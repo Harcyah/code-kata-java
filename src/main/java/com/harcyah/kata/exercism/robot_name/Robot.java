@@ -1,10 +1,10 @@
 package com.harcyah.kata.exercism.robot_name;
 
-import java.util.Random;
+import java.security.SecureRandom;
 
 public class Robot {
 
-    private static final Random RANDOM = new Random();
+    private static final SecureRandom RANDOM = new SecureRandom();
 
     protected String name;
 

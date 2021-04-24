@@ -3,7 +3,7 @@ package com.harcyah.kata.exercism.bank_account;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Random;
+import java.security.SecureRandom;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -153,7 +153,7 @@ public class BankAccountTest {
     }
 
     private void adjustBalanceConcurrently() throws BankAccountActionInvalidException, InterruptedException {
-        Random random = new Random();
+        SecureRandom random = new SecureRandom();
 
         Thread[] threads = new Thread[1000];
         for (int i = 0; i < 1000; i++) {
