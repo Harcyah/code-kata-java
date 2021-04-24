@@ -1,21 +1,21 @@
 package com.harcyah.kata.exercism.simple_cipher;
 
+import java.security.SecureRandom;
 import java.util.Arrays;
-import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Cipher {
 
     private static final Pattern PATTERN = Pattern.compile("[a-z]+");
-    private static final Random RANDOM = new Random(System.currentTimeMillis());
+    private static final SecureRandom RANDOM = new SecureRandom();
     private static final char[] ALPHABET = "abcdefghijklmnopqrstuvwxyz".toCharArray();
 
     protected final String key;
 
     public Cipher(String key) {
         Matcher matcher = PATTERN.matcher(key);
-        if (matcher.matches() == false) {
+        if (!matcher.matches()) {
             throw new IllegalArgumentException();
         }
         this.key = key;
