@@ -1,2 +1,3 @@
-Some code kata from different sources
-=====================================
+# code-kata-java
+
+Some java code kata from different sources
