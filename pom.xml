@@ -56,6 +56,12 @@
             <version>3.19.0</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.harcyah</groupId>
+            <artifactId>archunit-tests</artifactId>
+            <version>1.0.0</version>
+            <scope>test</scope>
+        </dependency>
 	</dependencies>
 
 	<build>
@@ -132,6 +138,9 @@
                 <configuration>
                     <argLine>-Duser.timezone=UTC -Duser.language=en -Duser.country=FR -Dfile.encoding=UTF8 -noverify -XX:TieredStopAtLevel=1</argLine>
                     <redirectTestOutputToFile>true</redirectTestOutputToFile>
+                    <dependenciesToScan>
+                        <dependency>com.harcyah:archunit-tests</dependency>
+                    </dependenciesToScan>
                 </configuration>
             </plugin>
             <plugin>
