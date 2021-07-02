@@ -114,7 +114,7 @@
                     </dependency>
                 </dependencies>
                 <configuration>
-                    <configLocation>https://raw.githubusercontent.com/Harcyah/build-tools/master/src/main/resources/harcyah-checkstyle.xml</configLocation>
+                    <configLocation>https://raw.githubusercontent.com/Harcyah/build-tools/master/harcyah-checkstyle.xml</configLocation>
                     <violationSeverity>warning</violationSeverity>
                     <failOnViolation>true</failOnViolation>
                     <failsOnError>true</failsOnError>
@@ -168,7 +168,7 @@
                     <linkXRef>false</linkXRef>
                     <printFailingErrors>true</printFailingErrors>
                     <rulesets>
-                        <ruleset>https://raw.githubusercontent.com/Harcyah/build-tools/master/src/main/resources/harcyah-pmd.xml</ruleset>
+                        <ruleset>https://raw.githubusercontent.com/Harcyah/build-tools/master/harcyah-pmd.xml</ruleset>
                     </rulesets>
                 </configuration>
                 <executions>
@@ -193,7 +193,7 @@
                 <configuration>
                     <includeTests>true</includeTests>
                     <failOnError>true</failOnError>
-                    <excludeFilterFile>https://raw.githubusercontent.com/Harcyah/build-tools/master/src/main/resources/harcyah-spotbugs.xml</excludeFilterFile>
+                    <excludeFilterFile>https://raw.githubusercontent.com/Harcyah/build-tools/master/harcyah-spotbugs.xml</excludeFilterFile>
                     <plugins>
                         <plugin>
                             <groupId>jp.skypencil.findbugs.slf4j</groupId>
