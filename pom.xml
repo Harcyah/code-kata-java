@@ -74,7 +74,7 @@
                     <source>11</source>
                     <target>11</target>
                     <release>11</release>
-                    <compilerArgument>-Xlint:all</compilerArgument>
+                    <compilerArgument>-Xlint:all,-processing</compilerArgument>
                     <showWarnings>true</showWarnings>
                     <showDeprecation>true</showDeprecation>
                 </configuration>
