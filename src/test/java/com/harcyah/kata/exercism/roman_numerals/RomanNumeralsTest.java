@@ -20,12 +20,17 @@ public class RomanNumeralsTest {
             {5, "V"},
             {6, "VI"},
             {9, "IX"},
+            {10, "X"},
+            {11, "XI"},
+            {14, "XIV"},
             {27, "XXVII"},
             {48, "XLVIII"},
             {59, "LIX"},
             {93, "XCIII"},
+            {100, "C"},
             {141, "CXLI"},
             {163, "CLXIII"},
+            {256, "CCLVI"},
             {402, "CDII"},
             {575, "DLXXV"},
             {911, "CMXI"},
@@ -36,10 +41,18 @@ public class RomanNumeralsTest {
 
     @ParameterizedTest
     @MethodSource("getTestData")
-    public void convertArabicNumberalToRomanNumeral(int input, String expectedOutput) {
-        RomanNumeral romanNumeral = new RomanNumeral(input);
+    public void testLoopImpl(int input, String expectedOutput) {
+        RomanNumeralLoopImpl sut = new RomanNumeralLoopImpl();
 
-        assertEquals(expectedOutput, romanNumeral.getRomanNumeral());
+        assertEquals(expectedOutput, sut.get(input));
+    }
+
+    @ParameterizedTest
+    @MethodSource("getTestData")
+    public void testModuloImpl(int input, String expectedOutput) {
+        RomanNumeralModuloImpl sut = new RomanNumeralModuloImpl();
+
+        assertEquals(expectedOutput, sut.get(input));
     }
 
 }
