@@ -1,0 +1,10 @@
+package ${package};
+
+public class Assertions extends org.assertj.core.api.Assertions {
+${all_assertions_entry_points}
+
+    private Assertions() {
+        // Do nothing
+    }
+
+}
