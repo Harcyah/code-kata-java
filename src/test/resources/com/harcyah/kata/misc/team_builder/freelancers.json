@@ -1,0 +1,620 @@
+{
+  "freelancers": [
+    {
+      "name": "Abdonie",
+      "price": 490
+    },
+    {
+      "name": "Achaire",
+      "price": 730
+    },
+    {
+      "name": "Adélie",
+      "price": 525
+    },
+    {
+      "name": "Adonise",
+      "price": 405
+    },
+    {
+      "name": "Agilberte",
+      "price": 495
+    },
+    {
+      "name": "Aimée",
+      "price": 485
+    },
+    {
+      "name": "Albane",
+      "price": 470
+    },
+    {
+      "name": "Alcyone",
+      "price": 435
+    },
+    {
+      "name": "Alexis",
+      "price": 425
+    },
+    {
+      "name": "Aloïs",
+      "price": 655
+    },
+    {
+      "name": "Amalthée",
+      "price": 440
+    },
+    {
+      "name": "Ambre",
+      "price": 500
+    },
+    {
+      "name": "Aminte",
+      "price": 565
+    },
+    {
+      "name": "Andéol",
+      "price": 540
+    },
+    {
+      "name": "Angeline",
+      "price": 525
+    },
+    {
+      "name": "Anne",
+      "price": 560
+    },
+    {
+      "name": "Anne-Isabelle",
+      "price": 615
+    },
+    {
+      "name": "Anne-Véronique",
+      "price": 485
+    },
+    {
+      "name": "Antigone",
+      "price": 610
+    },
+    {
+      "name": "Antoine-René",
+      "price": 450
+    },
+    {
+      "name": "Arabelle",
+      "price": 595
+    },
+    {
+      "name": "Ariel",
+      "price": 370
+    },
+    {
+      "name": "Armeline",
+      "price": 505
+    },
+    {
+      "name": "Arsinoé",
+      "price": 570
+    },
+    {
+      "name": "Asceline",
+      "price": 480
+    },
+    {
+      "name": "Athanasie",
+      "price": 555
+    },
+    {
+      "name": "Audrey",
+      "price": 495
+    },
+    {
+      "name": "Aurelle",
+      "price": 440
+    },
+    {
+      "name": "Aymard",
+      "price": 705
+    },
+    {
+      "name": "Barthélemy",
+      "price": 500
+    },
+    {
+      "name": "Benjamin",
+      "price": 570
+    },
+    {
+      "name": "Bertrand",
+      "price": 225
+    },
+    {
+      "name": "Briac",
+      "price": 425
+    },
+    {
+      "name": "Bruno-Pierre",
+      "price": 585
+    },
+    {
+      "name": "Carl",
+      "price": 475
+    },
+    {
+      "name": "Catherine-Amélie",
+      "price": 435
+    },
+    {
+      "name": "Célestine",
+      "price": 620
+    },
+    {
+      "name": "Charles-Alexandre",
+      "price": 480
+    },
+    {
+      "name": "Charles-François",
+      "price": 600
+    },
+    {
+      "name": "Charles-Philippe",
+      "price": 370
+    },
+    {
+      "name": "Chrétien",
+      "price": 625
+    },
+    {
+      "name": "Christophe",
+      "price": 390
+    },
+    {
+      "name": "Claude-Édouard",
+      "price": 610
+    },
+    {
+      "name": "Clélie",
+      "price": 465
+    },
+    {
+      "name": "Côme",
+      "price": 370
+    },
+    {
+      "name": "Cynthia",
+      "price": 580
+    },
+    {
+      "name": "Daniel-Pierre",
+      "price": 495
+    },
+    {
+      "name": "Denis",
+      "price": 600
+    },
+    {
+      "name": "Dorian",
+      "price": 485
+    },
+    {
+      "name": "Eléanore",
+      "price": 585
+    },
+    {
+      "name": "Émeline",
+      "price": 540
+    },
+    {
+      "name": "Épiphane",
+      "price": 485
+    },
+    {
+      "name": "Étienne-Michel",
+      "price": 550
+    },
+    {
+      "name": "Euphrasie",
+      "price": 620
+    },
+    {
+      "name": "Ève-Line",
+      "price": 600
+    },
+    {
+      "name": "Félicie",
+      "price": 625
+    },
+    {
+      "name": "Fidèle",
+      "price": 90
+    },
+    {
+      "name": "Florian",
+      "price": 600
+    },
+    {
+      "name": "Francis-Carl",
+      "price": 405
+    },
+    {
+      "name": "François-Étienne",
+      "price": 460
+    },
+    {
+      "name": "François-Régis",
+      "price": 275
+    },
+    {
+      "name": "Frédérique",
+      "price": 330
+    },
+    {
+      "name": "Gaëlle",
+      "price": 685
+    },
+    {
+      "name": "Gédéon",
+      "price": 785
+    },
+    {
+      "name": "Georges-Antoine",
+      "price": 335
+    },
+    {
+      "name": "Georges-Manuel",
+      "price": 460
+    },
+    {
+      "name": "Gérard-Raymond",
+      "price": 855
+    },
+    {
+      "name": "Gilberte",
+      "price": 670
+    },
+    {
+      "name": "Guenièvre",
+      "price": 515
+    },
+    {
+      "name": "Gustavine",
+      "price": 565
+    },
+    {
+      "name": "Guy-Michel",
+      "price": 630
+    },
+    {
+      "name": "Hélène-Marie",
+      "price": 510
+    },
+    {
+      "name": "Henri-Louis",
+      "price": 370
+    },
+    {
+      "name": "Hilaire",
+      "price": 485
+    },
+    {
+      "name": "Irène",
+      "price": 655
+    },
+    {
+      "name": "Isidore",
+      "price": 585
+    },
+    {
+      "name": "Jacques-Édouard",
+      "price": 410
+    },
+    {
+      "name": "Jacques-Olivier",
+      "price": 740
+    },
+    {
+      "name": "James-Alexis",
+      "price": 255
+    },
+    {
+      "name": "Jean-Carl",
+      "price": 385
+    },
+    {
+      "name": "Jean-Emmanuel",
+      "price": 480
+    },
+    {
+      "name": "Jean-Hervé",
+      "price": 545
+    },
+    {
+      "name": "Jean-Marc",
+      "price": 345
+    },
+    {
+      "name": "Jean-Pascal",
+      "price": 595
+    },
+    {
+      "name": "Jean-Roger",
+      "price": 490
+    },
+    {
+      "name": "Jeanne",
+      "price": 630
+    },
+    {
+      "name": "Jérémie",
+      "price": 610
+    },
+    {
+      "name": "Joël-André",
+      "price": 660
+    },
+    {
+      "name": "José",
+      "price": 765
+    },
+    {
+      "name": "Joseph-Guy",
+      "price": 470
+    },
+    {
+      "name": "Jude",
+      "price": 780
+    },
+    {
+      "name": "Julie-Anne",
+      "price": 540
+    },
+    {
+      "name": "Juliette",
+      "price": 385
+    },
+    {
+      "name": "Lambert",
+      "price": 595
+    },
+    {
+      "name": "Laurent",
+      "price": 445
+    },
+    {
+      "name": "Léandre",
+      "price": 540
+    },
+    {
+      "name": "Liam",
+      "price": 575
+    },
+    {
+      "name": "Lionel-Alain",
+      "price": 665
+    },
+    {
+      "name": "Louis-André",
+      "price": 550
+    },
+    {
+      "name": "Louis-Étienne",
+      "price": 355
+    },
+    {
+      "name": "Louis-Jean",
+      "price": 495
+    },
+    {
+      "name": "Louis-Olivier",
+      "price": 385
+    },
+    {
+      "name": "Louis-Thomas",
+      "price": 390
+    },
+    {
+      "name": "Louise-Laurence",
+      "price": 570
+    },
+    {
+      "name": "Luc-André",
+      "price": 560
+    },
+    {
+      "name": "Macaire",
+      "price": 680
+    },
+    {
+      "name": "Marc",
+      "price": 410
+    },
+    {
+      "name": "Marc-Michel",
+      "price": 495
+    },
+    {
+      "name": "Marie",
+      "price": 205
+    },
+    {
+      "name": "Martial",
+      "price": 505
+    },
+    {
+      "name": "Mathieu",
+      "price": 275
+    },
+    {
+      "name": "Maugis",
+      "price": 330
+    },
+    {
+      "name": "Mégane",
+      "price": 500
+    },
+    {
+      "name": "Michel-Adrien",
+      "price": 535
+    },
+    {
+      "name": "Michel-Olivier",
+      "price": 605
+    },
+    {
+      "name": "Moïsette",
+      "price": 520
+    },
+    {
+      "name": "Narcisse",
+      "price": 535
+    },
+    {
+      "name": "Nicolas",
+      "price": 630
+    },
+    {
+      "name": "Noah-Renaud",
+      "price": 405
+    },
+    {
+      "name": "Odette",
+      "price": 610
+    },
+    {
+      "name": "Ombline",
+      "price": 745
+    },
+    {
+      "name": "Pascal-Guillamue",
+      "price": 410
+    },
+    {
+      "name": "Paul",
+      "price": 525
+    },
+    {
+      "name": "Paul-Édouard",
+      "price": 670
+    },
+    {
+      "name": "Paul-Jacques",
+      "price": 570
+    },
+    {
+      "name": "Paul-Simon",
+      "price": 535
+    },
+    {
+      "name": "Perceval",
+      "price": 575
+    },
+    {
+      "name": "Philippe-Émile",
+      "price": 185
+    },
+    {
+      "name": "Pierre-Alain",
+      "price": 495
+    },
+    {
+      "name": "Pierre-Charles",
+      "price": 350
+    },
+    {
+      "name": "Pierre-Gabriel",
+      "price": 560
+    },
+    {
+      "name": "Pierre-Marie",
+      "price": 465
+    },
+    {
+      "name": "Pierre-Sébastien",
+      "price": 470
+    },
+    {
+      "name": "Pulchérie",
+      "price": 205
+    },
+    {
+      "name": "Reine",
+      "price": 875
+    },
+    {
+      "name": "René-Edmond",
+      "price": 495
+    },
+    {
+      "name": "Renée-Ève",
+      "price": 360
+    },
+    {
+      "name": "Rodrigue",
+      "price": 460
+    },
+    {
+      "name": "Ronan",
+      "price": 140
+    },
+    {
+      "name": "Samuel-Olivier",
+      "price": 550
+    },
+    {
+      "name": "Sarah-Jeanne",
+      "price": 425
+    },
+    {
+      "name": "Sébastien-Dominic",
+      "price": 375
+    },
+    {
+      "name": "Sidoine",
+      "price": 525
+    },
+    {
+      "name": "Simone",
+      "price": 585
+    },
+    {
+      "name": "Stéphanie",
+      "price": 455
+    },
+    {
+      "name": "Tanguy",
+      "price": 470
+    },
+    {
+      "name": "Thierry",
+      "price": 440
+    },
+    {
+      "name": "Tonnin",
+      "price": 265
+    },
+    {
+      "name": "Valère",
+      "price": 540
+    },
+    {
+      "name": "Victor-Conrad",
+      "price": 625
+    },
+    {
+      "name": "Violette",
+      "price": 385
+    },
+    {
+      "name": "William-Alexandre",
+      "price": 515
+    },
+    {
+      "name": "Yseult",
+      "price": 555
+    },
+    {
+      "name": "Yves-Mario",
+      "price": 405
+    }
+  ]
+}
