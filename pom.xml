@@ -246,6 +246,32 @@
                     <targetDir>target/generated-test-sources/java/assertj</targetDir>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.10.0</version>
+                <configuration>
+                    <generateBackupPoms>false</generateBackupPoms>
+                    <rulesUri>https://raw.githubusercontent.com/Harcyah/build-tools/master/harcyah-versions.xml</rulesUri>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.github.ferstl</groupId>
+                <artifactId>depgraph-maven-plugin</artifactId>
+                <version>4.0.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>graph</goal>
+                        </goals>
+                        <configuration>
+                            <showGroupIds>true</showGroupIds>
+                            <showVersions>true</showVersions>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
 	</build>
 
