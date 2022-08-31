@@ -12,7 +12,7 @@ public class ReversiTest {
 
     @Test
     public void testGetPossibleMovesSample1() throws Exception {
-        Reversi reversi = new Reversi("sample1");
+        Reversi reversi = new Reversi("/com/harcyah/kata/reddit/medium_2016_02_17/sample1");
         Set<Square> moves = reversi.getPossibleMoves();
         assertThat(moves)
             .hasSize(4)
@@ -25,14 +25,14 @@ public class ReversiTest {
 
     @Test
     public void testGetPossibleMovesSample2() throws Exception {
-        Reversi reversi = new Reversi("sample2");
+        Reversi reversi = new Reversi("/com/harcyah/kata/reddit/medium_2016_02_17/sample2");
         Set<Square> moves = reversi.getPossibleMoves();
         assertThat(moves).hasSize(11);
     }
 
     @Test
     public void testGetPossibleMovesSample3() throws Exception {
-        Reversi reversi = new Reversi("sample3");
+        Reversi reversi = new Reversi("/com/harcyah/kata/reddit/medium_2016_02_17/sample3");
         Set<Square> moves = reversi.getPossibleMoves();
         assertThat(moves).hasSize(12);
     }

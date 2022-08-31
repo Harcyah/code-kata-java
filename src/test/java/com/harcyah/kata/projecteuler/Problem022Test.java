@@ -27,7 +27,7 @@ public class Problem022Test {
     @Test
     public void testGetNamesScoreHardCase() throws Exception {
         Problem022 sut = new Problem022();
-        String resource = loadString("/com/harcyah/kata/projecteuler/projecteuler_022.txt");
+        String resource = loadString("/com/harcyah/kata/projecteuler/projecteuler_022.txt").trim();
         String[] tokens = resource.split(",");
         List<String> names = Lists.newArrayList();
         for (String token : tokens) {

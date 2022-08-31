@@ -1,12 +1,11 @@
 package com.harcyah.kata.reddit.easy_2016_02_22;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.List;
-import java.util.Scanner;
+
+import static com.harcyah.kata.ResourceLoader.loadLines;
 
 public class PlayingWithLightSwitches {
 
@@ -18,15 +17,19 @@ public class PlayingWithLightSwitches {
         return bitSet.cardinality();
     }
 
-    public int applyFrom(InputStream stream) throws IOException {
-        Scanner scanner = new Scanner(stream, StandardCharsets.UTF_8);
-        int lights = scanner.nextInt();
+    public int applyFrom(String path) throws IOException {
+        List<String> lines = loadLines(path);
+        int lights = Integer.parseInt(lines.get(0));
+
         List<Range> ranges = new ArrayList<>();
-        while (scanner.hasNextLine()) {
-            ranges.add(new Range(scanner.nextInt(), scanner.nextInt()));
+        for (int i = 1; i < lines.size(); i++) {
+            String line = lines.get(i);
+            int space = line.indexOf(" ");
+            int start = Integer.parseInt(line.substring(0, space));
+            int end = Integer.parseInt(line.substring(space + 1));
+            Range range = new Range(start, end);
+            ranges.add(range);
         }
-        scanner.close();
-        stream.close();
         return apply(lights, ranges);
     }
 
