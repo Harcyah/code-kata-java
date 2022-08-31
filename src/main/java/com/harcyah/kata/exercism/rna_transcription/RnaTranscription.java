@@ -15,7 +15,7 @@ public class RnaTranscription {
     }
 
     public static String ofDna(String source) {
-        StringBuffer rna = new StringBuffer();
+        StringBuilder rna = new StringBuilder();
         char[] chars = source.toCharArray();
         for (char c : chars) {
             rna.append(MAPPING.get(c));
