@@ -119,7 +119,7 @@
                     </dependency>
                 </dependencies>
                 <configuration>
-                    <configLocation>https://raw.githubusercontent.com/Harcyah/build-tools/master/harcyah-checkstyle.xml</configLocation>
+                    <configLocation>https://www.harcyah.xyz/maven-checkstyle.xml</configLocation>
                     <violationSeverity>warning</violationSeverity>
                     <failOnViolation>true</failOnViolation>
                     <failsOnError>true</failsOnError>
