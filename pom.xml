@@ -198,7 +198,7 @@
                 <configuration>
                     <includeTests>true</includeTests>
                     <failOnError>true</failOnError>
-                    <excludeFilterFile>https://raw.githubusercontent.com/Harcyah/build-tools/master/harcyah-spotbugs.xml</excludeFilterFile>
+                    <excludeFilterFile>https://www.harcyah.xyz/maven-spotbugs.xml</excludeFilterFile>
                     <plugins>
                         <plugin>
                             <groupId>jp.skypencil.findbugs.slf4j</groupId>
