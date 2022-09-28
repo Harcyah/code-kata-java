@@ -265,7 +265,7 @@
                 <version>2.12.0</version>
                 <configuration>
                     <generateBackupPoms>false</generateBackupPoms>
-                    <rulesUri>https://raw.githubusercontent.com/Harcyah/build-tools/master/harcyah-versions.xml</rulesUri>
+                    <rulesUri>https://www.harcyah.xyz/maven-versions.xml</rulesUri>
                 </configuration>
             </plugin>
             <plugin>
