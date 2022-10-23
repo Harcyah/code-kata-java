@@ -6,7 +6,7 @@ import java.util.Map;
 public class WordAppend {
 
     public String wordAppend(String[] strings) {
-        String out = "";
+        StringBuilder sb = new StringBuilder("");
         Map<String, Integer> map = new HashMap<>();
         for (String s : strings) {
             Integer appears = map.get(s);
@@ -18,10 +18,10 @@ public class WordAppend {
             map.put(s, appears);
 
             if ((appears > 0) && ((appears % 2) == 0)) {
-                out = out + s;
+                sb.append(s);
             }
         }
-        return out;
+        return sb.toString();
     }
 
 }
