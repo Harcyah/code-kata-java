@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class No23Test {
+class No23Test {
 
     @Test
-    public void testNo23() {
+    void testNo23() {
         No23 no23 = new No23();
         assertThat(no23.no23(new int[]{4, 5}))
             .isTrue();

@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class CopyEndyTest {
+class CopyEndyTest {
 
     @Test
-    public void testCopyEndy() {
+    void testCopyEndy() {
         CopyEndy copyEndy = new CopyEndy();
         assertArrayEquals(new int[]{9, 90}, copyEndy.copyEndy(new int[]{9, 11, 90, 22, 6}, 2));
         assertArrayEquals(new int[]{9, 90, 6}, copyEndy.copyEndy(new int[]{9, 11, 90, 22, 6}, 3));

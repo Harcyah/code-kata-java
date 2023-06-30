@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class CigarPartyTest {
+class CigarPartyTest {
 
     @Test
-    public void testCigarParty() {
+    void testCigarParty() {
         CigarParty cigarParty = new CigarParty();
         assertFalse(cigarParty.cigarParty(30, false));
         assertTrue(cigarParty.cigarParty(50, false));

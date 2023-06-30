@@ -8,7 +8,7 @@ import java.util.Collection;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class GetFirstColumnTest {
+class GetFirstColumnTest {
 
     public static Collection<Object[]> getTestData() {
         return Arrays.asList(new Object[][]{
@@ -22,7 +22,7 @@ public class GetFirstColumnTest {
 
     @ParameterizedTest
     @MethodSource("getTestData")
-    public void getFirstColumnTest(String matrixAsString, int[] firstColumn) {
+    void getFirstColumnTest(String matrixAsString, int[] firstColumn) {
         Matrix matrix = new Matrix(matrixAsString);
         assertArrayEquals(firstColumn, matrix.getColumn(0));
     }

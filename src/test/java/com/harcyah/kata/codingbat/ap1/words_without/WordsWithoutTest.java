@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class WordsWithoutTest {
+class WordsWithoutTest {
 
     @Test
-    public void testWordsWithout() {
+    void testWordsWithout() {
         WordsWithout wordsWithout = new WordsWithout();
         assertThat(wordsWithout.wordsWithout(new String[]{"a", "b", "c", "a"}, "a"))
             .isEqualTo(new String[]{"b", "c"});

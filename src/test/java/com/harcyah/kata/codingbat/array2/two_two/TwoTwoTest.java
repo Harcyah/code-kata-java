@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TwoTwoTest {
+class TwoTwoTest {
 
     @Test
-    public void testTwoTwo() {
+    void testTwoTwo() {
         TwoTwo twoTwo = new TwoTwo();
         assertThat(twoTwo.twoTwo(new int[]{4, 2, 2, 3})).isTrue();
         assertThat(twoTwo.twoTwo(new int[]{2, 2, 4})).isTrue();

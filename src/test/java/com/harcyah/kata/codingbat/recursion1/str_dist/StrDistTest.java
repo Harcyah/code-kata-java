@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class StrDistTest {
+class StrDistTest {
 
     @Test
-    public void testStrDist() {
+    void testStrDist() {
         StrDist strDist = new StrDist();
         assertThat(strDist.strDist("catcowcat", "cat")).isEqualTo(9);
         assertThat(strDist.strDist("catcowcat", "cow")).isEqualTo(3);

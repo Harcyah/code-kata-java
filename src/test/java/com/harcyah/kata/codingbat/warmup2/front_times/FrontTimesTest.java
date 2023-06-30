@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class FrontTimesTest {
+class FrontTimesTest {
 
     @Test
-    public void testFrontTimes() {
+    void testFrontTimes() {
         FrontTimes frontTimes = new FrontTimes();
         assertEquals("ChoCho", frontTimes.frontTimes("Chocolate", 2));
         assertEquals("ChoChoCho", frontTimes.frontTimes("Chocolate", 3));

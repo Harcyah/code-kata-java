@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class EuclidsTest {
+class EuclidsTest {
 
     @Test
-    public void testEuclids() {
+    void testEuclids() {
         Euclids euclids = new Euclids();
         assertEquals(1, euclids.getGCD(15, 16));
         assertEquals(12, euclids.getGCD(96, 36));

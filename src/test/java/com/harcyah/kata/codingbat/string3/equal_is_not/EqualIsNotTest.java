@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class EqualIsNotTest {
+class EqualIsNotTest {
 
     @Test
-    public void testEqualIsNot() {
+    void testEqualIsNot() {
         EqualIsNot equalIsNot = new EqualIsNot();
         assertThat(equalIsNot.equalIsNot("This is not")).isFalse();
         assertThat(equalIsNot.equalIsNot("This is notnot")).isTrue();

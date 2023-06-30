@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class PowerNTest {
+class PowerNTest {
 
     @Test
-    public void testPowerN() {
+    void testPowerN() {
         PowerN powerN = new PowerN();
         assertThat(powerN.powerN(3, 1))
             .isEqualTo(3);

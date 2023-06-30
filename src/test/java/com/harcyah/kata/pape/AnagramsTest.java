@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class AnagramsTest {
+class AnagramsTest {
 
     @Test
-    public void testAnagrams() {
+    void testAnagrams() {
         Anagrams anagrams = new Anagrams();
         assertFalse(anagrams.isAnagram("Foo", "Bar"));
         assertTrue(anagrams.isAnagram("Desperation", "A Rope Ends It"));

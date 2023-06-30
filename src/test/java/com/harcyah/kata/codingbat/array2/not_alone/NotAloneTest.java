@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class NotAloneTest {
+class NotAloneTest {
 
     @Test
-    public void testNotAlone() {
+    void testNotAlone() {
         NotAlone notAlone = new NotAlone();
         assertThat(notAlone.notAlone(new int[]{1, 2, 3}, 2))
             .isEqualTo(new int[]{1, 3, 3});

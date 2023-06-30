@@ -8,7 +8,7 @@ import java.util.Collection;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CountRowsTest {
+class CountRowsTest {
 
     public static Collection<Object[]> getTestData() {
         return Arrays.asList(new Object[][]{
@@ -22,7 +22,7 @@ public class CountRowsTest {
 
     @ParameterizedTest
     @MethodSource("getTestData")
-    public void countRowsTest(String matrixAsString, int numberOfRows) {
+    void countRowsTest(String matrixAsString, int numberOfRows) {
         Matrix matrix = new Matrix(matrixAsString);
         assertEquals(numberOfRows, matrix.getRowsCount());
     }

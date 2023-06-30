@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ModThreeTest {
+class ModThreeTest {
 
     @Test
-    public void testModThree() {
+    void testModThree() {
         ModThree modThree = new ModThree();
         assertThat(modThree.modThree(new int[]{2, 1, 3, 5}))
             .isTrue();

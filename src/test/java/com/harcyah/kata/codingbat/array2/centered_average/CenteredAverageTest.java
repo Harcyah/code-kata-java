@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CenteredAverageTest {
+class CenteredAverageTest {
 
     @Test
-    public void testCenteredAverage() {
+    void testCenteredAverage() {
         CenteredAverage centeredAverage = new CenteredAverage();
         assertThat(centeredAverage.centeredAverage(new int[]{1, 2, 3, 4, 100}))
             .isEqualTo(3);

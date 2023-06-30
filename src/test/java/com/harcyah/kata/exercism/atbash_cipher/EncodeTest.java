@@ -8,7 +8,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class EncodeTest {
+class EncodeTest {
 
     public static Collection<Object[]> getTestData() {
         return List.of(new Object[][]{
@@ -24,7 +24,7 @@ public class EncodeTest {
 
     @ParameterizedTest
     @MethodSource("getTestData")
-    public void test(String input, String expectedOutput) {
+    void test(String input, String expectedOutput) {
         assertEquals(expectedOutput, Atbash.encode(input));
     }
 

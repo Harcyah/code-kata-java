@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class IsEverywhereTest {
+class IsEverywhereTest {
 
     @Test
-    public void testIsEverywhere() {
+    void testIsEverywhere() {
         IsEverywhere isEverywhere = new IsEverywhere();
         assertThat(isEverywhere.isEverywhere(new int[]{1, 2, 1, 3}, 1))
             .isTrue();

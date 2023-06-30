@@ -4,50 +4,50 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class NaturalNumberTest {
+class NaturalNumberTest {
 
     @Test
-    public void testSmallPerfectNumberIsClassifiedCorrectly() {
+    void testSmallPerfectNumberIsClassifiedCorrectly() {
         assertEquals(Classification.PERFECT, new NaturalNumber(6).getClassification());
     }
 
     @Test
-    public void testMediumPerfectNumberIsClassifiedCorrectly() {
+    void testMediumPerfectNumberIsClassifiedCorrectly() {
         assertEquals(Classification.PERFECT, new NaturalNumber(28).getClassification());
     }
 
     @Test
-    public void testLargePerfectNumberIsClassifiedCorrectly() {
+    void testLargePerfectNumberIsClassifiedCorrectly() {
         assertEquals(Classification.PERFECT, new NaturalNumber(33550336).getClassification());
     }
 
     @Test
-    public void testSmallAbundantNumberIsClassifiedCorrectly() {
+    void testSmallAbundantNumberIsClassifiedCorrectly() {
         assertEquals(Classification.ABUNDANT, new NaturalNumber(12).getClassification());
     }
 
     @Test
-    public void testMediumAbundantNumberIsClassifiedCorrectly() {
+    void testMediumAbundantNumberIsClassifiedCorrectly() {
         assertEquals(Classification.ABUNDANT, new NaturalNumber(24).getClassification());
     }
 
     @Test
-    public void testLargeAbundantNumberIsClassifiedCorrectly() {
+    void testLargeAbundantNumberIsClassifiedCorrectly() {
         assertEquals(Classification.ABUNDANT, new NaturalNumber(33550335).getClassification());
     }
 
     @Test
-    public void testSmallDeficientNumberIsClassifiedCorrectly() {
+    void testSmallDeficientNumberIsClassifiedCorrectly() {
         assertEquals(Classification.DEFICIENT, new NaturalNumber(8).getClassification());
     }
 
     @Test
-    public void testMediumNumberIsClassifiedCorrectly() {
+    void testMediumNumberIsClassifiedCorrectly() {
         assertEquals(Classification.DEFICIENT, new NaturalNumber(31).getClassification());
     }
 
     @Test
-    public void testLargeDeficientNumberIsClassifiedCorrectly() {
+    void testLargeDeficientNumberIsClassifiedCorrectly() {
         assertEquals(Classification.DEFICIENT, new NaturalNumber(33550337).getClassification());
     }
 

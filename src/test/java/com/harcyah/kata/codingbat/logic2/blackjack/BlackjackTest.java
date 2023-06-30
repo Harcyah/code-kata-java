@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BlackjackTest {
+class BlackjackTest {
 
     @Test
-    public void testBlackjack() {
+    void testBlackjack() {
         Blackjack blackjack = new Blackjack();
         assertEquals(21, blackjack.blackjack(19, 21));
         assertEquals(21, blackjack.blackjack(21, 19));

@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class XyBalanceTest {
+class XyBalanceTest {
 
     @Test
-    public void testXyBalance() {
+    void testXyBalance() {
         XyBalance xyBalance = new XyBalance();
         assertTrue(xyBalance.xyBalance("aaxbby"));
         assertFalse(xyBalance.xyBalance("aaxbb"));

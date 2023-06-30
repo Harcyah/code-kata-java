@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class Or35Test {
+class Or35Test {
 
     @Test
-    public void testOr35() {
+    void testOr35() {
         Or35 or35 = new Or35();
         assertTrue(or35.or35(3));
         assertTrue(or35.or35(10));

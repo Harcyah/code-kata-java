@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ConCatTest {
+class ConCatTest {
 
     @Test
-    public void testConCat() {
+    void testConCat() {
         ConCat conCat = new ConCat();
         assertEquals("abcat", conCat.conCat("abc", "cat"));
         assertEquals("dogcat", conCat.conCat("dog", "cat"));

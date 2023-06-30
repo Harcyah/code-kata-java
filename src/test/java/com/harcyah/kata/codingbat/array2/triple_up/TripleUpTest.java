@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TripleUpTest {
+class TripleUpTest {
 
     @Test
-    public void testTripleUp() {
+    void testTripleUp() {
         TripleUp tripleUp = new TripleUp();
         assertThat(tripleUp.tripleUp(new int[]{1, 4, 5, 6, 2})).isTrue();
         assertThat(tripleUp.tripleUp(new int[]{1, 2, 3})).isTrue();

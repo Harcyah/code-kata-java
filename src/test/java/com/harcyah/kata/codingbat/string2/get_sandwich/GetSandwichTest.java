@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class GetSandwichTest {
+class GetSandwichTest {
 
     @Test
-    public void testGetSandwich() {
+    void testGetSandwich() {
         GetSandwich getSandwich = new GetSandwich();
         assertEquals("jam", getSandwich.getSandwich("breadjambread"));
         assertEquals("jam", getSandwich.getSandwich("xxbreadjambreadyy"));

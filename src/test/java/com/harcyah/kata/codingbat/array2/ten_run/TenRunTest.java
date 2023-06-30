@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TenRunTest {
+class TenRunTest {
 
     @Test
-    public void testTenRun() {
+    void testTenRun() {
         TenRun tenRun = new TenRun();
         assertThat(tenRun.tenRun(new int[]{2, 10, 3, 4, 20, 5})).isEqualTo(new int[]{2, 10, 10, 10, 20, 20});
         assertThat(tenRun.tenRun(new int[]{10, 1, 20, 2})).isEqualTo(new int[]{10, 10, 20, 20});

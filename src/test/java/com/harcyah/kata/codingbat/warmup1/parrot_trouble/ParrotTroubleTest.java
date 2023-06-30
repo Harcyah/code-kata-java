@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class ParrotTroubleTest {
+class ParrotTroubleTest {
 
     @Test
-    public void testParrotTrouble() {
+    void testParrotTrouble() {
         ParrotTrouble parrotTrouble = new ParrotTrouble();
         assertTrue(parrotTrouble.parrotTrouble(true, 6));
         assertFalse(parrotTrouble.parrotTrouble(true, 7));

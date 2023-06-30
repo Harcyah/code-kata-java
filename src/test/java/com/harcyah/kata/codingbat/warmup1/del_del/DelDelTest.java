@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DelDelTest {
+class DelDelTest {
 
     @Test
-    public void testDelDel() {
+    void testDelDel() {
         DelDel delDel = new DelDel();
         assertEquals("abc", delDel.delDel("adelbc"));
         assertEquals("aHello", delDel.delDel("adelHello"));

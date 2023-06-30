@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class IntMaxTest {
+class IntMaxTest {
 
     @Test
-    public void testIntMax() {
+    void testIntMax() {
         IntMax intMax = new IntMax();
         assertEquals(3, intMax.intMax(1, 2, 3));
         assertEquals(3, intMax.intMax(1, 3, 2));

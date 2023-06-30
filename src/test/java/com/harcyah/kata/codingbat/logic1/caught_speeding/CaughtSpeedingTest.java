@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CaughtSpeedingTest {
+class CaughtSpeedingTest {
 
     @Test
-    public void testCaughtSpeeding() {
+    void testCaughtSpeeding() {
         CaughtSpeeding caughtSpeeding = new CaughtSpeeding();
         assertEquals(0, caughtSpeeding.caughtSpeeding(60, false));
         assertEquals(1, caughtSpeeding.caughtSpeeding(65, false));

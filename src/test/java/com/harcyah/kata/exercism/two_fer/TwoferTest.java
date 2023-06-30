@@ -5,17 +5,17 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TwoferTest {
+class TwoferTest {
 
     private Twofer twofer;
 
     @BeforeEach
-    public void setup() {
+    void setup() {
         twofer = new Twofer();
     }
 
     @Test
-    public void noNameGiven() {
+    void noNameGiven() {
         String input = null;
         String expected = "One for you, one for me.";
 
@@ -23,7 +23,7 @@ public class TwoferTest {
     }
 
     @Test
-    public void withNameGiven() {
+    void withNameGiven() {
         String input = "Alice";
         String expected = "One for Alice, one for me.";
 
@@ -31,7 +31,7 @@ public class TwoferTest {
     }
 
     @Test
-    public void anotherNameGiven() {
+    void anotherNameGiven() {
         String input = "Bob";
         String expected = "One for Bob, one for me.";
 

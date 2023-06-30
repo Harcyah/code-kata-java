@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class FizzStringTest {
+class FizzStringTest {
 
     @Test
-    public void testFizzString() {
+    void testFizzString() {
         FizzString fizzString = new FizzString();
         assertEquals("Fizz", fizzString.fizzString("fig"));
         assertEquals("Buzz", fizzString.fizzString("dib"));

@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MakeTagsTest {
+class MakeTagsTest {
 
     @Test
-    public void testMakeTags() {
+    void testMakeTags() {
         MakeTags makeTags = new MakeTags();
         assertEquals("<i>Yay</i>", makeTags.makeTags("i", "Yay"));
         assertEquals("<i>Hello</i>", makeTags.makeTags("i", "Hello"));

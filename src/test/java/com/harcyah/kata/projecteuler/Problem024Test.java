@@ -7,16 +7,16 @@ import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Problem024Test {
+class Problem024Test {
 
     @Test
-    public void testProblem024() {
+    void testProblem024() {
         Problem024 sut = new Problem024();
         assertEquals("2783915460", sut.getLexicographicPermutations(1000000));
     }
 
     @Test
-    public void testToFactorialRepresentation() {
+    void testToFactorialRepresentation() {
         Problem024 sut = new Problem024();
         assertEquals("34101", factorialToString(sut.toFactorialRepresentation(463)));
         assertEquals("220", factorialToString(sut.toFactorialRepresentation(16)));

@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class HasOneTest {
+class HasOneTest {
 
     @Test
-    public void testHasOne() {
+    void testHasOne() {
         HasOne hasOne = new HasOne();
         assertTrue(hasOne.hasOne(10));
         assertFalse(hasOne.hasOne(22));

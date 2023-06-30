@@ -6,10 +6,10 @@ import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Word0Test {
+class Word0Test {
 
     @Test
-    public void testWord0() {
+    void testWord0() {
         Word0 word0 = new Word0();
         assertThat(word0.word0(new String[] { "a", "b", "a", "b" })).isEqualTo(Map.of("b", 0, "a", 0));
         assertThat(word0.word0(new String[] { "a", "b", "a", "c", "b" })).isEqualTo(Map.of("b", 0, "c", 0, "a", 0));

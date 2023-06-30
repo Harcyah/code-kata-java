@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Array667Test {
+class Array667Test {
 
     @Test
-    public void testArray667() {
+    void testArray667() {
         Array667 array667 = new Array667();
         assertEquals(1, array667.array667(new int[]{6, 6, 2}));
         assertEquals(1, array667.array667(new int[]{6, 6, 2, 6}));

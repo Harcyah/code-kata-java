@@ -13,17 +13,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /*
  * version: 1.0.0
  */
-public class WordSearcherTest {
+class WordSearcherTest {
 
     private WordSearcher wordSearcher;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         wordSearcher = new WordSearcher();
     }
 
     @Test
-    public void testLocatesWordsWrittenLeftToRight() {
+    void testLocatesWordsWrittenLeftToRight() {
         Map<String, Optional<WordLocation>> expectedLocations = new HashMap<>();
         expectedLocations.put("clojure", Optional.of(new WordLocation(new Pair(1, 10), new Pair(7, 10))));
 
@@ -49,7 +49,7 @@ public class WordSearcherTest {
     }
 
     @Test
-    public void testLocatesWordsWrittenRightToLeft() {
+    void testLocatesWordsWrittenRightToLeft() {
         Map<String, Optional<WordLocation>> expectedLocations = new HashMap<>();
         expectedLocations.put("clojure", Optional.of(new WordLocation(new Pair(1, 10), new Pair(7, 10))));
         expectedLocations.put("elixir", Optional.of(new WordLocation(new Pair(6, 5), new Pair(1, 5))));
@@ -76,7 +76,7 @@ public class WordSearcherTest {
     }
 
     @Test
-    public void testLocatesWordsWrittenTopToBottom() {
+    void testLocatesWordsWrittenTopToBottom() {
         Map<String, Optional<WordLocation>> expectedLocations = new HashMap<>();
         expectedLocations.put("clojure", Optional.of(new WordLocation(new Pair(1, 10), new Pair(7, 10))));
         expectedLocations.put("elixir", Optional.of(new WordLocation(new Pair(6, 5), new Pair(1, 5))));
@@ -104,7 +104,7 @@ public class WordSearcherTest {
     }
 
     @Test
-    public void testLocatesWordsWrittenBottomToTop() {
+    void testLocatesWordsWrittenBottomToTop() {
         Map<String, Optional<WordLocation>> expectedLocations = new HashMap<>();
         expectedLocations.put("clojure", Optional.of(new WordLocation(new Pair(1, 10), new Pair(7, 10))));
         expectedLocations.put("elixir", Optional.of(new WordLocation(new Pair(6, 5), new Pair(1, 5))));
@@ -131,7 +131,7 @@ public class WordSearcherTest {
     }
 
     @Test
-    public void testLocatesWordsWrittenTopLeftToBottomRight() {
+    void testLocatesWordsWrittenTopLeftToBottomRight() {
         Map<String, Optional<WordLocation>> expectedLocations = new HashMap<>();
         expectedLocations.put("clojure", Optional.of(new WordLocation(new Pair(1, 10), new Pair(7, 10))));
         expectedLocations.put("elixir", Optional.of(new WordLocation(new Pair(6, 5), new Pair(1, 5))));
@@ -159,7 +159,7 @@ public class WordSearcherTest {
     }
 
     @Test
-    public void testLocatesWordsWrittenBottomRightToTopLeft() {
+    void testLocatesWordsWrittenBottomRightToTopLeft() {
         Map<String, Optional<WordLocation>> expectedLocations = new HashMap<>();
         expectedLocations.put("clojure", Optional.of(new WordLocation(new Pair(1, 10), new Pair(7, 10))));
         expectedLocations.put("elixir", Optional.of(new WordLocation(new Pair(6, 5), new Pair(1, 5))));
@@ -188,7 +188,7 @@ public class WordSearcherTest {
     }
 
     @Test
-    public void testLocatesWordsWrittenBottomLeftToTopRight() {
+    void testLocatesWordsWrittenBottomLeftToTopRight() {
         Map<String, Optional<WordLocation>> expectedLocations = new HashMap<>();
         expectedLocations.put("clojure", Optional.of(new WordLocation(new Pair(1, 10), new Pair(7, 10))));
         expectedLocations.put("elixir", Optional.of(new WordLocation(new Pair(6, 5), new Pair(1, 5))));
@@ -218,7 +218,7 @@ public class WordSearcherTest {
     }
 
     @Test
-    public void testLocatesWordsWrittenTopRightToBottomLeft() {
+    void testLocatesWordsWrittenTopRightToBottomLeft() {
         Map<String, Optional<WordLocation>> expectedLocations = new HashMap<>();
         expectedLocations.put("clojure", Optional.of(new WordLocation(new Pair(1, 10), new Pair(7, 10))));
         expectedLocations.put("elixir", Optional.of(new WordLocation(new Pair(6, 5), new Pair(1, 5))));
@@ -249,7 +249,7 @@ public class WordSearcherTest {
     }
 
     @Test
-    public void testFailsToLocateAWordsThatIsNotInThePuzzle() {
+    void testFailsToLocateAWordsThatIsNotInThePuzzle() {
         Map<String, Optional<WordLocation>> expectedLocations = new HashMap<>();
         expectedLocations.put("clojure", Optional.of(new WordLocation(new Pair(1, 10), new Pair(7, 10))));
         expectedLocations.put("elixir", Optional.of(new WordLocation(new Pair(6, 5), new Pair(1, 5))));

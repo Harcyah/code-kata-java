@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LoneSumTest {
+class LoneSumTest {
 
     @Test
-    public void testLoneSum() {
+    void testLoneSum() {
         LoneSum loneSum = new LoneSum();
         assertEquals(6, loneSum.loneSum(1, 2, 3));
         assertEquals(2, loneSum.loneSum(3, 2, 3));

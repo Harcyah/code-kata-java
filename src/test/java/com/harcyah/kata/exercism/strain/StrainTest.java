@@ -8,38 +8,38 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class StrainTest {
+class StrainTest {
 
     @Test
-    public void emptyKeep() {
+    void emptyKeep() {
         List<Integer> input = new LinkedList<>();
         List<Integer> expectedOutput = new LinkedList<>();
         assertEquals(expectedOutput, Strain.keep(input, x -> x < 10));
     }
 
     @Test
-    public void keepEverything() {
+    void keepEverything() {
         List<Integer> input = List.of(1, 2, 3);
         List<Integer> expectedOutput = List.of(1, 2, 3);
         assertEquals(expectedOutput, Strain.keep(input, x -> x < 10));
     }
 
     @Test
-    public void keepFirstAndLast() {
+    void keepFirstAndLast() {
         List<Integer> input = List.of(1, 2, 3);
         List<Integer> expectedOutput = List.of(1, 3);
         assertEquals(expectedOutput, Strain.keep(input, x -> x % 2 != 0));
     }
 
     @Test
-    public void keepNeitherFirstNorLast() {
+    void keepNeitherFirstNorLast() {
         List<Integer> input = List.of(1, 2, 3, 4, 5);
         List<Integer> expectedOutput = List.of(2, 4);
         assertEquals(expectedOutput, Strain.keep(input, x -> x % 2 == 0));
     }
 
     @Test
-    public void keepStrings() {
+    void keepStrings() {
         List<String> words = List.of("apple zebra banana zombies cherimoya zelot".split(" "));
         List<String> expectedOutput = List.of("zebra", "zombies", "zelot");
         assertEquals(expectedOutput,
@@ -47,7 +47,7 @@ public class StrainTest {
     }
 
     @Test
-    public void keepArrays() {
+    void keepArrays() {
         List<List<Integer>> actual = List.of(
             List.of(1, 2, 3),
             List.of(5, 5, 5),
@@ -66,21 +66,21 @@ public class StrainTest {
     }
 
     @Test
-    public void emptyDiscard() {
+    void emptyDiscard() {
         List<Integer> input = new LinkedList<>();
         List<Integer> expectedOutput = new LinkedList<>();
         assertEquals(expectedOutput, Strain.discard(input, x -> x < 10));
     }
 
     @Test
-    public void discardNothing() {
+    void discardNothing() {
         List<Integer> input = List.of(1, 2, 3);
         List<Integer> expectedOutput = List.of(1, 2, 3);
         assertEquals(expectedOutput, Strain.discard(input, x -> x > 10));
     }
 
     @Test
-    public void discardFirstAndLast() {
+    void discardFirstAndLast() {
         List<Integer> input = List.of(1, 2, 3);
         List<Integer> expectedOutput = List.of(2);
         assertEquals(expectedOutput, Strain.discard(input, x -> x % 2 != 0));
@@ -88,14 +88,14 @@ public class StrainTest {
     }
 
     @Test
-    public void discardNeitherFirstNorLast() {
+    void discardNeitherFirstNorLast() {
         List<Integer> input = List.of(1, 2, 3, 4, 5);
         List<Integer> expectedOutput = List.of(1, 3, 5);
         assertEquals(expectedOutput, Strain.discard(input, x -> x % 2 == 0));
     }
 
     @Test
-    public void discardStrings() {
+    void discardStrings() {
         List<String> words = Arrays
             .asList("apple zebra banana zombies cherimoya zelot".split(" "));
         List<String> expectedOutput = List.of("apple", "banana", "cherimoya");
@@ -104,7 +104,7 @@ public class StrainTest {
     }
 
     @Test
-    public void discardArrays() {
+    void discardArrays() {
         List<List<Integer>> actual = List.of(
             List.of(1, 2, 3),
             List.of(5, 5, 5),

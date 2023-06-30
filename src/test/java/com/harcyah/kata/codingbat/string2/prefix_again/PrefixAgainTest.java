@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class PrefixAgainTest {
+class PrefixAgainTest {
 
     @Test
-    public void testPrefixAgain() {
+    void testPrefixAgain() {
         PrefixAgain prefixAgain = new PrefixAgain();
         assertTrue(prefixAgain.prefixAgain("abXYabc", 1));
         assertTrue(prefixAgain.prefixAgain("abXYabc", 2));

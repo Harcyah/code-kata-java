@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class StringXTest {
+class StringXTest {
 
     @Test
-    public void testStringX() {
+    void testStringX() {
         StringX stringX = new StringX();
         assertEquals("xHix", stringX.stringX("xxHxix"));
         assertEquals("abcd", stringX.stringX("abxxxcd"));

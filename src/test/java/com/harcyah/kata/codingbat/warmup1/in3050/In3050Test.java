@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class In3050Test {
+class In3050Test {
 
     @Test
-    public void testIn3050() {
+    void testIn3050() {
         In3050 in3050 = new In3050();
         assertTrue(in3050.in3050(30, 31));
         assertFalse(in3050.in3050(30, 41));

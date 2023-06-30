@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class MultiplicationTableTest {
+class MultiplicationTableTest {
 
     @Test
-    public void testGet3() {
+    void testGet3() {
         MultiplicationTable mt = new MultiplicationTable();
         int[][] table = mt.get(1, 3);
         assertThat(table).hasDimensions(3, 3);
@@ -18,7 +18,7 @@ public class MultiplicationTableTest {
     }
 
     @Test
-    public void testGet5() {
+    void testGet5() {
         MultiplicationTable mt = new MultiplicationTable();
         int[][] table = mt.get(1, 5);
         assertThat(table).hasDimensions(5, 5);

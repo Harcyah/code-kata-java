@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class EvenlySpacedTest {
+class EvenlySpacedTest {
 
     @Test
-    public void testEvenlySpaced() {
+    void testEvenlySpaced() {
         EvenlySpaced evenlySpaced = new EvenlySpaced();
         assertTrue(evenlySpaced.evenlySpaced(2, 4, 6));
         assertTrue(evenlySpaced.evenlySpaced(4, 6, 2));

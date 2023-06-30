@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class StringBitsTest {
+class StringBitsTest {
 
     @Test
-    public void testStringBits() {
+    void testStringBits() {
         StringBits stringBits = new StringBits();
         assertEquals("Hlo", stringBits.stringBits("Hello"));
         assertEquals("H", stringBits.stringBits("Hi"));

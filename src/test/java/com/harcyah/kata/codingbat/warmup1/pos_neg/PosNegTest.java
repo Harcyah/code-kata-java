@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class PosNegTest {
+class PosNegTest {
 
     @Test
-    public void testPosNeg() {
+    void testPosNeg() {
         PosNeg posNeg = new PosNeg();
         assertTrue(posNeg.posNeg(1, -1, false));
         assertTrue(posNeg.posNeg(-1, 1, false));

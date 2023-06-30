@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class MatchUpTest {
+class MatchUpTest {
 
     @Test
-    public void testMatchUp() {
+    void testMatchUp() {
         MatchUp matchUp = new MatchUp();
         assertThat(matchUp.matchUp(new int[]{1, 2, 3}, new int[]{2, 3, 10}))
             .isEqualTo(2);

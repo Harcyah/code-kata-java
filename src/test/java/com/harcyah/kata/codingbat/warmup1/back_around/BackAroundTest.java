@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BackAroundTest {
+class BackAroundTest {
 
     @Test
-    public void testBackAround() {
+    void testBackAround() {
         BackAround backAround = new BackAround();
         assertEquals("tcatt", backAround.backAround("cat"));
         assertEquals("oHelloo", backAround.backAround("Hello"));

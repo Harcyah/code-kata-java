@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class AllSwapTest {
+class AllSwapTest {
 
     @Test
-    public void testAllSwap() {
+    void testAllSwap() {
         AllSwap allSwap = new AllSwap();
         assertThat(allSwap.allSwap(new String[] { "ab", "ac" }))
             .isEqualTo(new String[] { "ac", "ab" });

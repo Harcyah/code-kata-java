@@ -6,10 +6,10 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class DiamondPrinterTest {
+class DiamondPrinterTest {
 
     @Test
-    public void testOneByOneDiamond() {
+    void testOneByOneDiamond() {
         List<String> output = new DiamondPrinter().printToList('A');
         assertThat(output).isEqualTo(List.of(
             "A"
@@ -17,7 +17,7 @@ public class DiamondPrinterTest {
     }
 
     @Test
-    public void testTwoByTwoDiamond() {
+    void testTwoByTwoDiamond() {
         List<String> output = new DiamondPrinter().printToList('B');
         assertThat(output).isEqualTo(List.of(
             " A ",
@@ -27,7 +27,7 @@ public class DiamondPrinterTest {
     }
 
     @Test
-    public void testThreeByThreeDiamond() {
+    void testThreeByThreeDiamond() {
         List<String> output = new DiamondPrinter().printToList('C');
         assertThat(output).isEqualTo(List.of(
             "  A  ",
@@ -39,7 +39,7 @@ public class DiamondPrinterTest {
     }
 
     @Test
-    public void testFiveByFiveDiamond() {
+    void testFiveByFiveDiamond() {
         List<String> output = new DiamondPrinter().printToList('E');
         assertThat(output).isEqualTo(List.of(
             "    A    ",
@@ -55,7 +55,7 @@ public class DiamondPrinterTest {
     }
 
     @Test
-    public void testFullDiamond() {
+    void testFullDiamond() {
         List<String> output = new DiamondPrinter().printToList('Z');
         assertThat(output).isEqualTo(List.of(
             "                         A                         ",

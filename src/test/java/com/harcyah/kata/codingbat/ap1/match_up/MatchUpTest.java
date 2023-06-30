@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MatchUpTest {
+class MatchUpTest {
 
     @Test
-    public void testMatchUp() {
+    void testMatchUp() {
         MatchUp matchUp = new MatchUp();
         assertEquals(1, matchUp.matchUp(new String[]{"aa", "bb", "cc"}, new String[]{"aaa", "xx", "bb"}));
         assertEquals(2, matchUp.matchUp(new String[]{"aa", "bb", "cc"}, new String[]{"aaa", "b", "bb"}));

@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class GroupNoAdjTest {
+class GroupNoAdjTest {
 
     @Test
-    public void testGroupNoAdj() {
+    void testGroupNoAdj() {
         GroupNoAdj groupNoAdj = new GroupNoAdj();
         assertThat(groupNoAdj.groupNoAdj(0, new int[]{2, 5, 10, 4}, 12)).isTrue();
         assertThat(groupNoAdj.groupNoAdj(0, new int[]{2, 5, 10, 4}, 14)).isFalse();

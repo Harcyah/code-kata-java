@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class StringCleanTest {
+class StringCleanTest {
 
     @Test
-    public void testStringClean() {
+    void testStringClean() {
         StringClean stringClean = new StringClean();
         assertThat(stringClean.stringClean("yyzzza")).isEqualTo("yza");
         assertThat(stringClean.stringClean("abbbcdd")).isEqualTo("abcd");

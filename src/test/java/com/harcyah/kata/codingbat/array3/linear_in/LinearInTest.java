@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class LinearInTest {
+class LinearInTest {
 
     @Test
-    public void testLinearIn() {
+    void testLinearIn() {
         LinearIn linearIn = new LinearIn();
         assertThat(linearIn.linearIn(new int[]{1, 2, 4, 6}, new int[]{2, 4}))
             .isTrue();

@@ -5,64 +5,64 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class IsogramCheckerTest {
+class IsogramCheckerTest {
 
     @Test
-    public void testIsogram() {
+    void testIsogram() {
         IsogramChecker iso = new IsogramChecker();
         assertTrue(iso.isIsogram("duplicates"));
     }
 
     @Test
-    public void testNotIsogram() {
+    void testNotIsogram() {
         IsogramChecker iso = new IsogramChecker();
         assertFalse(iso.isIsogram("eleven"));
     }
 
     @Test
-    public void testMediumLongIsogram() {
+    void testMediumLongIsogram() {
         IsogramChecker iso = new IsogramChecker();
         assertTrue(iso.isIsogram("subdermatoglyphic"));
     }
 
     @Test
-    public void testCaseInsensitive() {
+    void testCaseInsensitive() {
         IsogramChecker iso = new IsogramChecker();
         assertFalse(iso.isIsogram("Alphabet"));
     }
 
     @Test
-    public void testIsogramWithHyphen() {
+    void testIsogramWithHyphen() {
         IsogramChecker iso = new IsogramChecker();
         assertTrue(iso.isIsogram("thumbscrew-japingly"));
     }
 
     @Test
-    public void testIgnoresMultipleHyphens() {
+    void testIgnoresMultipleHyphens() {
         IsogramChecker iso = new IsogramChecker();
         assertTrue(iso.isIsogram("Hjelmqvist-Gryb-Zock-Pfund-Wax"));
     }
 
     @Test
-    public void testWorksWithGermanLetters() {
+    void testWorksWithGermanLetters() {
         IsogramChecker iso = new IsogramChecker();
         assertTrue(iso.isIsogram("Heizölrückstoßabdämpfung"));
     }
 
     @Test
-    public void testIgnoresSpaces() {
+    void testIgnoresSpaces() {
         IsogramChecker iso = new IsogramChecker();
         assertFalse(iso.isIsogram("the quick brown fox"));
     }
 
     @Test
-    public void testIgnoresSpaces2() {
+    void testIgnoresSpaces2() {
         IsogramChecker iso = new IsogramChecker();
         assertTrue(iso.isIsogram("Emily Jung Schwartzkopf"));
     }
 
     @Test
-    public void testDuplicateAccentedLetters() {
+    void testDuplicateAccentedLetters() {
         IsogramChecker iso = new IsogramChecker();
         assertFalse(iso.isIsogram("éléphant"));
     }

@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ParenBitTest {
+class ParenBitTest {
 
     @Test
-    public void testParenBit() {
+    void testParenBit() {
         ParenBit parenBit = new ParenBit();
         assertThat(parenBit.parenBit("xyz(abc)123")).isEqualTo("(abc)");
         assertThat(parenBit.parenBit("x(hello)")).isEqualTo("(hello)");

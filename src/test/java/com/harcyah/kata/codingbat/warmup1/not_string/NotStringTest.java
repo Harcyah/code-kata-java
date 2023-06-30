@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class NotStringTest {
+class NotStringTest {
 
     @Test
-    public void testNotString() {
+    void testNotString() {
         NotString notString = new NotString();
         assertEquals("not candy", notString.notString("candy"));
         assertEquals("not x", notString.notString("x"));

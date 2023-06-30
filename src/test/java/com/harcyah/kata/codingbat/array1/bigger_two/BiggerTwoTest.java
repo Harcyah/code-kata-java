@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class BiggerTwoTest {
+class BiggerTwoTest {
 
     @Test
-    public void testBiggerTwo() {
+    void testBiggerTwo() {
         BiggerTwo biggerTwo = new BiggerTwo();
         assertThat(biggerTwo.biggerTwo(new int[]{1, 2}, new int[]{3, 4})).isEqualTo(new int[]{3, 4});
         assertThat(biggerTwo.biggerTwo(new int[]{3, 4}, new int[]{1, 2})).isEqualTo(new int[]{3, 4});

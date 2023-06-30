@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CommonEndTest {
+class CommonEndTest {
 
     @Test
-    public void testCommonEnd() {
+    void testCommonEnd() {
         CommonEnd commonEnd = new CommonEnd();
         assertThat(commonEnd.commonEnd(new int[]{1, 2, 3}, new int[]{7, 3})).isTrue();
         assertThat(commonEnd.commonEnd(new int[]{1, 2, 3}, new int[]{7, 3, 2})).isFalse();

@@ -11,10 +11,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /*
  * version: 1.0.0
  */
-public class SaddlePointsTest {
+class SaddlePointsTest {
 
     @Test
-    public void testCanIdentifySingleSaddlePoint() {
+    void testCanIdentifySingleSaddlePoint() {
         Matrix matrix = new Matrix(List.of(
             List.of(9, 8, 7),
             List.of(5, 3, 2),
@@ -27,7 +27,7 @@ public class SaddlePointsTest {
     }
 
     @Test
-    public void testCanIdentifyThatEmptyMatrixHasNoSaddlePoints() {
+    void testCanIdentifyThatEmptyMatrixHasNoSaddlePoints() {
         Matrix matrix = new Matrix(new ArrayList<>());
 
         Set<MatrixCoordinate> expectedSaddlePoints = Set.of();
@@ -36,7 +36,7 @@ public class SaddlePointsTest {
     }
 
     @Test
-    public void testCanIdentifyLackOfSaddlePointsWhenThereAreNone() {
+    void testCanIdentifyLackOfSaddlePointsWhenThereAreNone() {
         Matrix matrix = new Matrix(List.of(
             List.of(1, 2, 3),
             List.of(3, 1, 2),
@@ -49,7 +49,7 @@ public class SaddlePointsTest {
     }
 
     @Test
-    public void testCanIdentifyMultipleSaddlePoints() {
+    void testCanIdentifyMultipleSaddlePoints() {
         Matrix matrix = new Matrix(List.of(
             List.of(4, 5, 4),
             List.of(3, 5, 5),
@@ -66,7 +66,7 @@ public class SaddlePointsTest {
     }
 
     @Test
-    public void testCanIdentifySaddlePointInBottomRightCorner() {
+    void testCanIdentifySaddlePointInBottomRightCorner() {
         Matrix matrix = new Matrix(List.of(
             List.of(8, 7, 9),
             List.of(6, 7, 6),

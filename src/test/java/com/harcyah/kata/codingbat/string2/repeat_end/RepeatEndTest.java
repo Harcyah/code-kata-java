@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RepeatEndTest {
+class RepeatEndTest {
 
     @Test
-    public void testRepeatEnd() {
+    void testRepeatEnd() {
         RepeatEnd repeatEnd = new RepeatEnd();
         assertEquals("llollollo", repeatEnd.repeatEnd("Hello", 3));
         assertEquals("lolo", repeatEnd.repeatEnd("Hello", 2));

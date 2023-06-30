@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Close10Test {
+class Close10Test {
 
     @Test
-    public void testClose10() {
+    void testClose10() {
         Close10 close10 = new Close10();
         assertEquals(8, close10.close10(8, 13));
         assertEquals(8, close10.close10(13, 8));

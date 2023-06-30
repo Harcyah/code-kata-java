@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class NotReplaceTest {
+class NotReplaceTest {
 
     @Test
-    public void testNotReplace() {
+    void testNotReplace() {
         NotReplace notReplace = new NotReplace();
         assertThat(notReplace.notReplace("is test")).isEqualTo("is not test");
         assertThat(notReplace.notReplace("is-is")).isEqualTo("is not-is not");

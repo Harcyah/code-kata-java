@@ -8,18 +8,18 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ParserTest {
+class ParserTest {
 
     private final Parser parser = new Parser();
 
     @Test
-    public void testParseEmptyInputs() {
+    void testParseEmptyInputs() {
         List<Command> commands = parser.parse("");
         assertThat(commands).isEmpty();
     }
 
     @Test
-    public void testParseTwoCommands() {
+    void testParseTwoCommands() {
         List<Command> commands = parser.parse("^h^c");
         assertThat(commands).hasSize(2);
         assertThat(commands.get(0)).isEqualTo(SpecialCommands.MOVE_TO_HEAD);
@@ -27,7 +27,7 @@ public class ParserTest {
     }
 
     @Test
-    public void testParseWithPutCharCommands() {
+    void testParseWithPutCharCommands() {
         List<Command> commands = parser.parse("^h^c^iDDD");
         assertThat(commands).hasSize(6);
         assertThat(commands.get(0)).isEqualTo(SpecialCommands.MOVE_TO_HEAD);
@@ -42,7 +42,7 @@ public class ParserTest {
     }
 
     @Test
-    public void testCanParseExample1() {
+    void testCanParseExample1() {
         List<Command> commands = parser.parse(Examples.EXAMPLE_1);
         assertThat(commands).isNotEmpty();
         assertThat(commands).filteredOn(x -> x.equals(SpecialCommands.MOVE_ONE_ROW_DOWN)).hasSize(4);
@@ -50,7 +50,7 @@ public class ParserTest {
     }
 
     @Test
-    public void testCanParseExample2() {
+    void testCanParseExample2() {
         List<Command> commands = parser.parse(Examples.EXAMPLE_2);
         assertThat(commands).isNotEmpty();
         assertThat(commands).filteredOn(x -> x.equals(SpecialCommands.MOVE_ONE_ROW_DOWN)).hasSize(9);

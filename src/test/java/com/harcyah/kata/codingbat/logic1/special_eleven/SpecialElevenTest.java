@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class SpecialElevenTest {
+class SpecialElevenTest {
 
     @Test
-    public void testSpecialEleven() {
+    void testSpecialEleven() {
         SpecialEleven specialEleven = new SpecialEleven();
         assertThat(specialEleven.specialEleven(22)).isTrue();
         assertThat(specialEleven.specialEleven(23)).isTrue();

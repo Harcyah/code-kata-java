@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Array220Test {
+class Array220Test {
 
     @Test
-    public void testArray220() {
+    void testArray220() {
         Array220 array220 = new Array220();
         assertThat(array220.array220(new int[]{1, 2, 20}, 0)).isTrue();
         assertThat(array220.array220(new int[]{3, 30}, 0)).isTrue();

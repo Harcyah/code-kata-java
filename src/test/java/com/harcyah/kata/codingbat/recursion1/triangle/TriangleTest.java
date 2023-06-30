@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TriangleTest {
+class TriangleTest {
 
     @Test
-    public void testTriangle() {
+    void testTriangle() {
         Triangle triangle = new Triangle();
         assertThat(triangle.triangle(0)).isEqualTo(0);
         assertThat(triangle.triangle(1)).isEqualTo(1);

@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class BlueTicketTest {
+class BlueTicketTest {
 
     @Test
-    public void testBlueTicket() {
+    void testBlueTicket() {
         BlueTicket blueTicket = new BlueTicket();
         assertThat(blueTicket.blueTicket(9, 1, 0)).isEqualTo(10);
         assertThat(blueTicket.blueTicket(9, 2, 0)).isEqualTo(0);

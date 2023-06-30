@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class AtFirstTest {
+class AtFirstTest {
 
     @Test
-    public void testAtFirst() {
+    void testAtFirst() {
         AtFirst atFirst = new AtFirst();
         assertEquals("he", atFirst.atFirst("hello"));
         assertEquals("hi", atFirst.atFirst("hi"));

@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class NoXTest {
+class NoXTest {
 
     @Test
-    public void testNoX() {
+    void testNoX() {
         NoX noX = new NoX();
         assertThat(noX.noX("xaxb")).isEqualTo("ab");
         assertThat(noX.noX("abc")).isEqualTo("abc");

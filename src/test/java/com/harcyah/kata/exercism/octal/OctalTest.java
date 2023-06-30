@@ -8,7 +8,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class OctalTest {
+class OctalTest {
 
     public static Collection<Object[]> getTestData() {
         return List.of(new Object[][]{
@@ -31,7 +31,7 @@ public class OctalTest {
 
     @ParameterizedTest
     @MethodSource("getTestData")
-    public void test(String input, int expectedOutput) {
+    void test(String input, int expectedOutput) {
         Octal octal = new Octal(input);
 
         assertEquals(expectedOutput, octal.getDecimal());

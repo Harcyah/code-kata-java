@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Sum13Test {
+class Sum13Test {
 
     @Test
-    public void testSum13() {
+    void testSum13() {
         Sum13 sum13 = new Sum13();
         assertThat(sum13.sum13(new int[]{1, 2, 2, 1}))
             .isEqualTo(6);

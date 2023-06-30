@@ -6,10 +6,10 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class LowerTest {
+class LowerTest {
 
     @Test
-    public void testLower() {
+    void testLower() {
         Lower lower = new Lower();
         assertThat(lower.lower(List.of("Hello", "Hi")))
             .containsExactly("hello", "hi");

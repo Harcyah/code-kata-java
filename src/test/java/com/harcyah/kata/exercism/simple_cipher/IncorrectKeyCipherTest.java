@@ -4,34 +4,34 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-public class IncorrectKeyCipherTest {
+class IncorrectKeyCipherTest {
 
     @Test
-    public void cipherThrowsWithAllCapsKey() {
+    void cipherThrowsWithAllCapsKey() {
         assertThatThrownBy(() -> new Cipher("ABCDEF"))
             .isInstanceOf(IllegalArgumentException.class);
     }
 
     @Test
-    public void cipherThrowsWithAnyCapsKey() {
+    void cipherThrowsWithAnyCapsKey() {
         assertThatThrownBy(() -> new Cipher("abcdEFg"))
             .isInstanceOf(IllegalArgumentException.class);
     }
 
     @Test
-    public void cipherThrowsWithNumericKey() {
+    void cipherThrowsWithNumericKey() {
         assertThatThrownBy(() -> new Cipher("12345"))
             .isInstanceOf(IllegalArgumentException.class);
     }
 
     @Test
-    public void cipherThrowsWithAnyNumericKey() {
+    void cipherThrowsWithAnyNumericKey() {
         assertThatThrownBy(() -> new Cipher("abcd345ef"))
             .isInstanceOf(IllegalArgumentException.class);
     }
 
     @Test
-    public void cipherThrowsWithEmptyKey() {
+    void cipherThrowsWithEmptyKey() {
         assertThatThrownBy(() -> new Cipher(""))
             .isInstanceOf(IllegalArgumentException.class);
     }

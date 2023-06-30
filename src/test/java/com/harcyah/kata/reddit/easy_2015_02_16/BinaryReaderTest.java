@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BinaryReaderTest {
+class BinaryReaderTest {
 
     private static final String HELLO_WORLD = "0100100001100101011011000110110001101111001000000101011101101111011100100110110001100100";
 
@@ -23,19 +23,19 @@ public class BinaryReaderTest {
             "110001111001";
 
     @Test
-    public void testHelloWorld() {
+    void testHelloWorld() {
         BinaryReader br = new BinaryReader();
         assertEquals("Hello World", br.read(HELLO_WORLD));
     }
 
     @Test
-    public void testUnknownValue1() {
+    void testUnknownValue1() {
         BinaryReader br = new BinaryReader();
         assertEquals("please talk to me", br.read(TEST_1));
     }
 
     @Test
-    public void testUnknownValue2() {
+    void testUnknownValue2() {
         BinaryReader br = new BinaryReader();
         assertEquals("life right now is lonely", br.read(TEST_2));
     }

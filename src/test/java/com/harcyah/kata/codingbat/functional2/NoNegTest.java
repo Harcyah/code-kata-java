@@ -6,10 +6,10 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class NoNegTest {
+class NoNegTest {
 
     @Test
-    public void testNoNeg() {
+    void testNoNeg() {
         NoNeg noNeg = new NoNeg();
         assertThat(noNeg.noNeg(List.of(1, -2)))
             .containsExactly(1);

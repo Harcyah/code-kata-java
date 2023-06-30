@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Problem018Test {
+class Problem018Test {
 
     @Test
-    public void testProblem018EasyCase() {
+    void testProblem018EasyCase() {
         int[][] triangle = new int[3][];
         triangle[0] = new int[]{75};
         triangle[1] = new int[]{95, 64};
@@ -18,7 +18,7 @@ public class Problem018Test {
     }
 
     @Test
-    public void testProblem018HardCase() {
+    void testProblem018HardCase() {
         int[][] triangle = new int[15][];
         triangle[0] = new int[]{75};
         triangle[1] = new int[]{95, 64};

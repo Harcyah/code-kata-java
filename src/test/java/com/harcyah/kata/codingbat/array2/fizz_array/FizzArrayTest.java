@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class FizzArrayTest {
+class FizzArrayTest {
 
     @Test
-    public void testFizzArray() {
+    void testFizzArray() {
         FizzArray fizzArray = new FizzArray();
         assertThat(fizzArray.fizzArray(4))
             .isEqualTo(new int[]{0, 1, 2, 3});

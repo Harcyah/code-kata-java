@@ -8,10 +8,10 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MinesweeperBoardTest {
+class MinesweeperBoardTest {
 
     @Test
-    public void testInputBoardWithNoRowsAndNoColumns() {
+    void testInputBoardWithNoRowsAndNoColumns() {
         List<String> inputBoard = Collections.emptyList();
         List<String> expectedAnnotatedRepresentation = Collections.emptyList();
         List<String> actualAnnotatedRepresentation = new MinesweeperBoard(inputBoard).getAnnotatedRepresentation();
@@ -20,7 +20,7 @@ public class MinesweeperBoardTest {
     }
 
     @Test
-    public void testInputBoardWithOneRowAndNoColumns() {
+    void testInputBoardWithOneRowAndNoColumns() {
         List<String> inputBoard = Collections.singletonList("");
         List<String> expectedAnnotatedRepresentation = Collections.singletonList("");
         List<String> actualAnnotatedRepresentation = new MinesweeperBoard(inputBoard).getAnnotatedRepresentation();
@@ -29,7 +29,7 @@ public class MinesweeperBoardTest {
     }
 
     @Test
-    public void testInputBoardWithNoMines() {
+    void testInputBoardWithNoMines() {
         List<String> inputBoard = List.of(
                 "   ",
                 "   ",
@@ -46,7 +46,7 @@ public class MinesweeperBoardTest {
     }
 
     @Test
-    public void testInputBoardWithOnlyMines() {
+    void testInputBoardWithOnlyMines() {
         List<String> inputBoard = List.of(
                 "***",
                 "***",
@@ -63,7 +63,7 @@ public class MinesweeperBoardTest {
     }
 
     @Test
-    public void testInputBoardWithSingleMineAtCenter() {
+    void testInputBoardWithSingleMineAtCenter() {
         List<String> inputBoard = List.of(
                 "   ",
                 " * ",
@@ -80,7 +80,7 @@ public class MinesweeperBoardTest {
     }
 
     @Test
-    public void testInputBoardWithMinesAroundPerimeter() {
+    void testInputBoardWithMinesAroundPerimeter() {
         List<String> inputBoard = List.of(
                 "***",
                 "* *",
@@ -97,7 +97,7 @@ public class MinesweeperBoardTest {
     }
 
     @Test
-    public void testInputBoardWithSingleRowAndTwoMines() {
+    void testInputBoardWithSingleRowAndTwoMines() {
         List<String> inputBoard = Collections.singletonList(
                 " * * ");
 
@@ -110,7 +110,7 @@ public class MinesweeperBoardTest {
     }
 
     @Test
-    public void testInputBoardWithSingleRowAndTwoMinesAtEdges() {
+    void testInputBoardWithSingleRowAndTwoMinesAtEdges() {
         List<String> inputBoard = Collections.singletonList(
                 "*   *");
 
@@ -123,7 +123,7 @@ public class MinesweeperBoardTest {
     }
 
     @Test
-    public void testInputBoardWithSingleColumnAndTwoMines() {
+    void testInputBoardWithSingleColumnAndTwoMines() {
         List<String> inputBoard = List.of(
                 " ",
                 "*",
@@ -144,7 +144,7 @@ public class MinesweeperBoardTest {
     }
 
     @Test
-    public void testInputBoardWithSingleColumnAndTwoMinesAtEdges() {
+    void testInputBoardWithSingleColumnAndTwoMinesAtEdges() {
         List<String> inputBoard = List.of(
                 "*",
                 " ",
@@ -165,7 +165,7 @@ public class MinesweeperBoardTest {
     }
 
     @Test
-    public void testInputBoardWithMinesInCross() {
+    void testInputBoardWithMinesInCross() {
         List<String> inputBoard = List.of(
                 "  *  ",
                 "  *  ",
@@ -186,7 +186,7 @@ public class MinesweeperBoardTest {
     }
 
     @Test
-    public void testLargeInputBoard() {
+    void testLargeInputBoard() {
         List<String> inputBoard = List.of(
                 " *  * ",
                 "  *   ",
@@ -209,21 +209,21 @@ public class MinesweeperBoardTest {
     }
 
     @Test
-    public void testNullInputBoardIsRejected() {
+    void testNullInputBoardIsRejected() {
         assertThatThrownBy(() -> new MinesweeperBoard(null))
             .isInstanceOf(IllegalArgumentException.class)
             .hasMessage("Input board may not be null.");
     }
 
     @Test
-    public void testInputBoardWithInvalidSymbolsIsRejected() {
+    void testInputBoardWithInvalidSymbolsIsRejected() {
         assertThatThrownBy(() -> new MinesweeperBoard(Collections.singletonList(" * & ")))
             .isInstanceOf(IllegalArgumentException.class)
             .hasMessage("Input board can only contain the characters ' ' and '*'.");
     }
 
     @Test
-    public void testInputBoardWithInconsistentRowLengthsIsRejected() {
+    void testInputBoardWithInconsistentRowLengthsIsRejected() {
         List<String> board = List.of(
             "*",
             "**",

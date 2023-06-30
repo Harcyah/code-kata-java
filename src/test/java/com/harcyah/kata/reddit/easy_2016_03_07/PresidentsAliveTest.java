@@ -6,10 +6,10 @@ import java.io.IOException;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class PresidentsAliveTest {
+class PresidentsAliveTest {
 
     @Test
-    public void testFindYearWithMostPresidentsAlive() throws IOException {
+    void testFindYearWithMostPresidentsAlive() throws IOException {
         int[] expected = new int[]{
             1822, 1823, 1824, 1825, 1826,
             1831, 1833, 1834, 1835, 1836,

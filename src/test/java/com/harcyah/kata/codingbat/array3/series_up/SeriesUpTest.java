@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class SeriesUpTest {
+class SeriesUpTest {
 
     @Test
-    public void testSeriesUp() {
+    void testSeriesUp() {
         SeriesUp seriesUp = new SeriesUp();
 
         assertThat(seriesUp.seriesUp(3))

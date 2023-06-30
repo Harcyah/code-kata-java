@@ -4,24 +4,24 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TrinaryTest {
+class TrinaryTest {
     @Test
-    public void testNonTrinaryCharacterIsZero() {
+    void testNonTrinaryCharacterIsZero() {
         assertEquals(0, Trinary.toDecimal("-"));
     }
 
     @Test
-    public void testNonTrinaryNumberIsZero() {
+    void testNonTrinaryNumberIsZero() {
         assertEquals(0, Trinary.toDecimal("3"));
     }
 
     @Test
-    public void testTrinaryWithNonTrinaryIsZero() {
+    void testTrinaryWithNonTrinaryIsZero() {
         assertEquals(0, Trinary.toDecimal("102-12"));
     }
 
     @Test
-    public void testTrinary() {
+    void testTrinary() {
         assertEquals(302, Trinary.toDecimal("102012"));
     }
 

@@ -8,10 +8,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class AllergiesTest {
+class AllergiesTest {
 
     @Test
-    public void noAllergiesMeansNotAllergicToAnything() {
+    void noAllergiesMeansNotAllergicToAnything() {
         Allergies allergies = new Allergies(0);
 
         assertFalse(allergies.isAllergicTo(Allergen.EGGS));
@@ -21,77 +21,77 @@ public class AllergiesTest {
     }
 
     @Test
-    public void allergicToEggs() {
+    void allergicToEggs() {
         Allergies allergies = new Allergies(1);
 
         assertTrue(allergies.isAllergicTo(Allergen.EGGS));
     }
 
     @Test
-    public void allergicToPeanuts() {
+    void allergicToPeanuts() {
         Allergies allergies = new Allergies(2);
 
         assertTrue(allergies.isAllergicTo(Allergen.PEANUTS));
     }
 
     @Test
-    public void allergicToShellfish() {
+    void allergicToShellfish() {
         Allergies allergies = new Allergies(4);
 
         assertTrue(allergies.isAllergicTo(Allergen.SHELLFISH));
     }
 
     @Test
-    public void allergicToStrawberries() {
+    void allergicToStrawberries() {
         Allergies allergies = new Allergies(8);
 
         assertTrue(allergies.isAllergicTo(Allergen.STRAWBERRIES));
     }
 
     @Test
-    public void allergicToTomatoes() {
+    void allergicToTomatoes() {
         Allergies allergies = new Allergies(16);
 
         assertTrue(allergies.isAllergicTo(Allergen.TOMATOES));
     }
 
     @Test
-    public void allergicToChocolate() {
+    void allergicToChocolate() {
         Allergies allergies = new Allergies(32);
 
         assertTrue(allergies.isAllergicTo(Allergen.CHOCOLATE));
     }
 
     @Test
-    public void allergicToPollen() {
+    void allergicToPollen() {
         Allergies allergies = new Allergies(64);
 
         assertTrue(allergies.isAllergicTo(Allergen.POLLEN));
     }
 
     @Test
-    public void allergicToCats() {
+    void allergicToCats() {
         Allergies allergies = new Allergies(128);
 
         assertTrue(allergies.isAllergicTo(Allergen.CATS));
     }
 
     @Test
-    public void isAllergicToEggsInAdditionToOtherStuff() {
+    void isAllergicToEggsInAdditionToOtherStuff() {
         Allergies allergies = new Allergies(5);
 
         assertTrue(allergies.isAllergicTo(Allergen.EGGS));
     }
 
     @Test
-    public void noAllergies() {
+    void noAllergies() {
         Allergies allergies = new Allergies(0);
 
         assertEquals(0, allergies.getList().size());
     }
 
     @Test
-    public void isAllergicToJustEggs() {
+    void isAllergicToJustEggs() {
         Allergies allergies = new Allergies(1);
         List<Allergen> expectedAllergens = List.of(new Allergen[]{Allergen.EGGS});
 
@@ -99,7 +99,7 @@ public class AllergiesTest {
     }
 
     @Test
-    public void isAllergicToJustPeanuts() {
+    void isAllergicToJustPeanuts() {
         Allergies allergies = new Allergies(2);
         List<Allergen> expectedAllergens = List.of(new Allergen[]{Allergen.PEANUTS});
 
@@ -107,7 +107,7 @@ public class AllergiesTest {
     }
 
     @Test
-    public void isAllergicToJustStrawberries() {
+    void isAllergicToJustStrawberries() {
         Allergies allergies = new Allergies(8);
         List<Allergen> expectedAllergens = List.of(new Allergen[]{Allergen.STRAWBERRIES});
 
@@ -115,7 +115,7 @@ public class AllergiesTest {
     }
 
     @Test
-    public void isAllergicToEggsAndPeanuts() {
+    void isAllergicToEggsAndPeanuts() {
         Allergies allergies = new Allergies(3);
         List<Allergen> expectedAllergens = List.of(new Allergen[]{
             Allergen.EGGS,
@@ -126,7 +126,7 @@ public class AllergiesTest {
     }
 
     @Test
-    public void isAllergicToEggsAndShellfish() {
+    void isAllergicToEggsAndShellfish() {
         Allergies allergies = new Allergies(5);
         List<Allergen> expectedAllergens = List.of(new Allergen[]{
             Allergen.EGGS,
@@ -137,7 +137,7 @@ public class AllergiesTest {
     }
 
     @Test
-    public void isAllergicToLotsOfStuff() {
+    void isAllergicToLotsOfStuff() {
         Allergies allergies = new Allergies(248);
         List<Allergen> expectedAllergens = List.of(new Allergen[]{
             Allergen.STRAWBERRIES,
@@ -151,7 +151,7 @@ public class AllergiesTest {
     }
 
     @Test
-    public void isAllergicToEverything() {
+    void isAllergicToEverything() {
         Allergies allergies = new Allergies(255);
         List<Allergen> expectedAllergens = List.of(new Allergen[]{
             Allergen.EGGS,
@@ -168,7 +168,7 @@ public class AllergiesTest {
     }
 
     @Test
-    public void ignoreNonAllergenScoreParts() {
+    void ignoreNonAllergenScoreParts() {
         Allergies allergies = new Allergies(509);
         List<Allergen> expectedAllergens = List.of(new Allergen[]{
             Allergen.EGGS,

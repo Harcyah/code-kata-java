@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class EvenOddTest {
+class EvenOddTest {
 
     @Test
-    public void testEvenOdd() {
+    void testEvenOdd() {
         EvenOdd evenOdd = new EvenOdd();
         assertThat(evenOdd.evenOdd(new int[]{1, 0, 1, 0, 0, 1, 1}))
             .isEqualTo(new int[]{0, 0, 0, 1, 1, 1, 1});

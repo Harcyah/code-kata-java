@@ -14,12 +14,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class SquareSolverTest {
+class SquareSolverTest {
 
     protected SquareSolver solver = new SquareSolver();
 
     @Test
-    public void testExerciseExample() {
+    void testExerciseExample() {
         Point a = new Point(-1, -1);
         Point b = new Point(2, 1);
         Point c = new Point(4, -2);
@@ -32,7 +32,7 @@ public class SquareSolverTest {
     }
 
     @Test
-    public void testObviousCaseSuccess() {
+    void testObviousCaseSuccess() {
         Point a = new Point(-1, -1);
         Point b = new Point(1, -1);
         Point c = new Point(-1, 1);
@@ -51,7 +51,7 @@ public class SquareSolverTest {
     }
 
     @Test
-    public void testSimpleCaseSuccess() {
+    void testSimpleCaseSuccess() {
         Point a = new Point(-2, 1);
         Point b = new Point(-1, -2);
         Point c = new Point(2, -1);
@@ -70,7 +70,7 @@ public class SquareSolverTest {
     }
 
     @Test
-    public void testObviousCaseFailure() {
+    void testObviousCaseFailure() {
         Point a = new Point(-1, -1);
         Point b = new Point(1, -1);
         Point c = new Point(-1, 1);
@@ -84,7 +84,7 @@ public class SquareSolverTest {
 
     @Test
     @Disabled
-    public void testWithLaurentDataset() throws IOException {
+    void testWithLaurentDataset() throws IOException {
         Reader reader = new Reader();
         TreeSet<Point> points = reader.read();
 

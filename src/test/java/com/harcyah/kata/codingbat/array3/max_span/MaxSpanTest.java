@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class MaxSpanTest {
+class MaxSpanTest {
 
     @Test
-    public void testMaxSpan() {
+    void testMaxSpan() {
         MaxSpan maxSpan = new MaxSpan();
         assertThat(maxSpan.maxSpan(new int[]{1, 2, 1, 1, 3})).isEqualTo(4);
         assertThat(maxSpan.maxSpan(new int[]{1, 4, 2, 1, 4, 1, 4})).isEqualTo(6);

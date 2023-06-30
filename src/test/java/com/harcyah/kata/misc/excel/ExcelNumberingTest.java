@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ExcelNumberingTest {
+class ExcelNumberingTest {
 
     @Test
-    public void testGetLabelWhile() {
+    void testGetLabelWhile() {
         ExcelNumberingWhileImpl en = new ExcelNumberingWhileImpl();
         assertEquals("A", en.getLabel(1));
         assertEquals("Z", en.getLabel(26));
@@ -18,7 +18,7 @@ public class ExcelNumberingTest {
     }
 
     @Test
-    public void testGetLabelRecursive() {
+    void testGetLabelRecursive() {
         ExcelNumberingRecursiveImpl en = new ExcelNumberingRecursiveImpl();
         assertEquals("A", en.getLabel(1));
         assertEquals("Z", en.getLabel(26));

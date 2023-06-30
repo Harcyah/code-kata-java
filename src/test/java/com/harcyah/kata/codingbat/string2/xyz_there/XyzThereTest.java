@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class XyzThereTest {
+class XyzThereTest {
 
     @Test
-    public void testXyzThere() {
+    void testXyzThere() {
         XyzThere xyzThere = new XyzThere();
         assertTrue(xyzThere.xyzThere("abcxyz"));
         assertFalse(xyzThere.xyzThere("abc.xyz"));

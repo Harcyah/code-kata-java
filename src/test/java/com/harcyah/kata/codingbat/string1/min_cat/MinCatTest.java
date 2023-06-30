@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MinCatTest {
+class MinCatTest {
 
     @Test
-    public void testMinCat() {
+    void testMinCat() {
         MinCat minCat = new MinCat();
         assertEquals("loHi", minCat.minCat("Hello", "Hi"));
         assertEquals("ellojava", minCat.minCat("Hello", "java"));

@@ -7,30 +7,30 @@ import java.util.NoSuchElementException;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-public class SimpleLinkedListTest {
+class SimpleLinkedListTest {
 
     @Test
-    public void newListIsEmpty() {
+    void newListIsEmpty() {
         SimpleLinkedList list = new SimpleLinkedList();
         assertThat(list.size()).isEqualTo(0);
     }
 
     @Test
-    public void canCreateFromArray() {
+    void canCreateFromArray() {
         Integer[] values = new Integer[]{1, 2, 3};
         SimpleLinkedList list = new SimpleLinkedList(values);
         assertThat(list.size()).isEqualTo(3);
     }
 
     @Test
-    public void popOnEmptyListWillThrow() {
+    void popOnEmptyListWillThrow() {
         SimpleLinkedList list = new SimpleLinkedList();
         assertThatThrownBy(list::pop)
             .isInstanceOf(NoSuchElementException.class);
     }
 
     @Test
-    public void popReturnsLastAddedElement() {
+    void popReturnsLastAddedElement() {
         SimpleLinkedList list = new SimpleLinkedList();
         list.push(9);
         list.push(8);
@@ -41,7 +41,7 @@ public class SimpleLinkedListTest {
     }
 
     @Test
-    public void reverseReversesList() {
+    void reverseReversesList() {
         SimpleLinkedList list = new SimpleLinkedList();
         list.push(9);
         list.push(8);
@@ -57,7 +57,7 @@ public class SimpleLinkedListTest {
     }
 
     @Test
-    public void canReturnListAsArray() {
+    void canReturnListAsArray() {
         SimpleLinkedList list = new SimpleLinkedList();
         list.push(9);
         list.push(8);
@@ -69,7 +69,7 @@ public class SimpleLinkedListTest {
     }
 
     @Test
-    public void canReturnEmptyListAsEmptyArray() {
+    void canReturnEmptyListAsEmptyArray() {
         SimpleLinkedList list = new SimpleLinkedList();
         Object[] expected = {};
         assertThat(list.asArray(Object.class)).containsExactly(expected);

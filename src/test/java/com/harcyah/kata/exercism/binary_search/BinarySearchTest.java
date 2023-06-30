@@ -8,7 +8,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BinarySearchTest {
+class BinarySearchTest {
 
     public static final List<Integer> EMPTY_LIST
             = Collections.unmodifiableList(new ArrayList<Integer>(0));
@@ -36,7 +36,7 @@ public class BinarySearchTest {
     );
 
     @Test
-    public void findsAValueInAnArrayWithOneElement() {
+    void findsAValueInAnArrayWithOneElement() {
         BinarySearch<Integer> sut = new BinarySearch<>(LIST_OF_UNIT_LENGTH);
         final int value = 6;
         final int actual = sut.indexOf(value);
@@ -45,7 +45,7 @@ public class BinarySearchTest {
     }
 
     @Test
-    public void findsAValueInTheMiddleOfAnArray() {
+    void findsAValueInTheMiddleOfAnArray() {
         BinarySearch<Integer> sut = new BinarySearch<>(SORTED_LIST);
         final int value = 6;
         final int actual = sut.indexOf(value);
@@ -54,7 +54,7 @@ public class BinarySearchTest {
     }
 
     @Test
-    public void findsAValueAtTheBeginningOfAnArray() {
+    void findsAValueAtTheBeginningOfAnArray() {
         BinarySearch<Integer> sut = new BinarySearch<>(SORTED_LIST);
         final int value = 1;
         final int actual = sut.indexOf(value);
@@ -63,7 +63,7 @@ public class BinarySearchTest {
     }
 
     @Test
-    public void findsAValueAtTheEndOfAnArray() {
+    void findsAValueAtTheEndOfAnArray() {
         BinarySearch<Integer> sut = new BinarySearch<>(SORTED_LIST);
         final int value = 11;
         final int actual = sut.indexOf(value);
@@ -72,7 +72,7 @@ public class BinarySearchTest {
     }
 
     @Test
-    public void findsAValueInAnArrayOfOddLength() {
+    void findsAValueInAnArrayOfOddLength() {
         BinarySearch<Integer> sut = new BinarySearch<>(SORTED_LIST_OF_ODD_LENGTH);
         final int value = 144;
         final int actual = sut.indexOf(value);
@@ -81,7 +81,7 @@ public class BinarySearchTest {
     }
 
     @Test
-    public void findsAValueInAnArrayOfEvenLength() {
+    void findsAValueInAnArrayOfEvenLength() {
         BinarySearch<Integer> sut
                 = new BinarySearch<>(SORTED_LIST_OF_EVEN_LENGTH);
         final int value = 21;
@@ -91,7 +91,7 @@ public class BinarySearchTest {
     }
 
     @Test
-    public void identifiesThatAValueIsNotIncludedInTheArray() {
+    void identifiesThatAValueIsNotIncludedInTheArray() {
         BinarySearch<Integer> sut = new BinarySearch<>(SORTED_LIST);
         final int value = 7;
         final int actual = sut.indexOf(value);
@@ -100,7 +100,7 @@ public class BinarySearchTest {
     }
 
     @Test
-    public void valueSmallerThanTheArraysSmallestValueIsNotIncluded() {
+    void valueSmallerThanTheArraysSmallestValueIsNotIncluded() {
         BinarySearch<Integer> sut = new BinarySearch<>(SORTED_LIST);
         final int value = 0;
         final int actual = sut.indexOf(value);
@@ -109,7 +109,7 @@ public class BinarySearchTest {
     }
 
     @Test
-    public void valueLargerThanTheArraysSmallestValueIsNotIncluded() {
+    void valueLargerThanTheArraysSmallestValueIsNotIncluded() {
         BinarySearch<Integer> sut = new BinarySearch<>(SORTED_LIST);
         final int value = 13;
         final int actual = sut.indexOf(value);
@@ -118,7 +118,7 @@ public class BinarySearchTest {
     }
 
     @Test
-    public void nothingIsIncludedInAnEmptyArray() {
+    void nothingIsIncludedInAnEmptyArray() {
         BinarySearch<Integer> sut = new BinarySearch<>(EMPTY_LIST);
         final int value = 1;
         final int actual = sut.indexOf(value);

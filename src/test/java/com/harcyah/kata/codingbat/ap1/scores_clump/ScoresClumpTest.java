@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class ScoresClumpTest {
+class ScoresClumpTest {
 
     @Test
-    public void testScoresClump() {
+    void testScoresClump() {
         ScoresClump scoresClump = new ScoresClump();
         assertTrue(scoresClump.scoresClump(new int[]{3, 4, 5}));
         assertFalse(scoresClump.scoresClump(new int[]{3, 4, 6}));

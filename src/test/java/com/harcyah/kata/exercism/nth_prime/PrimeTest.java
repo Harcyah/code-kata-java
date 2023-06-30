@@ -5,30 +5,30 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-public class PrimeTest {
+class PrimeTest {
 
     @Test
-    public void testFirstPrime() {
+    void testFirstPrime() {
         assertThat(Prime.nth(1)).isEqualTo(2);
     }
 
     @Test
-    public void testSecondPrime() {
+    void testSecondPrime() {
         assertThat(Prime.nth(2)).isEqualTo(3);
     }
 
     @Test
-    public void testSixthPrime() {
+    void testSixthPrime() {
         assertThat(Prime.nth(6)).isEqualTo(13);
     }
 
     @Test
-    public void testBigPrime() {
+    void testBigPrime() {
         assertThat(Prime.nth(10001)).isEqualTo(104743);
     }
 
     @Test
-    public void testUndefinedPrime() {
+    void testUndefinedPrime() {
         assertThatThrownBy(() -> Prime.nth(0))
             .isInstanceOf(IllegalArgumentException.class);
     }

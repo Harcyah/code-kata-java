@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class DoubleXTest {
+class DoubleXTest {
 
     @Test
-    public void testDoubleX() {
+    void testDoubleX() {
         DoubleX doubleX = new DoubleX();
         assertTrue(doubleX.doubleX("axxbb"));
         assertFalse(doubleX.doubleX("axaxax"));

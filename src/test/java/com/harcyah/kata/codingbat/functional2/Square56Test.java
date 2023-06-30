@@ -6,10 +6,10 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Square56Test {
+class Square56Test {
 
     @Test
-    public void testSquare56() {
+    void testSquare56() {
         Square56 square56 = new Square56();
         assertThat(square56.square56(List.of(3, 1, 4)))
             .containsExactly(19, 11);

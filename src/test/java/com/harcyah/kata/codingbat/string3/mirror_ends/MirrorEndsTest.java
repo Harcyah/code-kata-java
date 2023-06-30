@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class MirrorEndsTest {
+class MirrorEndsTest {
 
     @Test
-    public void testMirrorEnds() {
+    void testMirrorEnds() {
         MirrorEnds mirrorEnds = new MirrorEnds();
         assertThat(mirrorEnds.mirrorEnds("abXYZba")).isEqualTo("ab");
         assertThat(mirrorEnds.mirrorEnds("abca")).isEqualTo("a");

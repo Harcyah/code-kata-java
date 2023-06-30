@@ -7,10 +7,10 @@ import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Topping3Test {
+class Topping3Test {
 
     @Test
-    public void testTopping3() {
+    void testTopping3() {
         Topping3 topping3 = new Topping3();
         assertThat(topping3.topping3(MapBuilder.build("potato", "ketchup")))
             .isEqualTo(Map.of("fries", "ketchup", "potato", "ketchup"));

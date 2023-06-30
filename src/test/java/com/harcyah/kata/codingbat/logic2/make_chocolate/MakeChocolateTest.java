@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MakeChocolateTest {
+class MakeChocolateTest {
 
     @Test
-    public void testMakeChocolate() {
+    void testMakeChocolate() {
         MakeChocolate makeChocolate = new MakeChocolate();
         assertEquals(4, makeChocolate.makeChocolate(4, 1, 9));
         assertEquals(-1, makeChocolate.makeChocolate(4, 1, 10));

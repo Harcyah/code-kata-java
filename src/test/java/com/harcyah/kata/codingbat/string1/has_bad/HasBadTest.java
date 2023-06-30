@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class HasBadTest {
+class HasBadTest {
 
     @Test
-    public void testHasBad() {
+    void testHasBad() {
         HasBad hasBad = new HasBad();
         assertTrue(hasBad.hasBad("badxx"));
         assertTrue(hasBad.hasBad("xbadxx"));

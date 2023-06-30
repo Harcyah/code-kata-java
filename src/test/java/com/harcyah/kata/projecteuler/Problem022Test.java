@@ -9,23 +9,23 @@ import java.util.List;
 import static com.harcyah.kata.ResourceLoader.loadString;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Problem022Test {
+class Problem022Test {
 
     @Test
-    public void testGetValueOf() {
+    void testGetValueOf() {
         Problem022 sut = new Problem022();
         assertEquals(1, sut.getValueOf("A"));
         assertEquals(10, sut.getValueOf("ABCD"));
     }
 
     @Test
-    public void testGetNamesScoreEasyCase() {
+    void testGetNamesScoreEasyCase() {
         Problem022 sut = new Problem022();
         assertEquals(30, sut.getNamesScores(List.of("ABCD", "ABCD")));
     }
 
     @Test
-    public void testGetNamesScoreHardCase() throws Exception {
+    void testGetNamesScoreHardCase() throws Exception {
         Problem022 sut = new Problem022();
         String resource = loadString("/com/harcyah/kata/projecteuler/projecteuler_022.txt").trim();
         String[] tokens = resource.split(",");

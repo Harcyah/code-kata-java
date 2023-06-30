@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class NoTriplesTest {
+class NoTriplesTest {
 
     @Test
-    public void testNoTriples() {
+    void testNoTriples() {
         NoTriples noTriples = new NoTriples();
         assertTrue(noTriples.noTriples(new int[]{1, 1, 2, 2, 1}));
         assertFalse(noTriples.noTriples(new int[]{1, 1, 2, 2, 2, 1}));

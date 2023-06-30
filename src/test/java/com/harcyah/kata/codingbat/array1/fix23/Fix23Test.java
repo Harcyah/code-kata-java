@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Fix23Test {
+class Fix23Test {
 
     @Test
-    public void testFix23() {
+    void testFix23() {
         Fix23 fix23 = new Fix23();
         assertThat(fix23.fix23(new int[]{1, 2, 3})).isEqualTo(new int[]{1, 2, 0});
         assertThat(fix23.fix23(new int[]{2, 3, 5})).isEqualTo(new int[]{2, 0, 5});

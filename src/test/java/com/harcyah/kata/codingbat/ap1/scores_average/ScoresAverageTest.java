@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ScoresAverageTest {
+class ScoresAverageTest {
 
     @Test
-    public void testScoresAverage() {
+    void testScoresAverage() {
         ScoresAverage scoresAverage = new ScoresAverage();
         assertEquals(4, scoresAverage.scoresAverage(new int[]{2, 2, 4, 4}));
         assertEquals(4, scoresAverage.scoresAverage(new int[]{4, 4, 4, 2, 2, 2}));

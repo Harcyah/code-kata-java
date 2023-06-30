@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class MiddleWayTest {
+class MiddleWayTest {
 
     @Test
-    public void testMiddleWay() {
+    void testMiddleWay() {
         MiddleWay middleWay = new MiddleWay();
         assertThat(middleWay.middleWay(new int[]{1, 2, 3}, new int[]{4, 5, 6}))
             .isEqualTo(new int[]{2, 5});

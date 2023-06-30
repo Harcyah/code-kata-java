@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class AtbashCipherTest {
+class AtbashCipherTest {
 
     protected AtbashCipher cipher = new AtbashCipher();
 
     @Test
-    public void testCipher() {
+    void testCipher() {
         assertEquals("ullyzi", cipher.encode("foobar"));
         assertEquals("draziw", cipher.encode("wizard"));
         assertEquals("/i/wzrobkiltiznnvi", cipher.encode("/r/dailyprogrammer"));

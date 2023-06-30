@@ -6,10 +6,10 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Math1Test {
+class Math1Test {
 
     @Test
-    public void testMath1() {
+    void testMath1() {
         Math1 math1 = new Math1();
         assertThat(math1.math1(List.of(1, 2, 3)))
             .containsExactly(20, 30, 40);

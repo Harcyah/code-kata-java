@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class GroupSum6Test {
+class GroupSum6Test {
 
     @Test
-    public void testGroupSum6() {
+    void testGroupSum6() {
         GroupSum6 groupSum6 = new GroupSum6();
         assertThat(groupSum6.groupSum6(0, new int[]{5, 6, 2}, 8)).isTrue();
         assertThat(groupSum6.groupSum6(0, new int[]{5, 6, 2}, 9)).isFalse();

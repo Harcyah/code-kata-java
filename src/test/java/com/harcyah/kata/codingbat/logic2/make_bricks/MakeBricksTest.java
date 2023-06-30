@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class MakeBricksTest {
+class MakeBricksTest {
 
     @Test
-    public void testMakeBricks() {
+    void testMakeBricks() {
         MakeBricks makeBricks = new MakeBricks();
         assertTrue(makeBricks.makeBricks(3, 1, 8));
         assertFalse(makeBricks.makeBricks(3, 1, 9));

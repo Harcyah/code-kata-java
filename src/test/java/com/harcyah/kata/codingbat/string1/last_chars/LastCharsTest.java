@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LastCharsTest {
+class LastCharsTest {
 
     @Test
-    public void testLastChars() {
+    void testLastChars() {
         LastChars lastChars = new LastChars();
         assertEquals("ls", lastChars.lastChars("last", "chars"));
         assertEquals("ya", lastChars.lastChars("yo", "java"));

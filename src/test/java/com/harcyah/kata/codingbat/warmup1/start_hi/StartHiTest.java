@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class StartHiTest {
+class StartHiTest {
 
     @Test
-    public void testStartHi() {
+    void testStartHi() {
         StartHi startHi = new StartHi();
         assertTrue(startHi.startHi("hi there"));
         assertTrue(startHi.startHi("hi"));

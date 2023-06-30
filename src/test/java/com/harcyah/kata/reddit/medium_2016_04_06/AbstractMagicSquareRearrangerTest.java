@@ -25,7 +25,7 @@ public abstract class AbstractMagicSquareRearrangerTest {
     private static Integer[][] square24x24;
 
     @BeforeAll
-    public static void setUpClass() throws IOException {
+    static void setUpClass() throws IOException {
         square8x8Test0 = readSquareFromResource("8x8_0");
         square8x8Test1 = readSquareFromResource("8x8_1");
         square8x8Test2 = readSquareFromResource("8x8_2");
@@ -37,14 +37,14 @@ public abstract class AbstractMagicSquareRearrangerTest {
     }
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         rearranger = getRearranger();
     }
 
     protected abstract MagicSquareRearranger getRearranger();
 
     @Test
-    public void testGetSolutions() {
+    void testGetSolutions() {
         Integer[][] square = {{8, 1, 6}, {4, 9, 2}, {3, 5, 7}};
         List<Integer[]> solutions = rearranger.getSolutions(square);
         assertThat(solutions).hasSize(2);
@@ -66,54 +66,54 @@ public abstract class AbstractMagicSquareRearrangerTest {
     }
 
     @Test
-    public void testGetSolutionsForSample8x8Test0() {
+    void testGetSolutionsForSample8x8Test0() {
         List<Integer[]> solutions = rearranger.getSolutions(square8x8Test0);
         assertThat(solutions).hasSize(2);
     }
 
     @Test
-    public void testGetSolutionsForSample8x8Test1() {
+    void testGetSolutionsForSample8x8Test1() {
         List<Integer[]> solutions = rearranger.getSolutions(square8x8Test1);
         assertThat(solutions).hasSize(2);
     }
 
     @Test
-    public void testGetSolutionsForSample8x8Test2() {
+    void testGetSolutionsForSample8x8Test2() {
         List<Integer[]> solutions = rearranger.getSolutions(square8x8Test2);
         assertThat(solutions).hasSize(2);
     }
 
     @Test
     @Disabled
-    public void testGetSolutionsForSample12x12Test0() {
+    void testGetSolutionsForSample12x12Test0() {
         List<Integer[]> solutions = rearranger.getSolutions(square12x12Test0);
         assertThat(solutions).hasSize(3646);
     }
 
     @Test
     @Disabled
-    public void testGetSolutionsForSample12x12Test1() {
+    void testGetSolutionsForSample12x12Test1() {
         List<Integer[]> solutions = rearranger.getSolutions(square12x12Test1);
         assertThat(solutions).hasSize(3212);
     }
 
     @Test
     @Disabled
-    public void testGetSolutionsForSample16x16() {
+    void testGetSolutionsForSample16x16() {
         List<Integer[]> solutions = rearranger.getSolutions(square16x16);
         assertThat(solutions).hasSize(3646);
     }
 
     @Test
     @Disabled
-    public void testGetSolutionsForSample20x20() {
+    void testGetSolutionsForSample20x20() {
         List<Integer[]> solutions = rearranger.getSolutions(square20x20);
         assertThat(solutions).hasSize(3646);
     }
 
     @Test
     @Disabled
-    public void testGetSolutionsForSample24x24() {
+    void testGetSolutionsForSample24x24() {
         List<Integer[]> solutions = rearranger.getSolutions(square24x24);
         assertThat(solutions).hasSize(3212);
     }

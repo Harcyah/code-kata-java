@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SeeColorTest {
+class SeeColorTest {
 
     @Test
-    public void testSeeColor() {
+    void testSeeColor() {
         SeeColor seeColor = new SeeColor();
         assertEquals("red", seeColor.seeColor("redxx"));
         assertEquals("", seeColor.seeColor("xxred"));

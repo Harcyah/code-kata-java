@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MiddleTwoTest {
+class MiddleTwoTest {
 
     @Test
-    public void testMiddleTwo() {
+    void testMiddleTwo() {
         MiddleTwo middleTwo = new MiddleTwo();
         assertEquals("ri", middleTwo.middleTwo("string"));
         assertEquals("od", middleTwo.middleTwo("code"));

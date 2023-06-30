@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class More14Test {
+class More14Test {
 
     @Test
-    public void testMore14() {
+    void testMore14() {
         More14 more14 = new More14();
         assertThat(more14.more14(new int[]{1, 4, 1}))
             .isTrue();

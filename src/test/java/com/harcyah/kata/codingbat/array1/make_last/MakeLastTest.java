@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class MakeLastTest {
+class MakeLastTest {
 
     @Test
-    public void testMakeLast() {
+    void testMakeLast() {
         MakeLast makeLast = new MakeLast();
         assertThat(makeLast.makeLast(new int[]{4, 5, 6})).isEqualTo(new int[]{0, 0, 0, 0, 0, 6});
         assertThat(makeLast.makeLast(new int[]{1, 2})).isEqualTo(new int[]{0, 0, 0, 2});

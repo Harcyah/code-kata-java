@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LuhnTest {
+class LuhnTest {
 
     @Test
-    public void checkDigitIsRightMostDigit() {
+    void checkDigitIsRightMostDigit() {
         Luhn luhn = new Luhn(34567);
         int expectedOutput = 7;
 
@@ -15,21 +15,21 @@ public class LuhnTest {
     }
 
     @Test
-    public void addendsDoublesEveryOtherNumberFromRight() {
+    void addendsDoublesEveryOtherNumberFromRight() {
         Luhn luhn = new Luhn(12121);
 
         assertEquals("14141", luhn.getAddends());
     }
 
     @Test
-    public void addendsSubtracts9WhenDoubledNumberIsMoreThan9() {
+    void addendsSubtracts9WhenDoubledNumberIsMoreThan9() {
         Luhn luhn = new Luhn(8631);
 
         assertEquals("7661", luhn.getAddends());
     }
 
     @Test
-    public void checkSumAddsAddendsTogether1() {
+    void checkSumAddsAddendsTogether1() {
         Luhn luhn = new Luhn(4913);
         int expectedOutput = 22;
 
@@ -37,7 +37,7 @@ public class LuhnTest {
     }
 
     @Test
-    public void checkSumAddsAddendsTogether2() {
+    void checkSumAddsAddendsTogether2() {
         Luhn luhn = new Luhn(201773);
         int expectedOutput = 21;
 
@@ -45,7 +45,7 @@ public class LuhnTest {
     }
 
     @Test
-    public void numberIsValidWhenChecksumMod10IsZero1() {
+    void numberIsValidWhenChecksumMod10IsZero1() {
         Luhn luhn = new Luhn(738);
         boolean expectedOutput = false;
 
@@ -53,7 +53,7 @@ public class LuhnTest {
     }
 
     @Test
-    public void numberIsValidWhenChecksumMod10IsZero2() {
+    void numberIsValidWhenChecksumMod10IsZero2() {
         Luhn luhn = new Luhn(8739567);
         boolean expectedOutput = true;
 
@@ -61,21 +61,21 @@ public class LuhnTest {
     }
 
     @Test
-    public void luhnCanCreateSimpleNumbersWithValidCheckDigit() {
+    void luhnCanCreateSimpleNumbersWithValidCheckDigit() {
         long expectedOutput = 1230;
 
         assertEquals(expectedOutput, Luhn.create(123));
     }
 
     @Test
-    public void luhnCanCreateLargeNumbersWithValidCheckDigit() {
+    void luhnCanCreateLargeNumbersWithValidCheckDigit() {
         long expectedOutput = 8739567;
 
         assertEquals(expectedOutput, Luhn.create(873956));
     }
 
     @Test
-    public void luhnCanCreateHugeNumbersWithValidCheckDigit() {
+    void luhnCanCreateHugeNumbersWithValidCheckDigit() {
         long expectedOutput = 8372637564L;
 
         assertEquals(expectedOutput, Luhn.create(837263756));

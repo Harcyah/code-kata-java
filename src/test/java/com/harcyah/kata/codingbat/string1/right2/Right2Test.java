@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Right2Test {
+class Right2Test {
 
     @Test
-    public void testRight2() {
+    void testRight2() {
         Right2 right2 = new Right2();
         assertEquals("loHel", right2.right2("Hello"));
         assertEquals("vaja", right2.right2("java"));

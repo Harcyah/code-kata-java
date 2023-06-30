@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CountClumpsTest {
+class CountClumpsTest {
 
     @Test
-    public void testCountClumps() {
+    void testCountClumps() {
         CountClumps countClumps = new CountClumps();
         assertThat(countClumps.countClumps(new int[]{1, 2, 2, 3, 4, 4})).isEqualTo(2);
         assertThat(countClumps.countClumps(new int[]{1, 1, 2, 1, 1})).isEqualTo(2);

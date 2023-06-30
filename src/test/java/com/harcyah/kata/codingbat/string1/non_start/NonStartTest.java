@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class NonStartTest {
+class NonStartTest {
 
     @Test
-    public void testNonStart() {
+    void testNonStart() {
         NonStart nonStart = new NonStart();
         assertEquals("ellohere", nonStart.nonStart("Hello", "There"));
         assertEquals("avaode", nonStart.nonStart("java", "code"));

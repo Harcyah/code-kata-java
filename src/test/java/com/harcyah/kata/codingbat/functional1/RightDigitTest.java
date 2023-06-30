@@ -6,10 +6,10 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class RightDigitTest {
+class RightDigitTest {
 
     @Test
-    public void testRightDigit() {
+    void testRightDigit() {
         RightDigit rightDigit = new RightDigit();
         assertThat(rightDigit.rightDigit(List.of(1, 22, 93)))
             .containsExactly(1, 2, 3);

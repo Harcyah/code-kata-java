@@ -8,7 +8,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RaindropsTest {
+class RaindropsTest {
 
     public static Collection<Object[]> getTestData() {
         return List.of(new Object[][]{
@@ -42,7 +42,7 @@ public class RaindropsTest {
 
     @ParameterizedTest
     @MethodSource("getTestData")
-    public void test(int input, String output) {
+    void test(int input, String output) {
         assertEquals(output, Raindrops.convert(input));
     }
 

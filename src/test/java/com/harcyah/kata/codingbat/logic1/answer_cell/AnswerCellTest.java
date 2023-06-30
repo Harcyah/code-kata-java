@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class AnswerCellTest {
+class AnswerCellTest {
 
     @Test
-    public void testAnswerCell() {
+    void testAnswerCell() {
         AnswerCell answerCell = new AnswerCell();
         assertTrue(answerCell.answerCell(false, false, false));
         assertFalse(answerCell.answerCell(false, false, true));

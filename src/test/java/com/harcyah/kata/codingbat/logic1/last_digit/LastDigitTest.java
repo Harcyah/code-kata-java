@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class LastDigitTest {
+class LastDigitTest {
 
     @Test
-    public void testLastDigit() {
+    void testLastDigit() {
         LastDigit lastDigit = new LastDigit();
         assertTrue(lastDigit.lastDigit(23, 19, 13));
         assertFalse(lastDigit.lastDigit(23, 19, 12));

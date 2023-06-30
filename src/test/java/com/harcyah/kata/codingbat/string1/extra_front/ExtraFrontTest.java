@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ExtraFrontTest {
+class ExtraFrontTest {
 
     @Test
-    public void testExtraFront() {
+    void testExtraFront() {
         ExtraFront extraFront = new ExtraFront();
         assertEquals("HeHeHe", extraFront.extraFront("Hello"));
         assertEquals("ababab", extraFront.extraFront("ab"));

@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MissingCharTest {
+class MissingCharTest {
 
     @Test
-    public void testMissingChar() {
+    void testMissingChar() {
         MissingChar missingChar = new MissingChar();
         assertEquals("ktten", missingChar.missingChar("kitten", 1));
         assertEquals("itten", missingChar.missingChar("kitten", 0));

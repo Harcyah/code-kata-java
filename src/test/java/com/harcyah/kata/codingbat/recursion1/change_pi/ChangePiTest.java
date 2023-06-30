@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ChangePiTest {
+class ChangePiTest {
 
     @Test
-    public void testChangePi() {
+    void testChangePi() {
         ChangePi changePi = new ChangePi();
         assertThat(changePi.changePi("xpix")).isEqualTo("x3.14x");
         assertThat(changePi.changePi("pipi")).isEqualTo("3.143.14");

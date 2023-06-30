@@ -7,10 +7,10 @@ import java.util.List;
 import static java.util.Collections.emptyList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RelationshipComputerTest {
+class RelationshipComputerTest {
 
     @Test
-    public void testThatTwoEmptyListsAreConsideredEqual() {
+    void testThatTwoEmptyListsAreConsideredEqual() {
         Relationship computedRelationship = new RelationshipComputer<>().computeRelationship(
             emptyList(),
             emptyList());
@@ -19,7 +19,7 @@ public class RelationshipComputerTest {
     }
 
     @Test
-    public void testEmptyListIsSublistOfNonEmptyList() {
+    void testEmptyListIsSublistOfNonEmptyList() {
         Relationship relationship = new RelationshipComputer<>().computeRelationship(
             emptyList(),
             List.of(1, 2, 3));
@@ -28,7 +28,7 @@ public class RelationshipComputerTest {
     }
 
     @Test
-    public void testNonEmptyListIsSuperlistOfEmptyList() {
+    void testNonEmptyListIsSuperlistOfEmptyList() {
         Relationship relationship = new RelationshipComputer<>().computeRelationship(
             List.of('1', '2', '3'),
             emptyList());
@@ -37,7 +37,7 @@ public class RelationshipComputerTest {
     }
 
     @Test
-    public void testListIsEqualToItself() {
+    void testListIsEqualToItself() {
         List<String> anyList = List.of("1", "2", "3");
 
         Relationship relationship = new RelationshipComputer<String>().computeRelationship(
@@ -48,7 +48,7 @@ public class RelationshipComputerTest {
     }
 
     @Test
-    public void testDifferentListsOfTheSameLengthAreUnequal() {
+    void testDifferentListsOfTheSameLengthAreUnequal() {
         Relationship relationship = new RelationshipComputer<>().computeRelationship(
             List.of(1, 2, 3),
             List.of(2, 3, 4));
@@ -57,7 +57,7 @@ public class RelationshipComputerTest {
     }
 
     @Test
-    public void testSublistCheckDoesNotAbortAfterFalseStart() {
+    void testSublistCheckDoesNotAbortAfterFalseStart() {
         Relationship relationship = new RelationshipComputer<>().computeRelationship(
             List.of('1', '2', '5'),
             List.of('0', '1', '2', '3', '1', '2', '5', '6'));
@@ -66,7 +66,7 @@ public class RelationshipComputerTest {
     }
 
     @Test
-    public void testSublistCheckHandlesExtraneousRepeatsOfFirstEntry() {
+    void testSublistCheckHandlesExtraneousRepeatsOfFirstEntry() {
         Relationship relationship = new RelationshipComputer<>().computeRelationship(
             List.of("1", "1", "2"),
             List.of("0", "1", "1", "1", "2", "1", "2"));
@@ -75,7 +75,7 @@ public class RelationshipComputerTest {
     }
 
     @Test
-    public void testSublistAtStart() {
+    void testSublistAtStart() {
         Relationship relationship = new RelationshipComputer<>().computeRelationship(
             List.of(0, 1, 2),
             List.of(0, 1, 2, 3, 4, 5));
@@ -84,7 +84,7 @@ public class RelationshipComputerTest {
     }
 
     @Test
-    public void testSublistInMiddle() {
+    void testSublistInMiddle() {
         Relationship relationship = new RelationshipComputer<>().computeRelationship(
             List.of('2', '3', '4'),
             List.of('0', '1', '2', '3', '4', '5'));
@@ -93,7 +93,7 @@ public class RelationshipComputerTest {
     }
 
     @Test
-    public void testSublistAtEnd() {
+    void testSublistAtEnd() {
         Relationship relationship = new RelationshipComputer<>().computeRelationship(
             List.of("3", "4", "5"),
             List.of("0", "1", "2", "3", "4", "5"));
@@ -102,7 +102,7 @@ public class RelationshipComputerTest {
     }
 
     @Test
-    public void testAtStartOfSuperlist() {
+    void testAtStartOfSuperlist() {
         Relationship relationship = new RelationshipComputer<>().computeRelationship(
             List.of(0, 1, 2, 3, 4, 5),
             List.of(0, 1, 2));
@@ -111,7 +111,7 @@ public class RelationshipComputerTest {
     }
 
     @Test
-    public void testInMiddleOfSuperlist() {
+    void testInMiddleOfSuperlist() {
         Relationship relationship = new RelationshipComputer<>().computeRelationship(
             List.of('0', '1', '2', '3', '4', '5'),
             List.of('2', '3'));
@@ -120,7 +120,7 @@ public class RelationshipComputerTest {
     }
 
     @Test
-    public void testAtEndOfSuperlist() {
+    void testAtEndOfSuperlist() {
         Relationship relationship = new RelationshipComputer<>().computeRelationship(
             List.of("0", "1", "2", "3", "4", "5"),
             List.of("3", "4", "5"));
@@ -129,7 +129,7 @@ public class RelationshipComputerTest {
     }
 
     @Test
-    public void testFirstListMissingElementFromSecondList() {
+    void testFirstListMissingElementFromSecondList() {
         Relationship relationship = new RelationshipComputer<>().computeRelationship(
             List.of(1, 3),
             List.of(1, 2, 3));
@@ -138,7 +138,7 @@ public class RelationshipComputerTest {
     }
 
     @Test
-    public void testSecondListMissingElementFromFirstList() {
+    void testSecondListMissingElementFromFirstList() {
         Relationship relationship = new RelationshipComputer<>().computeRelationship(
             List.of('1', '2', '3'),
             List.of('1', '3'));
@@ -147,7 +147,7 @@ public class RelationshipComputerTest {
     }
 
     @Test
-    public void testThatListOrderingIsAccountedFor() {
+    void testThatListOrderingIsAccountedFor() {
         Relationship relationship = new RelationshipComputer<>().computeRelationship(
             List.of("1", "2", "3"),
             List.of("3", "2", "1"));
@@ -156,7 +156,7 @@ public class RelationshipComputerTest {
     }
 
     @Test
-    public void testThatListsWithSameDigitsButDifferentNumbersAreUnequal() {
+    void testThatListsWithSameDigitsButDifferentNumbersAreUnequal() {
         Relationship relationship = new RelationshipComputer<>().computeRelationship(
             List.of(1, 0, 1),
             List.of(10, 1));

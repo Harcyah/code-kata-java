@@ -6,10 +6,10 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class MoreYTest {
+class MoreYTest {
 
     @Test
-    public void testMoreY() {
+    void testMoreY() {
         MoreY moreY = new MoreY();
         assertThat(moreY.moreY(List.of("a", "b", "c")))
             .containsExactly("yay", "yby", "ycy");

@@ -8,22 +8,22 @@ import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class SchoolTest {
+class SchoolTest {
     private final School school = new School();
 
     @Test
-    public void startsWithNoStudents() {
+    void startsWithNoStudents() {
         assertThat(school.db()).isEmpty();
     }
 
     @Test
-    public void addsStudents() {
+    void addsStudents() {
         school.add("Aimee", 2);
         assertThat(school.db().get(2)).contains("Aimee");
     }
 
     @Test
-    public void addsMoreStudentsInSameGrade() {
+    void addsMoreStudentsInSameGrade() {
         final int grade = 2;
         school.add("James", grade);
         school.add("Blair", grade);
@@ -33,7 +33,7 @@ public class SchoolTest {
     }
 
     @Test
-    public void addsStudentsInMultipleGrades() {
+    void addsStudentsInMultipleGrades() {
         school.add("Chelsea", 3);
         school.add("Logan", 7);
 
@@ -43,7 +43,7 @@ public class SchoolTest {
     }
 
     @Test
-    public void getsStudentsInAGrade() {
+    void getsStudentsInAGrade() {
         school.add("Franklin", 5);
         school.add("Bradley", 5);
         school.add("Jeff", 1);
@@ -51,12 +51,12 @@ public class SchoolTest {
     }
 
     @Test
-    public void getsStudentsInEmptyGrade() {
+    void getsStudentsInEmptyGrade() {
         assertThat(school.grade(1)).isEmpty();
     }
 
     @Test
-    public void sortsSchool() {
+    void sortsSchool() {
         school.add("Jennifer", 4);
         school.add("Kareem", 6);
         school.add("Christopher", 4);

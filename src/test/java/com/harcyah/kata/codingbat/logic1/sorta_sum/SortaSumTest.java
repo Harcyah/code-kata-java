@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class SortaSumTest {
+class SortaSumTest {
 
     @Test
-    public void testSortaSum() {
+    void testSortaSum() {
         SortaSum sortaSum = new SortaSum();
         assertThat(sortaSum.sortaSum(3, 4)).isEqualTo(7);
         assertThat(sortaSum.sortaSum(9, 4)).isEqualTo(20);

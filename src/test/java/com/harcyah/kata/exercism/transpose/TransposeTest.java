@@ -5,17 +5,17 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TransposeTest {
+class TransposeTest {
 
     private Transpose transpose;
 
     @BeforeEach
-    public void setup() {
+    void setup() {
         transpose = new Transpose();
     }
 
     @Test
-    public void emptyString() {
+    void emptyString() {
         String input = "";
 
         String expected = "";
@@ -24,7 +24,7 @@ public class TransposeTest {
     }
 
     @Test
-    public void twoCharsInARow() {
+    void twoCharsInARow() {
         String input = "A1";
 
         String expected = "A" +
@@ -34,7 +34,7 @@ public class TransposeTest {
     }
 
     @Test
-    public void twoCharsInAColumn() {
+    void twoCharsInAColumn() {
         String input = "A\n" +
             "1";
 
@@ -44,7 +44,7 @@ public class TransposeTest {
     }
 
     @Test
-    public void simpleMatrix() {
+    void simpleMatrix() {
         String input = "ABC\n" +
             "123";
 
@@ -56,7 +56,7 @@ public class TransposeTest {
     }
 
     @Test
-    public void singleLine() {
+    void singleLine() {
         String input = "Single line.";
 
         String expected = "S\n" +
@@ -76,7 +76,7 @@ public class TransposeTest {
     }
 
     @Test
-    public void firstLineLongerThanSecond() {
+    void firstLineLongerThanSecond() {
         String input = "The fourth line.\n" +
             "The fifth line.";
 
@@ -101,7 +101,7 @@ public class TransposeTest {
     }
 
     @Test
-    public void secondLineLongerThanFirst() {
+    void secondLineLongerThanFirst() {
         String input = "The first line.\n" +
             "The second line.";
 
@@ -126,7 +126,7 @@ public class TransposeTest {
     }
 
     @Test
-    public void square() {
+    void square() {
         String input = "HEART\n" +
             "EMBER\n" +
             "ABUSE\n" +
@@ -143,7 +143,7 @@ public class TransposeTest {
     }
 
     @Test
-    public void rectangle() {
+    void rectangle() {
         String input = "FRACTURE\n" +
             "OUTLINED\n" +
             "BLOOMING\n" +
@@ -162,7 +162,7 @@ public class TransposeTest {
     }
 
     @Test
-    public void triangle() {
+    void triangle() {
         String input = "T\n" +
             "EE\n" +
             "AAA\n" +
@@ -181,7 +181,7 @@ public class TransposeTest {
     }
 
     @Test
-    public void manyLines() {
+    void manyLines() {
         String input = "Chor. Two households, both alike in dignity,\n" +
             "In fair Verona, where we lay our scene,\n" +
             "From ancient grudge break to new mutiny,\n" +

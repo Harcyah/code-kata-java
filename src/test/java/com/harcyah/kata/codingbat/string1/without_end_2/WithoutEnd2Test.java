@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class WithoutEnd2Test {
+class WithoutEnd2Test {
 
     @Test
-    public void testWithoutEnd2() {
+    void testWithoutEnd2() {
         WithoutEnd2 withoutEnd2 = new WithoutEnd2();
         assertEquals("ell", withoutEnd2.withouEnd2("Hello"));
         assertEquals("b", withoutEnd2.withouEnd2("abc"));

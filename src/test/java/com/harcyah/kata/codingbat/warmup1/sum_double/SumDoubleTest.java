@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SumDoubleTest {
+class SumDoubleTest {
 
     @Test
-    public void testSumDouble() {
+    void testSumDouble() {
         SumDouble sumDouble = new SumDouble();
         assertEquals(3, sumDouble.sumDouble(1, 2));
         assertEquals(5, sumDouble.sumDouble(3, 2));

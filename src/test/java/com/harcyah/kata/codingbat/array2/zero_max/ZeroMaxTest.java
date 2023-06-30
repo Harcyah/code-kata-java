@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ZeroMaxTest {
+class ZeroMaxTest {
 
     @Test
-    public void testZeroMax() {
+    void testZeroMax() {
         ZeroMax zeroMax = new ZeroMax();
         assertThat(zeroMax.zeroMax(new int[]{0, 5, 0, 3}))
             .isEqualTo(new int[]{5, 5, 3, 3});

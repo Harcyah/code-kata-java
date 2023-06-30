@@ -8,11 +8,11 @@ import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class EtlTest {
+class EtlTest {
     private final Etl etl = new Etl();
 
     @Test
-    public void testTransformOneValue() {
+    void testTransformOneValue() {
         Map<Integer, List<String>> old = ImmutableMap.of(1, List.of("A"));
         Map<String, Integer> expected = ImmutableMap.of("a", 1);
 
@@ -20,7 +20,7 @@ public class EtlTest {
     }
 
     @Test
-    public void testTransformMoreValues() {
+    void testTransformMoreValues() {
         Map<Integer, List<String>> old = ImmutableMap.of(
             1, List.of("A", "E", "I", "O", "U")
         );
@@ -36,7 +36,7 @@ public class EtlTest {
     }
 
     @Test
-    public void testMoreKeys() {
+    void testMoreKeys() {
         Map<Integer, List<String>> old = ImmutableMap.of(
             1, List.of("A", "E"),
             2, List.of("D", "G")
@@ -52,7 +52,7 @@ public class EtlTest {
     }
 
     @Test
-    public void testFullDataset() {
+    void testFullDataset() {
         Map<Integer, List<String>> old = ImmutableMap.<Integer, List<String>> builder()
             .put(1, List.of("A", "E", "I", "O", "U", "L", "N", "R", "S", "T"))
             .put(2, List.of("D", "G"))

@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Old35Test {
+class Old35Test {
 
     @Test
-    public void testOld35() {
+    void testOld35() {
         Old35 old35 = new Old35();
         assertThat(old35.old35(3)).isTrue();
         assertThat(old35.old35(10)).isTrue();

@@ -7,7 +7,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-public class PokerHandTest {
+class PokerHandTest {
 
     private static final String ONE_PAIR_1 = "3D 3S 5D 7D 9D";
     private static final String ONE_PAIR_2 = "3D 5D 7D 9D 3S";
@@ -38,19 +38,19 @@ public class PokerHandTest {
     private static final String HIGH_CARD = "7H 9H TS JS 3H";
 
     @Test
-    public void testConstructorThrowsExceptionIfStringArgumentHasIncorrectSize() {
+    void testConstructorThrowsExceptionIfStringArgumentHasIncorrectSize() {
         assertThatThrownBy(() -> new PokerHand("lorem ipsum dolor sit amet"))
             .isInstanceOf(IllegalArgumentException.class);
     }
 
     @Test
-    public void testConstructorThrowsExceptionIfSameCardAppearsTwice() {
+    void testConstructorThrowsExceptionIfSameCardAppearsTwice() {
         assertThatThrownBy(() -> new PokerHand("7H 9H TS JS JS"))
             .isInstanceOf(IllegalArgumentException.class);
     }
 
     @Test
-    public void testGetCardsAreExposedSortedByValueDesc() throws Exception {
+    void testGetCardsAreExposedSortedByValueDesc() throws Exception {
         PokerHand hand = new PokerHand("3D KS 5D 7D 9D");
         List<PokerCard> cards = hand.getCards();
         assertThat(cards).extractingResultOf("toString").containsExactly("KS", "9D", "7D", "5D", "3D");
@@ -58,13 +58,13 @@ public class PokerHandTest {
     }
 
     @Test
-    public void testGetRankFindsNothing() throws Exception {
+    void testGetRankFindsNothing() throws Exception {
         PokerHand hand = new PokerHand(HIGH_CARD);
         assertThat(hand.getRank()).isNull();
     }
 
     @Test
-    public void testGetRankFindsOnePair() throws Exception {
+    void testGetRankFindsOnePair() throws Exception {
         PokerHand hand0 = new PokerHand(ONE_PAIR_1);
         assertThat(hand0.getRank()).isEqualTo(Rank.ONE_PAIR);
 
@@ -73,7 +73,7 @@ public class PokerHandTest {
     }
 
     @Test
-    public void testGetRankFindsTwoPairs() throws Exception {
+    void testGetRankFindsTwoPairs() throws Exception {
         PokerHand hand0 = new PokerHand(TWO_PAIRS_1);
         assertThat(hand0.getRank()).isEqualTo(Rank.TWO_PAIRS);
 
@@ -82,7 +82,7 @@ public class PokerHandTest {
     }
 
     @Test
-    public void testGetRankFindsThreeOfKind() throws Exception {
+    void testGetRankFindsThreeOfKind() throws Exception {
         PokerHand hand0 = new PokerHand(THREE_OF_A_KIND_1);
         assertThat(hand0.getRank()).isEqualTo(Rank.THREE_OF_A_KIND);
 
@@ -91,7 +91,7 @@ public class PokerHandTest {
     }
 
     @Test
-    public void testGetRankFindsFullHouse() throws Exception {
+    void testGetRankFindsFullHouse() throws Exception {
         PokerHand hand0 = new PokerHand(FULL_HOUSE_1);
         assertThat(hand0.getRank()).isEqualTo(Rank.FULL_HOUSE);
 
@@ -100,7 +100,7 @@ public class PokerHandTest {
     }
 
     @Test
-    public void testGetRankFindsFourOfKind() throws Exception {
+    void testGetRankFindsFourOfKind() throws Exception {
         PokerHand hand0 = new PokerHand(FOUR_OF_A_KIND_1);
         assertThat(hand0.getRank()).isEqualTo(Rank.FOUR_OF_A_KIND);
 
@@ -109,7 +109,7 @@ public class PokerHandTest {
     }
 
     @Test
-    public void testGetRankFindsFlush() throws Exception {
+    void testGetRankFindsFlush() throws Exception {
         PokerHand hand0 = new PokerHand(FLUSH_1);
         assertThat(hand0.getRank()).isEqualTo(Rank.FLUSH);
 
@@ -118,7 +118,7 @@ public class PokerHandTest {
     }
 
     @Test
-    public void testGetRankFindsStraight() throws Exception {
+    void testGetRankFindsStraight() throws Exception {
         PokerHand hand0 = new PokerHand(STRAIGHT_1);
         assertThat(hand0.getRank()).isEqualTo(Rank.STRAIGHT);
 
@@ -127,7 +127,7 @@ public class PokerHandTest {
     }
 
     @Test
-    public void testGetRankFindsStraightFlush() throws Exception {
+    void testGetRankFindsStraightFlush() throws Exception {
         PokerHand hand0 = new PokerHand(STRAIGHT_FLUSH_1);
         assertThat(hand0.getRank()).isEqualTo(Rank.STRAIGHT_FLUSH);
 
@@ -136,13 +136,13 @@ public class PokerHandTest {
     }
 
     @Test
-    public void testGetRankFindsRoyalFlush() throws Exception {
+    void testGetRankFindsRoyalFlush() throws Exception {
         PokerHand hand0 = new PokerHand(ROYAL_FLUSH);
         assertThat(hand0.getRank()).isEqualTo(Rank.ROYAL_FLUSH);
     }
 
     @Test
-    public void testRoyalFlushBeatsStraightFlush() throws Exception {
+    void testRoyalFlushBeatsStraightFlush() throws Exception {
         PokerHand royalFlush = new PokerHand(ROYAL_FLUSH);
         PokerHand straightFlush = new PokerHand(STRAIGHT_FLUSH_1);
         assertThat(straightFlush).isLessThan(royalFlush);
@@ -150,7 +150,7 @@ public class PokerHandTest {
     }
 
     @Test
-    public void testStraightFlushBeatsFourOfAKind() throws Exception {
+    void testStraightFlushBeatsFourOfAKind() throws Exception {
         PokerHand straightFlush = new PokerHand(STRAIGHT_FLUSH_1);
         PokerHand fourOfAKind = new PokerHand(FOUR_OF_A_KIND_1);
         assertThat(fourOfAKind).isLessThan(straightFlush);
@@ -158,7 +158,7 @@ public class PokerHandTest {
     }
 
     @Test
-    public void testFourOfAKindBeatsFullHouse() throws Exception {
+    void testFourOfAKindBeatsFullHouse() throws Exception {
         PokerHand fourOfAKind = new PokerHand(FOUR_OF_A_KIND_1);
         PokerHand fullHouse = new PokerHand(FULL_HOUSE_1);
         assertThat(fullHouse).isLessThan(fourOfAKind);
@@ -166,7 +166,7 @@ public class PokerHandTest {
     }
 
     @Test
-    public void testFullHouseBeatsFlush() throws Exception {
+    void testFullHouseBeatsFlush() throws Exception {
         PokerHand fullHouse = new PokerHand(FULL_HOUSE_1);
         PokerHand flush = new PokerHand(FLUSH_1);
         assertThat(flush).isLessThan(fullHouse);
@@ -174,7 +174,7 @@ public class PokerHandTest {
     }
 
     @Test
-    public void testFlushBeatsStraight() throws Exception {
+    void testFlushBeatsStraight() throws Exception {
         PokerHand flush = new PokerHand(FLUSH_1);
         PokerHand straight = new PokerHand(STRAIGHT_1);
         assertThat(straight).isLessThan(flush);
@@ -182,7 +182,7 @@ public class PokerHandTest {
     }
 
     @Test
-    public void testStraightBeatsThreeOfAKind() throws Exception {
+    void testStraightBeatsThreeOfAKind() throws Exception {
         PokerHand straight = new PokerHand(STRAIGHT_1);
         PokerHand threeOfAKind = new PokerHand(THREE_OF_A_KIND_1);
         assertThat(threeOfAKind).isLessThan(straight);
@@ -190,7 +190,7 @@ public class PokerHandTest {
     }
 
     @Test
-    public void testThreeOfAKindBeatsTwoPairs() throws Exception {
+    void testThreeOfAKindBeatsTwoPairs() throws Exception {
         PokerHand threeOfAKind = new PokerHand(THREE_OF_A_KIND_1);
         PokerHand twoPairs = new PokerHand(TWO_PAIRS_1);
         assertThat(twoPairs).isLessThan(threeOfAKind);
@@ -198,7 +198,7 @@ public class PokerHandTest {
     }
 
     @Test
-    public void testTwoPairsBeatsOnePair() throws Exception {
+    void testTwoPairsBeatsOnePair() throws Exception {
         PokerHand twoPairs = new PokerHand(TWO_PAIRS_1);
         PokerHand onePair = new PokerHand(ONE_PAIR_1);
         assertThat(onePair).isLessThan(twoPairs);
@@ -206,7 +206,7 @@ public class PokerHandTest {
     }
 
     @Test
-    public void testOnePairBeatsHighCard() throws Exception {
+    void testOnePairBeatsHighCard() throws Exception {
         PokerHand onePair = new PokerHand(ONE_PAIR_1);
         PokerHand highCard = new PokerHand(HIGH_CARD);
         assertThat(highCard).isLessThan(onePair);

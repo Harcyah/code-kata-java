@@ -7,10 +7,10 @@ import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class MapBullyTest {
+class MapBullyTest {
 
     @Test
-    public void testMapBully() {
+    void testMapBully() {
         MapBully mapBully = new MapBully();
         assertThat(mapBully.mapBully(MapBuilder.build("b", "dirt", "a", "candy")))
             .isEqualTo(Map.of("b", "candy", "a", ""));

@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class AlarmClockTest {
+class AlarmClockTest {
 
     @Test
-    public void testAlarmClock() {
+    void testAlarmClock() {
         AlarmClock alarmClock = new AlarmClock();
         assertThat(alarmClock.alarmClock(1, false)).isEqualTo("7:00");
         assertThat(alarmClock.alarmClock(5, false)).isEqualTo("7:00");

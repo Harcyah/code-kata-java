@@ -5,16 +5,16 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class FoodChainTest {
+class FoodChainTest {
     private FoodChain foodChain;
 
     @BeforeEach
-    public void setup() {
+    void setup() {
         foodChain = new FoodChain();
     }
 
     @Test
-    public void fly() {
+    void fly() {
         int verse = 1;
         String expected = "I know an old lady who swallowed a fly.\n" +
                 "I don't know why she swallowed the fly. Perhaps she'll die.";
@@ -23,7 +23,7 @@ public class FoodChainTest {
     }
 
     @Test
-    public void spider() {
+    void spider() {
         int verse = 2;
         String expected = "I know an old lady who swallowed a spider.\n" +
                 "It wriggled and jiggled and tickled inside her.\n" +
@@ -34,7 +34,7 @@ public class FoodChainTest {
     }
 
     @Test
-    public void bird() {
+    void bird() {
         int verse = 3;
         String expected = "I know an old lady who swallowed a bird.\n" +
                 "How absurd to swallow a bird!\n" +
@@ -46,7 +46,7 @@ public class FoodChainTest {
     }
 
     @Test
-    public void cat() {
+    void cat() {
         int verse = 4;
         String expected = "I know an old lady who swallowed a cat.\n" +
                 "Imagine that, to swallow a cat!\n" +
@@ -59,7 +59,7 @@ public class FoodChainTest {
     }
 
     @Test
-    public void dog() {
+    void dog() {
         int verse = 5;
         String expected = "I know an old lady who swallowed a dog.\n" +
                 "What a hog, to swallow a dog!\n" +
@@ -73,7 +73,7 @@ public class FoodChainTest {
     }
 
     @Test
-    public void goat() {
+    void goat() {
         int verse = 6;
         String expected = "I know an old lady who swallowed a goat.\n" +
                 "Just opened her throat and swallowed a goat!\n" +
@@ -88,7 +88,7 @@ public class FoodChainTest {
     }
 
     @Test
-    public void cow() {
+    void cow() {
         int verse = 7;
         String expected = "I know an old lady who swallowed a cow.\n" +
                 "I don't know how she swallowed a cow!\n" +
@@ -104,7 +104,7 @@ public class FoodChainTest {
     }
 
     @Test
-    public void horse() {
+    void horse() {
         int verse = 8;
         String expected = "I know an old lady who swallowed a horse.\n" +
                 "She's dead, of course!";
@@ -113,7 +113,7 @@ public class FoodChainTest {
     }
 
     @Test
-    public void multipleVerses() {
+    void multipleVerses() {
         int startVerse = 1;
         int endVerse = 3;
         String expected = "I know an old lady who swallowed a fly.\n" +
@@ -134,7 +134,7 @@ public class FoodChainTest {
     }
 
     @Test
-    public void wholeSong() {
+    void wholeSong() {
         int startVerse = 1;
         int endVerse = 8;
         String expected = "I know an old lady who swallowed a fly.\n" +

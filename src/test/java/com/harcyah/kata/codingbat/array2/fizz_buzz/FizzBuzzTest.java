@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class FizzBuzzTest {
+class FizzBuzzTest {
 
     @Test
-    public void testFizzBuzz() {
+    void testFizzBuzz() {
         FizzBuzz fizzBuzz = new FizzBuzz();
         assertThat(fizzBuzz.fizzBuzz(1, 6))
             .isEqualTo(new String[]{"1", "2", "Fizz", "4", "Buzz"});

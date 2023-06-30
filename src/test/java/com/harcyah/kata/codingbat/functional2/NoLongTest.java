@@ -6,10 +6,10 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class NoLongTest {
+class NoLongTest {
 
     @Test
-    public void testNoLong() {
+    void testNoLong() {
         NoLong noLong = new NoLong();
         assertThat(noLong.noLong(List.of("this", "not", "too", "long")))
             .containsExactly("not", "too");

@@ -6,10 +6,10 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class KindergartenGardenTest {
+class KindergartenGardenTest {
 
     @Test
-    public void singleStudent() {
+    void singleStudent() {
         String student = "Alice";
         String plants = "RC\nGG";
         List<Plant> expected = List.of(Plant.RADISHES, Plant.CLOVER, Plant.GRASS, Plant.GRASS);
@@ -21,7 +21,7 @@ public class KindergartenGardenTest {
     }
 
     @Test
-    public void singleStudent2() {
+    void singleStudent2() {
         String student = "Alice";
         String plants = "VC\nRC";
         List<Plant> expected = List.of(Plant.VIOLETS, Plant.CLOVER, Plant.RADISHES, Plant.CLOVER);
@@ -33,7 +33,7 @@ public class KindergartenGardenTest {
     }
 
     @Test
-    public void twoStudents() {
+    void twoStudents() {
         String student = "Bob";
         String plants = "VVCG\nVVRC";
         List<Plant> expected = List.of(Plant.CLOVER, Plant.GRASS, Plant.RADISHES, Plant.CLOVER);
@@ -45,7 +45,7 @@ public class KindergartenGardenTest {
     }
 
     @Test
-    public void oneGardenSecondStudent() {
+    void oneGardenSecondStudent() {
         String student = "Bob";
         String plants = "VVCCGG\nVVCCGG";
         List<Plant> expected = List.of(Plant.CLOVER, Plant.CLOVER, Plant.CLOVER, Plant.CLOVER);
@@ -57,7 +57,7 @@ public class KindergartenGardenTest {
     }
 
     @Test
-    public void oneGardenThirdStudent() {
+    void oneGardenThirdStudent() {
         String student = "Charlie";
         String plants = "VVCCGG\nVVCCGG";
         List<Plant> expected = List.of(Plant.GRASS, Plant.GRASS, Plant.GRASS, Plant.GRASS);
@@ -69,7 +69,7 @@ public class KindergartenGardenTest {
     }
 
     @Test
-    public void fullGardenFirstStudent() {
+    void fullGardenFirstStudent() {
         String student = "Alice";
         String plants = "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV";
         List<Plant> expected = List.of(Plant.VIOLETS, Plant.RADISHES, Plant.VIOLETS, Plant.RADISHES);
@@ -81,7 +81,7 @@ public class KindergartenGardenTest {
     }
 
     @Test
-    public void fullGardenSecondStudent() {
+    void fullGardenSecondStudent() {
         String student = "Bob";
         String plants = "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV";
         List<Plant> expected = List.of(Plant.CLOVER, Plant.GRASS, Plant.CLOVER, Plant.CLOVER);
@@ -93,7 +93,7 @@ public class KindergartenGardenTest {
     }
 
     @Test
-    public void fullGardenSecondToLastStudent() {
+    void fullGardenSecondToLastStudent() {
         String student = "Kincaid";
         String plants = "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV";
         List<Plant> expected = List.of(Plant.GRASS, Plant.CLOVER, Plant.CLOVER, Plant.GRASS);
@@ -105,7 +105,7 @@ public class KindergartenGardenTest {
     }
 
     @Test
-    public void fullGardenLastStudent() {
+    void fullGardenLastStudent() {
         String student = "Larry";
         String plants = "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV";
         List<Plant> expected = List.of(Plant.GRASS, Plant.VIOLETS, Plant.CLOVER, Plant.VIOLETS);
@@ -117,7 +117,7 @@ public class KindergartenGardenTest {
     }
 
     @Test
-    public void customStudentGardenFirstStudentInAlphabeticalOrder() {
+    void customStudentGardenFirstStudentInAlphabeticalOrder() {
         String[] studentArray = {"Samantha", "Patricia", "Xander", "Roger"};
         String student = "Patricia";
         String plants = "VCRRGVRG\nRVGCCGCV";
@@ -130,7 +130,7 @@ public class KindergartenGardenTest {
     }
 
     @Test
-    public void customStudentGardenSecondStudentInAlphabeticalOrder() {
+    void customStudentGardenSecondStudentInAlphabeticalOrder() {
         String[] studentArray = {"Samantha", "Patricia", "Xander", "Roger"};
         String student = "Roger";
         String plants = "VCRRGVRG\nRVGCCGCV";
@@ -143,7 +143,7 @@ public class KindergartenGardenTest {
     }
 
     @Test
-    public void customStudentGardenThirdStudentInAlphabeticalOrder() {
+    void customStudentGardenThirdStudentInAlphabeticalOrder() {
         String[] studentArray = {"Samantha", "Patricia", "Xander", "Roger"};
         String student = "Samantha";
         String plants = "VCRRGVRG\nRVGCCGCV";
@@ -156,7 +156,7 @@ public class KindergartenGardenTest {
     }
 
     @Test
-    public void customStudentGardenFourthStudentInAlphabeticalOrder() {
+    void customStudentGardenFourthStudentInAlphabeticalOrder() {
         String[] studentArray = {"Samantha", "Patricia", "Xander", "Roger"};
         String student = "Xander";
         String plants = "VCRRGVRG\nRVGCCGCV";
