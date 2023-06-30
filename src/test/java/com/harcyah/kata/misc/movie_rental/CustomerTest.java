@@ -8,10 +8,10 @@ import static com.harcyah.kata.misc.movie_rental.Category.REGULAR;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 // Source: https://codingdojo.org/kata/movie-rental/
-public class CustomerTest {
+class CustomerTest {
 
     @Test
-    public void testTextRenderer() {
+    void testTextRenderer() {
         Customer customer = new Customer("Bob");
         customer.addRental(new Rental(new Movie("Jaws", REGULAR), 2));
         customer.addRental(new Rental(new Movie("Golden Eye", REGULAR), 3));
@@ -37,7 +37,7 @@ public class CustomerTest {
     }
 
     @Test
-    public void testHtmlRenderer() {
+    void testHtmlRenderer() {
         Customer customer = new Customer("martin");
         customer.addRental(new Rental(new Movie("Jaws", REGULAR), 2));
         customer.addRental(new Rental(new Movie("Short New", NEW_RELEASE), 1));

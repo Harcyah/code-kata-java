@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class NearTenTest {
+class NearTenTest {
 
     @Test
-    public void testNearTen() {
+    void testNearTen() {
         NearTen nearTen = new NearTen();
         assertThat(nearTen.nearTen(12))
             .isTrue();

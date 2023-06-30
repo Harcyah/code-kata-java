@@ -9,10 +9,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class SeriesTest {
+class SeriesTest {
 
     @Test
-    public void hasDigitsShort() {
+    void hasDigitsShort() {
         Series sut = new Series("01234");
         List<Integer> expected = List.of(0, 1, 2, 3, 4);
         List<Integer> actual = sut.getDigits();
@@ -22,7 +22,7 @@ public class SeriesTest {
     }
 
     @Test
-    public void hasDigitsLong() {
+    void hasDigitsLong() {
         Series sut = new Series("0123456789");
         List<Integer> expected = List.of(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
         List<Integer> actual = sut.getDigits();
@@ -32,7 +32,7 @@ public class SeriesTest {
     }
 
     @Test
-    public void keepsTheDigitOrderIfReversed() {
+    void keepsTheDigitOrderIfReversed() {
         Series sut = new Series("9876543210");
         List<Integer> expected = List.of(9, 8, 7, 6, 5, 4, 3, 2, 1, 0);
         List<Integer> actual = sut.getDigits();
@@ -42,7 +42,7 @@ public class SeriesTest {
     }
 
     @Test
-    public void keepsArbitraryDigitOrder() {
+    void keepsArbitraryDigitOrder() {
         Series sut = new Series("936923468");
         List<Integer> expected = List.of(9, 3, 6, 9, 2, 3, 4, 6, 8);
         List<Integer> actual = sut.getDigits();
@@ -52,7 +52,7 @@ public class SeriesTest {
     }
 
     @Test
-    public void canSliceByOne() {
+    void canSliceByOne() {
         Series sut = new Series("01234");
         List<List<Integer>> expected = List.of(
                 List.of(0),
@@ -67,7 +67,7 @@ public class SeriesTest {
     }
 
     @Test
-    public void canSliceByTwo() {
+    void canSliceByTwo() {
         Series sut = new Series("98273463");
         List<List<Integer>> expected = List.of(
                 List.of(9, 8),
@@ -84,7 +84,7 @@ public class SeriesTest {
     }
 
     @Test
-    public void canSliceByThree() {
+    void canSliceByThree() {
         Series sut = new Series("01234");
         List<List<Integer>> expected = List.of(
                 List.of(0, 1, 2),
@@ -97,7 +97,7 @@ public class SeriesTest {
     }
 
     @Test
-    public void canSliceByThreeWithDuplicateDigits() {
+    void canSliceByThreeWithDuplicateDigits() {
         Series sut = new Series("31001");
         List<List<Integer>> expected = List.of(
                 List.of(3, 1, 0),
@@ -110,7 +110,7 @@ public class SeriesTest {
     }
 
     @Test
-    public void canSliceByFour() {
+    void canSliceByFour() {
         Series sut = new Series("91274");
         List<List<Integer>> expected = List.of(
                 List.of(9, 1, 2, 7),
@@ -122,7 +122,7 @@ public class SeriesTest {
     }
 
     @Test
-    public void canSliceByFive() {
+    void canSliceByFive() {
         Series sut = new Series("81228");
         List<List<Integer>> expected = List.of(
                 List.of(8, 1, 2, 2, 8));
@@ -133,7 +133,7 @@ public class SeriesTest {
     }
 
     @Test
-    public void throwsAnErrorIfNotEnoughDigitsToSlice() {
+    void throwsAnErrorIfNotEnoughDigitsToSlice() {
         assertThatThrownBy(() -> new Series("01032987583").slices(12))
             .isInstanceOf(IllegalArgumentException.class);
     }

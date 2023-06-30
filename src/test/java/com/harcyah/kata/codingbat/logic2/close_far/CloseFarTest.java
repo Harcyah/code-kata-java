@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class CloseFarTest {
+class CloseFarTest {
 
     @Test
-    public void testCloseFar() {
+    void testCloseFar() {
         CloseFar closeFar = new CloseFar();
         assertTrue(closeFar.closeFar(1, 2, 10));
         assertFalse(closeFar.closeFar(1, 2, 3));

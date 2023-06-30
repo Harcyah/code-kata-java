@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CountAbcTest {
+class CountAbcTest {
 
     @Test
-    public void testCountAbc() {
+    void testCountAbc() {
         CountAbc countAbc = new CountAbc();
         assertThat(countAbc.countAbc("abc")).isEqualTo(1);
         assertThat(countAbc.countAbc("abcxxabc")).isEqualTo(2);

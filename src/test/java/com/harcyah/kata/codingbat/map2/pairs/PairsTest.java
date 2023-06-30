@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class PairsTest {
+class PairsTest {
 
     @Test
-    public void testPairs() {
+    void testPairs() {
         Pairs pairs = new Pairs();
         assertThat(pairs.pairs(new String[]{"code", "bug"})).isEqualTo(ImmutableMap.of("b", "g", "c", "e"));
         assertThat(pairs.pairs(new String[]{"man", "moon", "main"})).isEqualTo(ImmutableMap.of("m", "n"));

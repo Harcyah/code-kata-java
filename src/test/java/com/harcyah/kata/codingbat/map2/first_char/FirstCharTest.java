@@ -6,10 +6,10 @@ import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class FirstCharTest {
+class FirstCharTest {
 
     @Test
-    public void testFirstChar() {
+    void testFirstChar() {
         FirstChar firstChar = new FirstChar();
         assertThat(firstChar.firstChar(new String[] { "salt", "tea", "soda", "toast" }))
             .isEqualTo(Map.of("t", "teatoast", "s", "saltsoda"));

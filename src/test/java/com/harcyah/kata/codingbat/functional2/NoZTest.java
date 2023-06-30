@@ -6,10 +6,10 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class NoZTest {
+class NoZTest {
 
     @Test
-    public void testNoZ() {
+    void testNoZ() {
         NoZ noZ = new NoZ();
         assertThat(noZ.noZ(List.of("aaa", "bbb", "aza")))
             .containsExactly("aaa", "bbb");

@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class WordsCountTest {
+class WordsCountTest {
 
     @Test
-    public void testWordsCount() {
+    void testWordsCount() {
         WordsCount wordsCount = new WordsCount();
         assertEquals(2, wordsCount.wordsCount(new String[]{"a", "bb", "b", "ccc"}, 1));
         assertEquals(1, wordsCount.wordsCount(new String[]{"a", "bb", "b", "ccc"}, 3));

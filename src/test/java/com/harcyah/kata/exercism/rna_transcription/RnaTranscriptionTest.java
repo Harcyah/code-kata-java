@@ -4,35 +4,35 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RnaTranscriptionTest {
+class RnaTranscriptionTest {
 
     @Test
-    public void testRnaTranscriptionOfEmptyDnaIsEmptyRna() {
+    void testRnaTranscriptionOfEmptyDnaIsEmptyRna() {
         assertEquals("", RnaTranscription.ofDna(""));
     }
 
     @Test
-    public void testRnaTranscriptionOfCytosineIsGuanine() {
+    void testRnaTranscriptionOfCytosineIsGuanine() {
         assertEquals("G", RnaTranscription.ofDna("C"));
     }
 
     @Test
-    public void testRnaTranscriptionOfGuanineIsCytosine() {
+    void testRnaTranscriptionOfGuanineIsCytosine() {
         assertEquals("C", RnaTranscription.ofDna("G"));
     }
 
     @Test
-    public void testRnaTranscriptionOfThymineIsAdenine() {
+    void testRnaTranscriptionOfThymineIsAdenine() {
         assertEquals("A", RnaTranscription.ofDna("T"));
     }
 
     @Test
-    public void testRnaTranscriptionOfAdenineIsUracil() {
+    void testRnaTranscriptionOfAdenineIsUracil() {
         assertEquals("U", RnaTranscription.ofDna("A"));
     }
 
     @Test
-    public void testRnaTranscription() {
+    void testRnaTranscription() {
         assertEquals("UGCACCAGAAUU", RnaTranscription.ofDna("ACGTGGTCTTAA"));
     }
 

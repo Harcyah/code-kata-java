@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BeerSongTest {
+class BeerSongTest {
 
     @Test
-    public void singOneVerse() {
+    void singOneVerse() {
         assertEquals("8 bottles of beer on the wall, 8 bottles of beer.\nTake one down and pass it around, 7 bottles of beer on the wall.\n\n", BeerSong.verse(8));
         assertEquals("2 bottles of beer on the wall, 2 bottles of beer.\nTake one down and pass it around, 1 bottle of beer on the wall.\n\n", BeerSong.verse(2));
         assertEquals("1 bottle of beer on the wall, 1 bottle of beer.\nTake it down and pass it around, no more bottles of beer on the wall.\n\n", BeerSong.verse(1));
@@ -16,7 +16,7 @@ public class BeerSongTest {
     }
 
     @Test
-    public void singMoreThanOneVerse() {
+    void singMoreThanOneVerse() {
         assertEquals("8 bottles of beer on the wall, 8 bottles of beer.\nTake one down and pass it around, 7 bottles of beer on the wall.\n" +
             "\n7 bottles of beer on the wall, 7 bottles of beer.\nTake one down and pass it around, 6 bottles of beer on the wall.\n" +
             "\n6 bottles of beer on the wall, 6 bottles of beer.\nTake one down and pass it around, 5 bottles of beer on the wall.\n\n", BeerSong.sing(8, 6));
@@ -27,7 +27,7 @@ public class BeerSongTest {
     }
 
     @Test
-    public void singEntireSong() {
+    void singEntireSong() {
         assertEquals("99 bottles of beer on the wall, 99 bottles of beer.\nTake one down and pass it around, 98 bottles of beer on the wall.\n\n" +
                 "98 bottles of beer on the wall, 98 bottles of beer.\nTake one down and pass it around, 97 bottles of beer on the wall.\n\n" +
                 "97 bottles of beer on the wall, 97 bottles of beer.\nTake one down and pass it around, 96 bottles of beer on the wall.\n\n" +

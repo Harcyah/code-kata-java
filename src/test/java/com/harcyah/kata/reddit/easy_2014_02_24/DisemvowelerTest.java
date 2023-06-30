@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DisemvowelerTest {
+class DisemvowelerTest {
 
     @Test
-    public void testDisemvoweleStringOne() {
+    void testDisemvoweleStringOne() {
         Disemvoweler disemvoweler = new Disemvoweler();
         Pair<String, String> pair = disemvoweler.disemvowele("all those who believe in psychokinesis raise my hand");
         assertEquals("llthswhblvnpsychknssrsmyhnd", pair.getRight());
@@ -16,7 +16,7 @@ public class DisemvowelerTest {
     }
 
     @Test
-    public void testDisemvoweleStringTwo() {
+    void testDisemvoweleStringTwo() {
         Disemvoweler disemvoweler = new Disemvoweler();
         Pair<String, String> pair = disemvoweler.disemvowele("did you hear about the excellent farmer who was outstanding in his field");
         assertEquals("ddyhrbtthxcllntfrmrwhwststndngnhsfld", pair.getRight());

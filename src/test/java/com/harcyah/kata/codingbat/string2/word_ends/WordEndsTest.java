@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class WordEndsTest {
+class WordEndsTest {
 
     @Test
-    public void testWordEnds() {
+    void testWordEnds() {
         WordEnds wordEnds = new WordEnds();
         assertEquals("c13i", wordEnds.wordEnds("abcXY123XYijk", "XY"));
         assertEquals("13", wordEnds.wordEnds("XY123XY", "XY"));

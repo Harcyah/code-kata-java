@@ -12,7 +12,7 @@ class EmployeeReportBuilderTest {
     private final EmployeeReportBuilder builder = new EmployeeReportBuilder();
 
     @Test
-    public void testGetEmployees() {
+    void testGetEmployees() {
         List<Employee> employees = builder.getEmployees();
 
         assertThat(employees)

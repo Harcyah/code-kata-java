@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class NearHundredTest {
+class NearHundredTest {
 
     @Test
-    public void testNearHundred() {
+    void testNearHundred() {
         NearHundred nearHundred = new NearHundred();
         assertTrue(nearHundred.nearHundred(93));
         assertTrue(nearHundred.nearHundred(90));

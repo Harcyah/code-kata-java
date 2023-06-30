@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PhoneNumberTest {
+class PhoneNumberTest {
 
     @Test
-    public void cleansNumber() {
+    void cleansNumber() {
         final String expectedNumber = "1234567890";
         final String actualNumber = new PhoneNumber("(123) 456-7890").getNumber();
 
@@ -17,7 +17,7 @@ public class PhoneNumberTest {
     }
 
     @Test
-    public void cleansNumberWithDots() {
+    void cleansNumberWithDots() {
         final String expectedNumber = "1234567890";
         final String actualNumber = new PhoneNumber("123.456.7890").getNumber();
 
@@ -27,7 +27,7 @@ public class PhoneNumberTest {
     }
 
     @Test
-    public void validWhen11DigitsAndFirstIs1() {
+    void validWhen11DigitsAndFirstIs1() {
         final String expectedNumber = "1234567890";
         final String actualNumber = new PhoneNumber("11234567890").getNumber();
 
@@ -37,7 +37,7 @@ public class PhoneNumberTest {
     }
 
     @Test
-    public void invalidWhenOnly11Digits() {
+    void invalidWhenOnly11Digits() {
         final String expectedNumber = "0000000000";
         final String actualNumber = new PhoneNumber("21234567890").getNumber();
 
@@ -47,7 +47,7 @@ public class PhoneNumberTest {
     }
 
     @Test
-    public void invalidWhen9Digits() {
+    void invalidWhen9Digits() {
         final String expectedNumber = "0000000000";
         final String actualNumber = new PhoneNumber("123456789").getNumber();
 
@@ -57,7 +57,7 @@ public class PhoneNumberTest {
     }
 
     @Test
-    public void areaCode() {
+    void areaCode() {
         final String expectedAreaCode = "123";
         final String actualAreaCode = new PhoneNumber("1234567890").getAreaCode();
 
@@ -67,7 +67,7 @@ public class PhoneNumberTest {
     }
 
     @Test
-    public void prettyPrint() {
+    void prettyPrint() {
         final String expectedPrettyNumber = "(123) 456-7890";
         final String actualPrettyNumber = new PhoneNumber("1234567890").pretty();
 
@@ -77,7 +77,7 @@ public class PhoneNumberTest {
     }
 
     @Test
-    public void prettyPrintWithFullUSPhoneNumber() {
+    void prettyPrintWithFullUSPhoneNumber() {
         final String expectedPrettyNumber = "(123) 456-7890";
         final String actualPrettyNumber = new PhoneNumber("11234567890").pretty();
 

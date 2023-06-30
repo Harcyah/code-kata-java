@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class MakePiTest {
+class MakePiTest {
 
     @Test
-    public void testMakePi() {
+    void testMakePi() {
         MakePi makePi = new MakePi();
         assertThat(makePi.makePi()).isEqualTo(new int[]{3, 1, 4});
     }

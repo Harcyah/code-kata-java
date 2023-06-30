@@ -6,10 +6,10 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class WordsWithoutListTest {
+class WordsWithoutListTest {
 
     @Test
-    public void testWordsWithoutList() {
+    void testWordsWithoutList() {
         WordsWithoutList wordsWithoutList = new WordsWithoutList();
         assertEquals(List.of("bb", "ccc"), wordsWithoutList.wordsWithoutList(new String[]{"a", "bb", "b", "ccc"}, 1));
         assertEquals(List.of("a", "bb", "b"), wordsWithoutList.wordsWithoutList(new String[]{"a", "bb", "b", "ccc"}, 3));

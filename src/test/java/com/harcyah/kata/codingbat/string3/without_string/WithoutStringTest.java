@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class WithoutStringTest {
+class WithoutStringTest {
 
     @Test
-    public void testWithoutString() {
+    void testWithoutString() {
         WithoutString withoutString = new WithoutString();
         assertThat(withoutString.withoutString("Hello there", "llo")).isEqualTo("He there");
         assertThat(withoutString.withoutString("Hello there", "e")).isEqualTo("Hllo thr");

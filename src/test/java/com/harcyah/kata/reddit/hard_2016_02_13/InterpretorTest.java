@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class InterpretorTest {
+class InterpretorTest {
 
     @Test
-    public void testRedditInputOne() {
+    void testRedditInputOne() {
         // Given
         Terminal terminal = new Terminal();
         Interpretor interpretor = new Interpretor();
@@ -20,7 +20,7 @@ public class InterpretorTest {
     }
 
     @Test
-    public void testRedditInputTwo() {
+    void testRedditInputTwo() {
         // Given
         Terminal terminal = new Terminal();
         Interpretor interpretor = new Interpretor();

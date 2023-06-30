@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class StrCopiesTest {
+class StrCopiesTest {
 
     @Test
-    public void testStrCopies() {
+    void testStrCopies() {
         StrCopies strCopies = new StrCopies();
         assertThat(strCopies.strCopies("catcowcat", "cat", 2)).isTrue();
         assertThat(strCopies.strCopies("catcowcat", "cow", 2)).isFalse();

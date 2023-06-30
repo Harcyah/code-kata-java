@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Sum67Test {
+class Sum67Test {
 
     @Test
-    public void testSum67() {
+    void testSum67() {
         Sum67 sum67 = new Sum67();
         assertThat(sum67.sum67(new int[]{1, 2, 2})).isEqualTo(5);
         assertThat(sum67.sum67(new int[]{1, 2, 2, 6, 99, 99, 7})).isEqualTo(5);

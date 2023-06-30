@@ -11,17 +11,17 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @SuppressWarnings("unchecked")
-public class CustomSetTest {
+class CustomSetTest {
 
     @Test
-    public void setsWithNoElementsAreEmpty() {
+    void setsWithNoElementsAreEmpty() {
         final boolean actual = new CustomSet<>(Collections.EMPTY_LIST)
             .isEmpty();
         assertTrue(actual);
     }
 
     @Test
-    public void setsWithElementsAreNotEmpty() {
+    void setsWithElementsAreNotEmpty() {
         final boolean actual = new CustomSet<>(List.of(1))
             .isEmpty();
 
@@ -29,7 +29,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void nothingIsContainedInAnEmptySet() {
+    void nothingIsContainedInAnEmptySet() {
         final boolean actual = new CustomSet<>(Collections.EMPTY_LIST)
             .contains(1);
 
@@ -37,7 +37,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void whenTheElementIsInTheSet() {
+    void whenTheElementIsInTheSet() {
         final boolean actual = new CustomSet<>(List.of(1, 2, 3))
             .contains(1);
 
@@ -45,7 +45,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void whenTheElementIsNotInTheSet() {
+    void whenTheElementIsNotInTheSet() {
         final boolean actual = new CustomSet<>(List.of(1, 2, 3))
             .contains(4);
 
@@ -53,7 +53,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void emptySetIsASubsetOfAnotherEmptySet() {
+    void emptySetIsASubsetOfAnotherEmptySet() {
         final boolean actual = new CustomSet<>(Collections.EMPTY_LIST)
             .isSubset(
                 new CustomSet<>(Collections.EMPTY_LIST));
@@ -62,7 +62,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void emptySetIsASubsetOfNonEemptySet() {
+    void emptySetIsASubsetOfNonEemptySet() {
         final boolean actual = new CustomSet<>(List.of(1))
             .isSubset(
                 new CustomSet<>(Collections.EMPTY_LIST));
@@ -71,7 +71,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void nonEmptySetIsNotASubsetOfEmptySet() {
+    void nonEmptySetIsNotASubsetOfEmptySet() {
         final boolean actual = new CustomSet<>(Collections.EMPTY_LIST)
             .isSubset(
                 new CustomSet<>(List.of(1)));
@@ -80,7 +80,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void setIsASubsetOfSetWithExactSameElements() {
+    void setIsASubsetOfSetWithExactSameElements() {
         final boolean actual = new CustomSet<>(List.of(1, 2, 3))
             .isSubset(
                 new CustomSet<>(List.of(1, 2, 3)));
@@ -89,7 +89,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void setIsASubsetOfLargerSetWithSameElements() {
+    void setIsASubsetOfLargerSetWithSameElements() {
         final boolean actual = new CustomSet<>(List.of(4, 1, 2, 3))
             .isSubset(
                 new CustomSet<>(List.of(1, 2, 3)));
@@ -98,7 +98,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void setIsNotASubsetOfSetThatDoesNotContainItsElements() {
+    void setIsNotASubsetOfSetThatDoesNotContainItsElements() {
         final boolean actual = new CustomSet<>(List.of(4, 1, 3))
             .isSubset(
                 new CustomSet<>(List.of(1, 2, 3)));
@@ -107,7 +107,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void theEmptySetIsDisjointWithItself() {
+    void theEmptySetIsDisjointWithItself() {
         final boolean actual = new CustomSet<>(Collections.EMPTY_LIST)
             .isDisjoint(
                 new CustomSet<>(Collections.EMPTY_LIST));
@@ -116,7 +116,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void emptySetIsDisjointWithNonEmptySet() {
+    void emptySetIsDisjointWithNonEmptySet() {
         final boolean actual = new CustomSet<>(Collections.EMPTY_LIST)
             .isDisjoint(
                 new CustomSet<>(List.of(1)));
@@ -125,7 +125,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void nonEmptySetIsDisjointWithEmptySet() {
+    void nonEmptySetIsDisjointWithEmptySet() {
         final boolean actual = new CustomSet<>(List.of(1))
             .isDisjoint(
                 new CustomSet<>(Collections.EMPTY_LIST));
@@ -134,7 +134,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void setsAreNotDisjointIfTheyShareAnElement() {
+    void setsAreNotDisjointIfTheyShareAnElement() {
         final boolean actual = new CustomSet<>(List.of(1, 2))
             .isDisjoint(
                 new CustomSet<>(List.of(2, 3)));
@@ -143,7 +143,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void setsAreDisjointIfTheyShareNoElements() {
+    void setsAreDisjointIfTheyShareNoElements() {
         final boolean actual = new CustomSet<>(List.of(1, 2))
             .isDisjoint(
                 new CustomSet<>(List.of(3, 4)));
@@ -152,7 +152,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void emptySetsAreEqual() {
+    void emptySetsAreEqual() {
         final boolean actual = new CustomSet<>(Collections.EMPTY_LIST)
             .equals(
                 new CustomSet<>(Collections.EMPTY_LIST));
@@ -161,7 +161,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void emptySetIsNotEqualToNonEmptySet() {
+    void emptySetIsNotEqualToNonEmptySet() {
         final boolean actual = new CustomSet<>(Collections.EMPTY_LIST)
             .equals(
                 new CustomSet<>(List.of(1, 2, 3)));
@@ -170,7 +170,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void nonEmptySetIsNotEqualToEmptySet() {
+    void nonEmptySetIsNotEqualToEmptySet() {
         final boolean actual = new CustomSet<>(List.of(1, 2, 3))
             .equals(
                 new CustomSet<>(Collections.EMPTY_LIST));
@@ -179,7 +179,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void setsWithTheSameElementsAreEqual() {
+    void setsWithTheSameElementsAreEqual() {
         final boolean actual = new CustomSet<>(List.of(1, 2))
             .equals(
                 new CustomSet<>(List.of(2, 1)));
@@ -188,7 +188,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void setsWithDifferentElementsAreNotEqual() {
+    void setsWithDifferentElementsAreNotEqual() {
         final boolean actual = new CustomSet<>(List.of(1, 2, 3))
             .equals(
                 new CustomSet<>(List.of(1, 2, 4)));
@@ -197,7 +197,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void addToEmptySet() {
+    void addToEmptySet() {
         final int element = 3;
         final CustomSet<Integer> expected = new CustomSet<>(
             Collections.unmodifiableList(List.of(element)));
@@ -211,7 +211,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void addToNonEmptySet() {
+    void addToNonEmptySet() {
         final int element = 3;
         final CustomSet<Integer> expected = new CustomSet<>(
             Collections.unmodifiableList(List.of(1, 2, 3, 4)));
@@ -225,7 +225,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void addingAnExistingElementDoesNotChangeTheSet() {
+    void addingAnExistingElementDoesNotChangeTheSet() {
         final int element = 3;
         final CustomSet<Integer> expected = new CustomSet<>(
             Collections.unmodifiableList(List.of(1, 2, 3)));
@@ -238,7 +238,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void intersectionOfTwoEmptySetsIsAnEmptySet() {
+    void intersectionOfTwoEmptySetsIsAnEmptySet() {
         final CustomSet<Integer> actual = new CustomSet<>(Collections.EMPTY_LIST)
             .getIntersection(
                 new CustomSet<>(Collections.EMPTY_LIST));
@@ -248,7 +248,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void intersectionOfAnEmptySetAndNonEmptySetIsAnEmptySet() {
+    void intersectionOfAnEmptySetAndNonEmptySetIsAnEmptySet() {
         final CustomSet<Integer> actual = new CustomSet<>(Collections.EMPTY_LIST)
             .getIntersection(
                 new CustomSet<>(List.of(3, 2, 5)));
@@ -258,7 +258,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void intersectionOfANonEmptySetAndAnEmptySetIsAnEmptySet() {
+    void intersectionOfANonEmptySetAndAnEmptySetIsAnEmptySet() {
         final CustomSet<Integer> actual = new CustomSet<>(List.of(1, 2, 3, 4))
             .getIntersection(
                 new CustomSet<>(Collections.EMPTY_LIST));
@@ -269,7 +269,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void intersectionOfTwoSetsWithNoSharedElementsIsAnEmptySet() {
+    void intersectionOfTwoSetsWithNoSharedElementsIsAnEmptySet() {
         final CustomSet<Integer> actual = new CustomSet<>(List.of(1, 2, 3))
             .getIntersection(
                 new CustomSet<>(List.of(4, 5, 6)));
@@ -279,7 +279,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void intersectionOfTwoSetsWithSharedElementsIsASetOfTheSharedElements() {
+    void intersectionOfTwoSetsWithSharedElementsIsASetOfTheSharedElements() {
         final CustomSet<Integer> expected = new CustomSet<>(
             Collections.unmodifiableList(List.of(2, 3)));
         final CustomSet<Integer> actual = new CustomSet<>(List.of(1, 2, 3, 4))
@@ -292,7 +292,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void differenceOfTwoEmptySetsIsAnEmptySet() {
+    void differenceOfTwoEmptySetsIsAnEmptySet() {
         final CustomSet<Integer> actual = new CustomSet<>(Collections.EMPTY_LIST)
             .getDifference(
                 new CustomSet<>(Collections.EMPTY_LIST));
@@ -302,7 +302,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void differenceOfAnEmptySetAndNonEmptySetIsAnEmptySet() {
+    void differenceOfAnEmptySetAndNonEmptySetIsAnEmptySet() {
         final CustomSet<Integer> actual = new CustomSet<>(Collections.EMPTY_LIST)
             .getDifference(
                 new CustomSet<>(List.of(3, 2, 5)));
@@ -312,7 +312,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void differenceOfANonEmptySetAndAnEmptySetIsTheNonEmptySet() {
+    void differenceOfANonEmptySetAndAnEmptySetIsTheNonEmptySet() {
         final CustomSet<Integer> expected = new CustomSet<>(
             Collections.unmodifiableList(List.of(1, 2, 3, 4)));
         final CustomSet<Integer> actual = new CustomSet<>(List.of(1, 2, 3, 4))
@@ -325,7 +325,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void differenceOfTwoNonEmptySetsIsASetOfElementsThatAreOnlyInTheFirstSet() {
+    void differenceOfTwoNonEmptySetsIsASetOfElementsThatAreOnlyInTheFirstSet() {
         final CustomSet<Integer> expected = new CustomSet<>(
             Collections.unmodifiableList(List.of(1, 3)));
         final CustomSet<Integer> actual = new CustomSet<>(List.of(3, 2, 1))
@@ -338,7 +338,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void unionOfTwoEmptySetsIsAnEmptySet() {
+    void unionOfTwoEmptySetsIsAnEmptySet() {
         final CustomSet<Integer> actual = new CustomSet<>(Collections.EMPTY_LIST)
             .getUnion(
                 new CustomSet<>(Collections.EMPTY_LIST));
@@ -348,7 +348,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void unionOfAnEmptySetAndNonEmptySetIsTheNonEmptySet() {
+    void unionOfAnEmptySetAndNonEmptySetIsTheNonEmptySet() {
         final CustomSet<Integer> expected = new CustomSet<>(
             Collections.unmodifiableList(List.of(2)));
         final CustomSet<Integer> actual = new CustomSet<>(Collections.EMPTY_LIST)
@@ -361,7 +361,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void unionOfANonEmptySetAndAnEmptySetIsTheNonEmptySet() {
+    void unionOfANonEmptySetAndAnEmptySetIsTheNonEmptySet() {
         final CustomSet<Integer> expected = new CustomSet<>(
             Collections.unmodifiableList(List.of(1, 3)));
         final CustomSet<Integer> actual = new CustomSet<>(List.of(1, 3))
@@ -374,7 +374,7 @@ public class CustomSetTest {
     }
 
     @Test
-    public void unionOfTwoNonEmptySetsContainsAllUniqueElements() {
+    void unionOfTwoNonEmptySetsContainsAllUniqueElements() {
         final CustomSet<Integer> expected = new CustomSet<>(
             Collections.unmodifiableList(List.of(3, 2, 1)));
         final CustomSet<Integer> actual = new CustomSet<>(List.of(1, 3))

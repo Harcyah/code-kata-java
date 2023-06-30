@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ShareDigitTest {
+class ShareDigitTest {
 
     @Test
-    public void testShareDigit() {
+    void testShareDigit() {
         ShareDigit shareDigit = new ShareDigit();
         assertThat(shareDigit.shareDigit(12, 23)).isTrue();
         assertThat(shareDigit.shareDigit(12, 43)).isFalse();

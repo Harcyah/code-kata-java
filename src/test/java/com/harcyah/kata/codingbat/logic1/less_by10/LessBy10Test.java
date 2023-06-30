@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class LessBy10Test {
+class LessBy10Test {
 
     @Test
-    public void testLessBy10() {
+    void testLessBy10() {
         LessBy10 lessBy10 = new LessBy10();
         assertTrue(lessBy10.lessBy10(1, 7, 11));
         assertFalse(lessBy10.lessBy10(1, 7, 10));

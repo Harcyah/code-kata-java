@@ -5,16 +5,16 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class DequeTest {
+class DequeTest {
     private Deque<Integer> subject;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         subject = new Deque<>();
     }
 
     @Test
-    public void testPushPop() {
+    void testPushPop() {
         subject.push(10);
         subject.push(20);
         assertThat(subject.pop()).isEqualTo(20);
@@ -22,7 +22,7 @@ public class DequeTest {
     }
 
     @Test
-    public void testPushShift() {
+    void testPushShift() {
         subject.push(10);
         subject.push(20);
         assertThat(subject.shift()).isEqualTo(10);
@@ -30,7 +30,7 @@ public class DequeTest {
     }
 
     @Test
-    public void testUnshiftShift() {
+    void testUnshiftShift() {
         subject.unshift(10);
         subject.unshift(20);
         assertThat(subject.shift()).isEqualTo(20);
@@ -38,7 +38,7 @@ public class DequeTest {
     }
 
     @Test
-    public void testUnshiftPop() {
+    void testUnshiftPop() {
         subject.unshift(10);
         subject.unshift(20);
         assertThat(subject.pop()).isEqualTo(10);
@@ -46,7 +46,7 @@ public class DequeTest {
     }
 
     @Test
-    public void testExample() {
+    void testExample() {
         subject.push(10);
         subject.push(20);
         assertThat(subject.pop()).isEqualTo(20);

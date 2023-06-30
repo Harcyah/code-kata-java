@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class MaxTripleTest {
+class MaxTripleTest {
 
     @Test
-    public void testMaxTriple() {
+    void testMaxTriple() {
         MaxTriple maxTriple = new MaxTriple();
         assertThat(maxTriple.maxTriple(new int[]{1, 2, 3})).isEqualTo(3);
         assertThat(maxTriple.maxTriple(new int[]{1, 5, 3})).isEqualTo(5);

@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CountTripleTest {
+class CountTripleTest {
 
     @Test
-    public void testCountTriple() {
+    void testCountTriple() {
         CountTriple sut = new CountTriple();
         assertThat(sut.countTriple("abcXXXabc")).isEqualTo(1);
         assertThat(sut.countTriple("xxxabyyyycd")).isEqualTo(3);

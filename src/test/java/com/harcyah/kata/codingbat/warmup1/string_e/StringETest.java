@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class StringETest {
+class StringETest {
 
     @Test
-    public void testStringE() {
+    void testStringE() {
         StringE stringE = new StringE();
         assertTrue(stringE.stringE("Hello"));
         assertTrue(stringE.stringE("Heelle"));

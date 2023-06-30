@@ -6,10 +6,10 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class NoXTest {
+class NoXTest {
 
     @Test
-    public void testNoX() {
+    void testNoX() {
         NoX noX = new NoX();
         assertThat(noX.noX(List.of("ax", "bb", "cx")))
             .containsExactly("a", "bb", "c");

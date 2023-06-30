@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class WordAppendTest {
+class WordAppendTest {
 
     @Test
-    public void testWordAppend() {
+    void testWordAppend() {
         WordAppend wordAppend = new WordAppend();
         assertThat(wordAppend.wordAppend(new String[] { "a", "b", "a" })).isEqualTo("a");
         assertThat(wordAppend.wordAppend(new String[] { "a", "b", "a", "c", "a", "d", "a" })).isEqualTo("aa");

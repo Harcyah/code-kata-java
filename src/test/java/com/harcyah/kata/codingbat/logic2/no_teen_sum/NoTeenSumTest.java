@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class NoTeenSumTest {
+class NoTeenSumTest {
 
     @Test
-    public void testNoTeenSum() {
+    void testNoTeenSum() {
         NoTeenSum noTeenSum = new NoTeenSum();
         assertEquals(6, noTeenSum.noTeenSum(1, 2, 3));
         assertEquals(3, noTeenSum.noTeenSum(2, 13, 1));

@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class BunnyEars2Test {
+class BunnyEars2Test {
 
     @Test
-    public void testBunnyEars2() {
+    void testBunnyEars2() {
         BunnyEars2 bunnyEars2 = new BunnyEars2();
         assertThat(bunnyEars2.bunnyEars2(0)).isEqualTo(0);
         assertThat(bunnyEars2.bunnyEars2(1)).isEqualTo(2);

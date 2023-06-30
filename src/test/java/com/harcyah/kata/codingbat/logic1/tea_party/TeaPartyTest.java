@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TeaPartyTest {
+class TeaPartyTest {
 
     @Test
-    public void testTeaParty() {
+    void testTeaParty() {
         TeaParty teaParty = new TeaParty();
         assertThat(teaParty.teaParty(6, 8)).isEqualTo(1);
         assertThat(teaParty.teaParty(3, 8)).isEqualTo(0);

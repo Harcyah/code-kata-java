@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class NestParenTest {
+class NestParenTest {
 
     @Test
-    public void testNestParen() {
+    void testNestParen() {
         NestParen nestParen = new NestParen();
         assertThat(nestParen.nestParen("(())")).isTrue();
         assertThat(nestParen.nestParen("((()))")).isTrue();

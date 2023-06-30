@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class MaxEnd3Test {
+class MaxEnd3Test {
 
     @Test
-    public void testMaxEnd3() {
+    void testMaxEnd3() {
         MaxEnd3 maxEnd3 = new MaxEnd3();
         assertThat(maxEnd3.maxEnd3(new int[]{1, 2, 3}))
             .isEqualTo(new int[]{3, 3, 3});

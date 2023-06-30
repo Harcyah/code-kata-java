@@ -5,31 +5,31 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RectangleCounterTest {
+class RectangleCounterTest {
 
     private RectangleCounter rectangleCounter;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         rectangleCounter = new RectangleCounter();
     }
 
     @Test
-    public void testInputWithNoColumnsContainsNoRectangles() {
+    void testInputWithNoColumnsContainsNoRectangles() {
         String[] inputGrid = new String[]{};
 
         assertEquals(0, rectangleCounter.countRectangles(inputGrid));
     }
 
     @Test
-    public void testNonTrivialInputWithNoRectangles() {
+    void testNonTrivialInputWithNoRectangles() {
         String[] inputGrid = new String[]{" "};
 
         assertEquals(0, rectangleCounter.countRectangles(inputGrid));
     }
 
     @Test
-    public void testInputWithOneRectangle() {
+    void testInputWithOneRectangle() {
         String[] inputGrid = new String[]{
             "+-+",
             "| |",
@@ -40,7 +40,7 @@ public class RectangleCounterTest {
     }
 
     @Test
-    public void testInputWithTwoRectanglesWithoutSharedEdges() {
+    void testInputWithTwoRectanglesWithoutSharedEdges() {
         String[] inputGrid = new String[]{
             "  +-+",
             "  | |",
@@ -53,7 +53,7 @@ public class RectangleCounterTest {
     }
 
     @Test
-    public void testInputWithFiveRectanglesWithSharedEdges() {
+    void testInputWithFiveRectanglesWithSharedEdges() {
         String[] inputGrid = new String[]{
             "  +-+",
             "  | |",
@@ -66,7 +66,7 @@ public class RectangleCounterTest {
     }
 
     @Test
-    public void testThatRectangleOfHeightOneIsCounted() {
+    void testThatRectangleOfHeightOneIsCounted() {
         String[] inputGrid = new String[]{
             "+--+",
             "+--+"
@@ -76,7 +76,7 @@ public class RectangleCounterTest {
     }
 
     @Test
-    public void testThatRectangleOfWidthOneIsCounted() {
+    void testThatRectangleOfWidthOneIsCounted() {
         String[] inputGrid = new String[]{
             "++",
             "||",
@@ -87,7 +87,7 @@ public class RectangleCounterTest {
     }
 
     @Test
-    public void testThatOneByOneSquareIsCounted() {
+    void testThatOneByOneSquareIsCounted() {
         String[] inputGrid = new String[]{
             "++",
             "++"
@@ -97,7 +97,7 @@ public class RectangleCounterTest {
     }
 
     @Test
-    public void testThatIncompleteRectanglesAreNotCounted() {
+    void testThatIncompleteRectanglesAreNotCounted() {
         String[] inputGrid = new String[]{
             "  +-+",
             "    |",
@@ -110,7 +110,7 @@ public class RectangleCounterTest {
     }
 
     @Test
-    public void testThatRectanglesOfDifferentSizesAreAllCounted() {
+    void testThatRectanglesOfDifferentSizesAreAllCounted() {
         String[] inputGrid = new String[]{
             "+------+----+",
             "|      |    |",
@@ -123,7 +123,7 @@ public class RectangleCounterTest {
     }
 
     @Test
-    public void testThatIntersectionsWithoutCornerCharacterDoNotCountAsRectangleCorners() {
+    void testThatIntersectionsWithoutCornerCharacterDoNotCountAsRectangleCorners() {
         String[] inputGrid = new String[]{
             "+------+----+",
             "|      |    |",
@@ -136,7 +136,7 @@ public class RectangleCounterTest {
     }
 
     @Test
-    public void testLargeInputWithManyRectangles() {
+    void testLargeInputWithManyRectangles() {
         String[] inputGrid = new String[]{
             "+---+--+----+",
             "|   +--+----+",

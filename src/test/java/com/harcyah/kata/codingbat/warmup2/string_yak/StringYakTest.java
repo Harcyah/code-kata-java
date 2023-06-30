@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class StringYakTest {
+class StringYakTest {
 
     @Test
-    public void testStringYak() {
+    void testStringYak() {
         StringYak stringYak = new StringYak();
         assertEquals("pak", stringYak.stringYak("yakpak"));
         assertEquals("pak", stringYak.stringYak("pakyak"));

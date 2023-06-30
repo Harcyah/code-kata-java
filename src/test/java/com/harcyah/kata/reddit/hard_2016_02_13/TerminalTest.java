@@ -6,31 +6,31 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TerminalTest {
+class TerminalTest {
 
     protected Terminal terminal;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         terminal = new Terminal();
     }
 
     @Test
-    public void testConstructor() {
+    void testConstructor() {
         assertEquals(0, terminal.col);
         assertEquals(0, terminal.row);
         assertEquals(Modes.INSERT, terminal.mode);
     }
 
     @Test
-    public void testMoveTo() {
+    void testMoveTo() {
         terminal.moveTo(5, 8);
         assertEquals(5, terminal.col);
         assertEquals(8, terminal.row);
     }
 
     @Test
-    public void testMoveToBeginningOfLine() {
+    void testMoveToBeginningOfLine() {
         terminal.moveTo(5, 8);
         terminal.moveToBeginningOfLine();
         assertEquals(0, terminal.col);
@@ -38,7 +38,7 @@ public class TerminalTest {
     }
 
     @Test
-    public void testMoveOneColRight() {
+    void testMoveOneColRight() {
         terminal.moveTo(5, 8);
         terminal.moveOneColRight();
         assertEquals(6, terminal.col);
@@ -54,7 +54,7 @@ public class TerminalTest {
     }
 
     @Test
-    public void testMoveOneColLeft() {
+    void testMoveOneColLeft() {
         terminal.moveTo(5, 8);
         terminal.moveOneColLeft();
         assertEquals(4, terminal.col);
@@ -70,7 +70,7 @@ public class TerminalTest {
     }
 
     @Test
-    public void testMoveOneRowDown() {
+    void testMoveOneRowDown() {
         terminal.moveTo(8, 5);
         terminal.moveOneRowDown();
         assertEquals(8, terminal.col);
@@ -86,7 +86,7 @@ public class TerminalTest {
     }
 
     @Test
-    public void testMoveOneRowUp() {
+    void testMoveOneRowUp() {
         terminal.moveTo(8, 5);
         terminal.moveOneRowUp();
         assertEquals(8, terminal.col);
@@ -102,7 +102,7 @@ public class TerminalTest {
     }
 
     @Test
-    public void testEraseRight() {
+    void testEraseRight() {
         terminal.buffer[0] = new char[]{'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'};
         terminal.col = 5;
         terminal.eraseRight();
@@ -110,19 +110,19 @@ public class TerminalTest {
     }
 
     @Test
-    public void testSetModeInsert() {
+    void testSetModeInsert() {
         terminal.setModeInsert();
         assertEquals(Modes.INSERT, terminal.mode);
     }
 
     @Test
-    public void testSetModeOverwrite() {
+    void testSetModeOverwrite() {
         terminal.setModeOverwrite();
         assertEquals(Modes.OVERWRITE, terminal.mode);
     }
 
     @Test
-    public void testPutCharDependsOnCurrentMode() {
+    void testPutCharDependsOnCurrentMode() {
         RememberingMode mode = new RememberingMode();
         terminal.mode = mode;
         terminal.putChar('c');
@@ -132,7 +132,7 @@ public class TerminalTest {
     }
 
     @Test
-    public void testPutCharInsert() {
+    void testPutCharInsert() {
         terminal.mode = Modes.INSERT;
 
         // PutChar on empty line
@@ -154,7 +154,7 @@ public class TerminalTest {
     }
 
     @Test
-    public void testPutCharOverwrite() {
+    void testPutCharOverwrite() {
         terminal.mode = Modes.OVERWRITE;
 
         // PutChar on empty line
@@ -176,14 +176,14 @@ public class TerminalTest {
     }
 
     @Test
-    public void testPutCharAtCurrentPosition() {
+    void testPutCharAtCurrentPosition() {
         terminal.moveTo(1, 2);
         terminal.putCharAtCurrentPosition('z');
         assertEquals('z', terminal.buffer[2][1]);
     }
 
     @Test
-    public void testShiftRight() {
+    void testShiftRight() {
         terminal.fill('*');
         terminal.row = 0;
         terminal.col = 5;

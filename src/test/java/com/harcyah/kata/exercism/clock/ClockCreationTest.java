@@ -4,100 +4,100 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ClockCreationTest {
+class ClockCreationTest {
 
     @Test
-    public void canPrintTimeOnTheHour() {
+    void canPrintTimeOnTheHour() {
         assertEquals("08:00", new Clock(8, 0).toString());
     }
 
     @Test
-    public void canPrintTimeWithMinutes() {
+    void canPrintTimeWithMinutes() {
         assertEquals("11:09", new Clock(11, 9).toString());
     }
 
     @Test
-    public void midnightPrintsAsZero() {
+    void midnightPrintsAsZero() {
         assertEquals("00:00", new Clock(24, 0).toString());
     }
 
     @Test
-    public void hourRollsOver() {
+    void hourRollsOver() {
         assertEquals("01:00", new Clock(25, 0).toString());
     }
 
     @Test
-    public void hourRollsOverContinuously() {
+    void hourRollsOverContinuously() {
         assertEquals("04:00", new Clock(100, 0).toString());
     }
 
     @Test
-    public void sixtyMinutesIsNextHour() {
+    void sixtyMinutesIsNextHour() {
         assertEquals("02:00", new Clock(1, 60).toString());
     }
 
     @Test
-    public void minutesRollOver() {
+    void minutesRollOver() {
         assertEquals("02:40", new Clock(0, 160).toString());
     }
 
     @Test
-    public void minutesRollOverContinuously() {
+    void minutesRollOverContinuously() {
         assertEquals("04:43", new Clock(0, 1723).toString());
     }
 
     @Test
-    public void hourAndMinutesRollOver() {
+    void hourAndMinutesRollOver() {
         assertEquals("03:40", new Clock(25, 160).toString());
     }
 
     @Test
-    public void hourAndMinutesRollOverContinuously() {
+    void hourAndMinutesRollOverContinuously() {
         assertEquals("11:01", new Clock(201, 3001).toString());
     }
 
     @Test
-    public void hourAndMinutesRollOverToExactlyMidnight() {
+    void hourAndMinutesRollOverToExactlyMidnight() {
         assertEquals("00:00", new Clock(72, 8640).toString());
     }
 
     @Test
-    public void negativeHour() {
+    void negativeHour() {
         assertEquals("23:15", new Clock(-1, 15).toString());
     }
 
     @Test
-    public void negativeHourRollsOver() {
+    void negativeHourRollsOver() {
         assertEquals("23:00", new Clock(-25, 0).toString());
     }
 
     @Test
-    public void negativeHourRollsOverContinuously() {
+    void negativeHourRollsOverContinuously() {
         assertEquals("05:00", new Clock(-91, 0).toString());
     }
 
     @Test
-    public void negativeMinutes() {
+    void negativeMinutes() {
         assertEquals("00:20", new Clock(1, -40).toString());
     }
 
     @Test
-    public void negativeMinutesRollOver() {
+    void negativeMinutesRollOver() {
         assertEquals("22:20", new Clock(1, -160).toString());
     }
 
     @Test
-    public void negativeMinutesRollOverContinuously() {
+    void negativeMinutesRollOverContinuously() {
         assertEquals("16:40", new Clock(1, -4820).toString());
     }
 
     @Test
-    public void negativeHourAndMinutesBothRollOver() {
+    void negativeHourAndMinutesBothRollOver() {
         assertEquals("20:20", new Clock(-25, -160).toString());
     }
 
     @Test
-    public void negativeHourAndMinutesBothRollOverContinuously() {
+    void negativeHourAndMinutesBothRollOverContinuously() {
         assertEquals("22:10", new Clock(-121, -5810).toString());
     }
 

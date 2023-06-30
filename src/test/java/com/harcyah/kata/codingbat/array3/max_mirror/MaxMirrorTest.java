@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class MaxMirrorTest {
+class MaxMirrorTest {
 
     @Test
-    public void testMaxMirror() {
+    void testMaxMirror() {
         MaxMirror maxMirror = new MaxMirror();
         assertThat(maxMirror.maxMirror(new int[]{1, 2, 3, 8, 9, 3, 2, 1})).isEqualTo(3);
         assertThat(maxMirror.maxMirror(new int[]{1, 2, 1, 4})).isEqualTo(3);

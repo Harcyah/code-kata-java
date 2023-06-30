@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CountEvensTest {
+class CountEvensTest {
 
     @Test
-    public void testCountEvens() {
+    void testCountEvens() {
         CountEvens countEvens = new CountEvens();
         assertThat(countEvens.countEvens(new int[]{2, 1, 2, 3, 4}))
             .isEqualTo(3);

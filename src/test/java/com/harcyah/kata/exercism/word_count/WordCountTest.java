@@ -7,12 +7,12 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class WordCountTest {
+class WordCountTest {
 
     private final WordCount wordCount = new WordCount();
 
     @Test
-    public void countOneWord() {
+    void countOneWord() {
         final Map<String, Integer> expectedWordCount = new HashMap<>();
         expectedWordCount.put("word", 1);
 
@@ -21,7 +21,7 @@ public class WordCountTest {
     }
 
     @Test
-    public void countOneOfEach() {
+    void countOneOfEach() {
         final Map<String, Integer> expectedWordCount = new HashMap<>();
         expectedWordCount.put("one", 1);
         expectedWordCount.put("of", 1);
@@ -32,7 +32,7 @@ public class WordCountTest {
     }
 
     @Test
-    public void countMultipleOccurences() {
+    void countMultipleOccurences() {
         final Map<String, Integer> expectedWordCount = new HashMap<>();
         expectedWordCount.put("one", 1);
         expectedWordCount.put("fish", 4);
@@ -45,7 +45,7 @@ public class WordCountTest {
     }
 
     @Test
-    public void ignorePunctuation() {
+    void ignorePunctuation() {
         final Map<String, Integer> expectedWordCount = new HashMap<>();
         expectedWordCount.put("car", 1);
         expectedWordCount.put("carpet", 1);
@@ -59,7 +59,7 @@ public class WordCountTest {
     }
 
     @Test
-    public void includeNumbers() {
+    void includeNumbers() {
         final Map<String, Integer> expectedWordCount = new HashMap<>();
         expectedWordCount.put("testing", 2);
         expectedWordCount.put("1", 1);
@@ -70,7 +70,7 @@ public class WordCountTest {
     }
 
     @Test
-    public void normalizeCase() {
+    void normalizeCase() {
         final Map<String, Integer> expectedWordCount = new HashMap<>();
         expectedWordCount.put("go", 3);
 

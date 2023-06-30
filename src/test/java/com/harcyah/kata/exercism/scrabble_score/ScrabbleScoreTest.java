@@ -8,7 +8,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ScrabbleScoreTest {
+class ScrabbleScoreTest {
 
     public static Collection<Object[]> getTestData() {
         return List.of(new Object[][]{
@@ -26,7 +26,7 @@ public class ScrabbleScoreTest {
 
     @ParameterizedTest
     @MethodSource("getTestData")
-    public void test(String input, int score) {
+    void test(String input, int score) {
         Scrabble scrabble = new Scrabble(input);
 
         assertEquals(score, scrabble.getScore());

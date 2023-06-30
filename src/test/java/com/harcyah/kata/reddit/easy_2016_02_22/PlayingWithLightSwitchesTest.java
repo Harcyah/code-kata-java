@@ -7,12 +7,12 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PlayingWithLightSwitchesTest {
+class PlayingWithLightSwitchesTest {
 
     protected PlayingWithLightSwitches switches = new PlayingWithLightSwitches();
 
     @Test
-    public void testBasicExample() {
+    void testBasicExample() {
         assertEquals(7, switches.apply(10, List.of(new Range[]{
             new Range(3, 6),
             new Range(0, 4),
@@ -21,7 +21,7 @@ public class PlayingWithLightSwitchesTest {
     }
 
     @Test
-    public void testChallengeExample() {
+    void testChallengeExample() {
         assertEquals(423, switches.apply(1000, List.of(
             new Range(616, 293),
             new Range(344, 942),
@@ -51,7 +51,7 @@ public class PlayingWithLightSwitchesTest {
     }
 
     @Test
-    public void testFattyBoomBoomExample() throws IOException {
+    void testFattyBoomBoomExample() throws IOException {
         assertEquals(2500245, switches.applyFrom("/com/harcyah/kata/reddit/easy_2016_02_22/lots_of_switches.txt"));
     }
 

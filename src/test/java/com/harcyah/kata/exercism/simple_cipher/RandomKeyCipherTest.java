@@ -6,27 +6,27 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class RandomKeyCipherTest {
+class RandomKeyCipherTest {
 
     private Cipher cipher;
 
     @BeforeEach
-    public void setup() {
+    void setup() {
         this.cipher = new Cipher();
     }
 
     @Test
-    public void cipherKeyIsMadeOfLetters() {
+    void cipherKeyIsMadeOfLetters() {
         assertTrue(cipher.getKey().matches("[a-z]+"));
     }
 
     @Test
-    public void defaultCipherKeyIs100Characters() {
+    void defaultCipherKeyIs100Characters() {
         assertEquals(100, cipher.getKey().length());
     }
 
     @Test
-    public void cipherKeysAreRandomlyGenerated() {
+    void cipherKeysAreRandomlyGenerated() {
         assertTrue(!(new Cipher().getKey().equals(cipher.getKey())));
     }
 
@@ -35,21 +35,21 @@ public class RandomKeyCipherTest {
      * with shift ciphers, some characters will always output the key verbatim.
      */
     @Test
-    public void cipherCanEncode() {
+    void cipherCanEncode() {
         String expectedOutput = cipher.getKey().substring(0, 10);
 
         assertEquals(expectedOutput, cipher.encode("aaaaaaaaaa"));
     }
 
     @Test
-    public void cipherCanDecode() {
+    void cipherCanDecode() {
         String expectedOutput = "aaaaaaaaaa";
 
         assertEquals(expectedOutput, cipher.decode(cipher.getKey().substring(0, 10)));
     }
 
     @Test
-    public void cipherIsReversible() {
+    void cipherIsReversible() {
         String plainText = "abcdefghij";
 
         assertEquals(plainText, cipher.decode(cipher.encode(plainText)));

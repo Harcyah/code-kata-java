@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class SameFirstLastTest {
+class SameFirstLastTest {
 
     @Test
-    public void testSameFirstLast() {
+    void testSameFirstLast() {
         SameFirstLast sameFirstLast = new SameFirstLast();
         assertThat(sameFirstLast.sameFirstLast(new int[]{1, 2, 3})).isFalse();
         assertThat(sameFirstLast.sameFirstLast(new int[]{1, 2, 3, 1})).isTrue();

@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RepeatSeparatorTest {
+class RepeatSeparatorTest {
 
     @Test
-    public void testRepeatSeparator() {
+    void testRepeatSeparator() {
         RepeatSeparator repeatSeparator = new RepeatSeparator();
         assertEquals("WordXWordXWord", repeatSeparator.repeatSeparator("Word", "X", 3));
         assertEquals("ThisAndThis", repeatSeparator.repeatSeparator("This", "And", 2));

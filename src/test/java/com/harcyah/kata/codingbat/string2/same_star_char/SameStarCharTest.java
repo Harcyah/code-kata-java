@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class SameStarCharTest {
+class SameStarCharTest {
 
     @Test
-    public void testSameStarChar() {
+    void testSameStarChar() {
         SameStarChar sameStarChar = new SameStarChar();
         assertTrue(sameStarChar.sameStarChar("xy*yzz"));
         assertFalse(sameStarChar.sameStarChar("xy*zzz"));

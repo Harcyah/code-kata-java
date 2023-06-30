@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LuckySumTest {
+class LuckySumTest {
 
     @Test
-    public void testLuckySum() {
+    void testLuckySum() {
         LuckySum luckySum = new LuckySum();
         assertEquals(6, luckySum.luckySum(1, 2, 3));
         assertEquals(3, luckySum.luckySum(1, 2, 13));

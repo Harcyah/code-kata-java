@@ -7,10 +7,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class FilterTest {
+class FilterTest {
 
     @Test
-    public void testFilter3() {
+    void testFilter3() {
         assertEquals("Fizz", Filters.MULT_3.getLabel());
         assertTrue(Filters.MULT_3.matches(3));
         assertTrue(Filters.MULT_3.matches(15));
@@ -21,7 +21,7 @@ public class FilterTest {
     }
 
     @Test
-    public void testFilter5() {
+    void testFilter5() {
         assertEquals("Buzz", Filters.MULT_5.getLabel());
         assertTrue(Filters.MULT_5.matches(5));
         assertTrue(Filters.MULT_5.matches(15));
@@ -32,7 +32,7 @@ public class FilterTest {
     }
 
     @Test
-    public void testFilter35() {
+    void testFilter35() {
         assertTrue(Filters.MULT_3_5.matches(15));
         assertTrue(Filters.MULT_3_5.matches(30));
         assertTrue(Filters.MULT_3_5.matches(45));

@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class CopyEvensTest {
+class CopyEvensTest {
 
     @Test
-    public void testCopyEvens() {
+    void testCopyEvens() {
         CopyEvens copyEvens = new CopyEvens();
         assertArrayEquals(new int[]{2, 4}, copyEvens.copyEvens(new int[]{3, 2, 4, 5, 8}, 2));
         assertArrayEquals(new int[]{2, 4, 8}, copyEvens.copyEvens(new int[]{3, 2, 4, 5, 8}, 3));

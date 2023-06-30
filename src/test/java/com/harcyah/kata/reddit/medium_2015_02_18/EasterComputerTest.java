@@ -6,10 +6,10 @@ import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class EasterComputerTest {
+class EasterComputerTest {
 
     @Test
-    public void testCompute() {
+    void testCompute() {
         EasterComputer ec = new EasterComputer();
         assertEquals(LocalDate.of(2006, 4, 16), ec.compute(2006));
         assertEquals(LocalDate.of(2014, 4, 20), ec.compute(2014));

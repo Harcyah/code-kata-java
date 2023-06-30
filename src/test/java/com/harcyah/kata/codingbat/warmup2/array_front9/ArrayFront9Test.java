@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class ArrayFront9Test {
+class ArrayFront9Test {
 
     @Test
-    public void testArrayFront9() {
+    void testArrayFront9() {
         ArrayFront9 arrayFront9 = new ArrayFront9();
         assertTrue(arrayFront9.arrayFront9(new int[]{1, 2, 9, 3, 4}));
         assertFalse(arrayFront9.arrayFront9(new int[]{1, 2, 3, 4, 9}));

@@ -7,10 +7,10 @@ import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class MapShareTest {
+class MapShareTest {
 
     @Test
-    public void testMapShare() {
+    void testMapShare() {
         MapShare mapShare = new MapShare();
         assertThat(mapShare.mapShare(MapBuilder.build("b", "bbb", "c", "ccc", "a", "aaa")))
             .isEqualTo(Map.of("b", "aaa", "a", "aaa"));

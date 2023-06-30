@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Array11Test {
+class Array11Test {
 
     @Test
-    public void testArray11() {
+    void testArray11() {
         Array11 array11 = new Array11();
         assertThat(array11.array11(new int[]{1, 2, 11}, 0)).isEqualTo(1);
         assertThat(array11.array11(new int[]{11, 11}, 0)).isEqualTo(2);

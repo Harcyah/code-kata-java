@@ -8,7 +8,7 @@ import java.util.Collection;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class GetLastRowTest {
+class GetLastRowTest {
 
     public static Collection<Object[]> getTestData() {
         return Arrays.asList(new Object[][]{
@@ -22,7 +22,7 @@ public class GetLastRowTest {
 
     @ParameterizedTest
     @MethodSource("getTestData")
-    public void getLastRowTest(String matrixAsString, int[] lastRow) {
+    void getLastRowTest(String matrixAsString, int[] lastRow) {
         Matrix matrix = new Matrix(matrixAsString);
         assertArrayEquals(lastRow, matrix.getRow(matrix.getRowsCount() - 1));
     }

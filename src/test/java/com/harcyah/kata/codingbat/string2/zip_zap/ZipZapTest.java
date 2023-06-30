@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ZipZapTest {
+class ZipZapTest {
 
     @Test
-    public void testZipZap() {
+    void testZipZap() {
         ZipZap zipZap = new ZipZap();
         assertEquals("zpXzp", zipZap.zipZap("zipXzap"));
         assertEquals("zpzp", zipZap.zipZap("zopzop"));

@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class SquirrelPlayTest {
+class SquirrelPlayTest {
 
     @Test
-    public void testSquirrelPlay() {
+    void testSquirrelPlay() {
         SquirrelPlay squirrelPlay = new SquirrelPlay();
         assertTrue(squirrelPlay.squirrelPlay(70, false));
         assertFalse(squirrelPlay.squirrelPlay(95, false));

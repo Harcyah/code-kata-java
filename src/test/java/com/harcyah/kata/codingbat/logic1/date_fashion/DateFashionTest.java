@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DateFashionTest {
+class DateFashionTest {
 
     @Test
-    public void testDateFashion() {
+    void testDateFashion() {
         DateFashion dateFashion = new DateFashion();
         assertEquals(2, dateFashion.dateFashion(5, 10));
         assertEquals(0, dateFashion.dateFashion(5, 2));

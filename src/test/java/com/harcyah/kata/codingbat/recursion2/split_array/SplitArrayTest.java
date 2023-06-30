@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class SplitArrayTest {
+class SplitArrayTest {
 
     @Test
-    public void testSplitArray() {
+    void testSplitArray() {
         SplitArray splitArray = new SplitArray();
         assertThat(splitArray.splitArray(new int[]{2, 2})).isTrue();
         assertThat(splitArray.splitArray(new int[]{2, 3})).isFalse();

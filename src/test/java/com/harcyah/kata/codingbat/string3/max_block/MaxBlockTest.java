@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class MaxBlockTest {
+class MaxBlockTest {
 
     @Test
-    public void testMaxBlock() {
+    void testMaxBlock() {
         MaxBlock maxBlock = new MaxBlock();
         assertThat(maxBlock.maxBlock("hoopla")).isEqualTo(2);
         assertThat(maxBlock.maxBlock("abbCCCddBBBxx")).isEqualTo(3);

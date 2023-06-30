@@ -6,10 +6,10 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class NoTeenTest {
+class NoTeenTest {
 
     @Test
-    public void testNoTeen() {
+    void testNoTeen() {
         NoTeen noTeen = new NoTeen();
         assertThat(noTeen.noTeen(List.of(12, 13, 19, 20)))
             .containsExactly(12, 20);

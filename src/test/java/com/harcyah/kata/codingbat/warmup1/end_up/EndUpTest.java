@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class EndUpTest {
+class EndUpTest {
 
     @Test
-    public void testEndUp() {
+    void testEndUp() {
         EndUp endUp = new EndUp();
         assertEquals("HeLLO", endUp.endUp("Hello"));
         assertEquals("hi thERE", endUp.endUp("hi there"));

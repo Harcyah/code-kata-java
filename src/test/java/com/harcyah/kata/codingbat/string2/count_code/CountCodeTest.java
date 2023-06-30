@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CountCodeTest {
+class CountCodeTest {
 
     @Test
-    public void testCountCode() {
+    void testCountCode() {
         CountCode countCode = new CountCode();
         assertEquals(1, countCode.countCode("aaacodebbb"));
         assertEquals(2, countCode.countCode("codexxcode"));

@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DayOfTheWeekTest {
+class DayOfTheWeekTest {
 
     private static final int SUNDAY = 0;
     private static final int WEDNESDAY = 3;
@@ -12,7 +12,7 @@ public class DayOfTheWeekTest {
     private static final int FRIDAY = 5;
 
     @Test
-    public void testGetDayOfWeek() {
+    void testGetDayOfWeek() {
         DayOfTheWeek dotw = new DayOfTheWeek();
         assertEquals(SUNDAY, dotw.getDayOfWeek(1953, 1, 18));
         assertEquals(SUNDAY, dotw.getDayOfWeek(1953, 8, 2));

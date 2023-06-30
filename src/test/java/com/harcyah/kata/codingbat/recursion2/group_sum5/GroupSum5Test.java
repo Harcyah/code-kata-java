@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class GroupSum5Test {
+class GroupSum5Test {
 
     @Test
-    public void testGroupSum5() {
+    void testGroupSum5() {
         GroupSum5 groupSum5 = new GroupSum5();
         assertThat(groupSum5.groupSum5(0, new int[]{2, 5, 10, 4}, 19)).isTrue();
         assertThat(groupSum5.groupSum5(0, new int[]{2, 5, 10, 4}, 17)).isTrue();

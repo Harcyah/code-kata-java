@@ -6,10 +6,10 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class DoublingTest {
+class DoublingTest {
 
     @Test
-    public void testDoubling() {
+    void testDoubling() {
         Doubling doubling = new Doubling();
         assertThat(doubling.doubling(List.of(1, 2, 3)))
             .containsExactly(2, 4, 6);

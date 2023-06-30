@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class SumHeightsTest {
+class SumHeightsTest {
 
     @Test
-    public void testSumHeights() {
+    void testSumHeights() {
         SumHeights sumHeights = new SumHeights();
         assertThat(sumHeights.sumHeights(new int[]{5, 3, 6, 7, 2}, 2, 4))
             .isEqualTo(6);

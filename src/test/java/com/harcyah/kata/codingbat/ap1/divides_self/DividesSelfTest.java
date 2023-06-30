@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class DividesSelfTest {
+class DividesSelfTest {
 
     @Test
-    public void testDividesSelf() {
+    void testDividesSelf() {
         DividesSelf dividesSelf = new DividesSelf();
         assertTrue(dividesSelf.dividesSelf(128));
         assertTrue(dividesSelf.dividesSelf(12));

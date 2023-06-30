@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class WordsFrontTest {
+class WordsFrontTest {
 
     @Test
-    public void testWordsFront() {
+    void testWordsFront() {
         WordsFront wordsFront = new WordsFront();
         assertArrayEquals(new String[]{"a"}, wordsFront.wordsFront(new String[]{"a", "b", "c", "d"}, 1));
         assertArrayEquals(new String[]{"a", "b"}, wordsFront.wordsFront(new String[]{"a", "b", "c", "d"}, 2));

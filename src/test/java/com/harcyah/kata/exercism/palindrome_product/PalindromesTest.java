@@ -12,10 +12,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class PalindromesTest {
+class PalindromesTest {
 
     @Test
-    public void largestPalindromeFromSingleDigitFactors() {
+    void largestPalindromeFromSingleDigitFactors() {
         final List<List<Integer>> expected = Collections.unmodifiableList(
                 List.of(
                         List.of(1, 9),
@@ -43,7 +43,7 @@ public class PalindromesTest {
     }
 
     @Test
-    public void largestPalindromeFromDoubleDigitFactors() {
+    void largestPalindromeFromDoubleDigitFactors() {
         final List<List<Integer>> expected = Collections.unmodifiableList(
                 List.of(
                         List.of(91, 99)
@@ -72,7 +72,7 @@ public class PalindromesTest {
     }
 
     @Test
-    public void smallestPalindromeFromDoubleDigitFactors() {
+    void smallestPalindromeFromDoubleDigitFactors() {
         final List<List<Integer>> expected = Collections.unmodifiableList(
                 List.of(
                         List.of(11, 11)
@@ -101,7 +101,7 @@ public class PalindromesTest {
     }
 
     @Test
-    public void largestPalindromeFromTripleDigitFactors() {
+    void largestPalindromeFromTripleDigitFactors() {
         final List<List<Integer>> expected = Collections.unmodifiableList(
                 List.of(
                         List.of(913, 993)
@@ -130,7 +130,7 @@ public class PalindromesTest {
     }
 
     @Test
-    public void smallestPalindromeFromTripleDigitFactors() {
+    void smallestPalindromeFromTripleDigitFactors() {
         final List<List<Integer>> expected = Collections.unmodifiableList(
                 List.of(
                         List.of(101, 101)

@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Only14Test {
+class Only14Test {
 
     @Test
-    public void testOnly14() {
+    void testOnly14() {
         Only14 only14 = new Only14();
         assertThat(only14.only14(new int[]{1, 4, 1, 4}))
             .isTrue();

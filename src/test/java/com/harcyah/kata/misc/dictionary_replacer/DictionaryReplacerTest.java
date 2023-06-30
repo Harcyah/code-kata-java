@@ -10,19 +10,19 @@ import static org.assertj.core.api.Assertions.assertThat;
 class DictionaryReplacerTest {
 
     @Test
-    public void testSample1() {
+    void testSample1() {
         Map<String, String> dictionary = Map.of();
         assertThat(DictionaryReplacer.replace("", dictionary)).isEqualTo("");
     }
 
     @Test
-    public void testSample2() {
+    void testSample2() {
         Map<String, String> dictionary = Map.of("temp", "temporary");
         assertThat(DictionaryReplacer.replace("$temp$", dictionary)).isEqualTo("temporary");
     }
 
     @Test
-    public void testSample3() {
+    void testSample3() {
         Map<String, String> dictionary = Map.of("temp", "temporary", "name", "John Doe");
         assertThat(DictionaryReplacer.replace("$temp$ here comes the name $name$", dictionary)).isEqualTo("temporary here comes the name John Doe");
     }

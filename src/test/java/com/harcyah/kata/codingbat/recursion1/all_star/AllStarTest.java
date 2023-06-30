@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class AllStarTest {
+class AllStarTest {
 
     @Test
-    public void testAllStar() {
+    void testAllStar() {
         AllStar allStar = new AllStar();
         assertThat(allStar.allStar("hello")).isEqualTo("h*e*l*l*o");
         assertThat(allStar.allStar("abc")).isEqualTo("a*b*c");

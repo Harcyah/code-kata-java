@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class Scores100Test {
+class Scores100Test {
 
     @Test
-    public void testScores100() {
+    void testScores100() {
         Scores100 scores100 = new Scores100();
         assertTrue(scores100.scores100(new int[]{1, 100, 100}));
         assertFalse(scores100.scores100(new int[]{1, 100, 99, 100}));

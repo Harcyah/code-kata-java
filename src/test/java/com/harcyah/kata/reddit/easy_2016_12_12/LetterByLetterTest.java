@@ -6,12 +6,12 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class LetterByLetterTest {
+class LetterByLetterTest {
 
     private final LetterByLetter changer = new LetterByLetter();
 
     @Test
-    public void testChangeFloorToBrake() {
+    void testChangeFloorToBrake() {
         List<String> changes = changer.change("floor", "brake");
 
         assertThat(changes).containsExactly(
@@ -25,7 +25,7 @@ public class LetterByLetterTest {
     }
 
     @Test
-    public void testChangeWoodToBook() {
+    void testChangeWoodToBook() {
         List<String> changes = changer.change("wood", "book");
 
         assertThat(changes).containsExactly(
@@ -36,7 +36,7 @@ public class LetterByLetterTest {
     }
 
     @Test
-    public void testChangeAFallToTheFloorToBrakingTheDoorIn() {
+    void testChangeAFallToTheFloorToBrakingTheDoorIn() {
         List<String> changes = changer.change("a fall to the floor", "braking the door in");
 
         assertThat(changes).containsExactly(

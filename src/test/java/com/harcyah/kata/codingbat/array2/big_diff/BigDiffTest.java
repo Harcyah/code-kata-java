@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class BigDiffTest {
+class BigDiffTest {
 
     @Test
-    public void testBigDiff() {
+    void testBigDiff() {
         BigDiff bigDiff = new BigDiff();
         assertThat(bigDiff.bigDiff(new int[]{10, 3, 5, 6}))
             .isEqualTo(7);

@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class Makes10Test {
+class Makes10Test {
 
     @Test
-    public void testMakes10() {
+    void testMakes10() {
         Makes10 makes10 = new Makes10();
         assertTrue(makes10.makes10(9, 10));
         assertFalse(makes10.makes10(9, 9));

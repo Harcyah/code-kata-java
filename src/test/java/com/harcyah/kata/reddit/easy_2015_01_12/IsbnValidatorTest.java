@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class IsbnValidatorTest {
+class IsbnValidatorTest {
 
     @Test
-    public void testValidatorSuccess() {
+    void testValidatorSuccess() {
         IsbnValidator isbn = new IsbnValidator();
         assertTrue(isbn.isValid("1-84356-028-3"));
         assertTrue(isbn.isValid("0-684-84328-5"));
@@ -19,7 +19,7 @@ public class IsbnValidatorTest {
     }
 
     @Test
-    public void testValidatorFailure() {
+    void testValidatorFailure() {
         IsbnValidator isbn = new IsbnValidator();
         assertFalse(isbn.isValid("2-84356-028-3"));
         assertFalse(isbn.isValid("0-784-84328-5"));

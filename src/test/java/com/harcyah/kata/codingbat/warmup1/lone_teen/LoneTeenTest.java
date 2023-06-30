@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class LoneTeenTest {
+class LoneTeenTest {
 
     @Test
-    public void testLoneTeen() {
+    void testLoneTeen() {
         LoneTeen loneTeen = new LoneTeen();
         assertTrue(loneTeen.loneTeen(13, 99));
         assertTrue(loneTeen.loneTeen(21, 19));

@@ -6,10 +6,10 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class SchoolAttendanceTest {
+class SchoolAttendanceTest {
 
     @Test
-    public void getStudentsSortedByGenderAndLastNameAscending() throws Exception {
+    void getStudentsSortedByGenderAndLastNameAscending() throws Exception {
         SchoolAttendance sa = new SchoolAttendance();
 
         List<Student> students = sa.getStudentsSortedByGenderAndLastNameAscending();
@@ -31,7 +31,7 @@ public class SchoolAttendanceTest {
     }
 
     @Test
-    public void getStudentsSortedByBirthDateAscending() throws Exception {
+    void getStudentsSortedByBirthDateAscending() throws Exception {
         SchoolAttendance sa = new SchoolAttendance();
 
         List<Student> students = sa.getStudentsSortedByBirthDateAscending();
@@ -53,7 +53,7 @@ public class SchoolAttendanceTest {
     }
 
     @Test
-    public void getStudentsSortedByLastNameAscending() throws Exception {
+    void getStudentsSortedByLastNameAscending() throws Exception {
         SchoolAttendance sa = new SchoolAttendance();
 
         List<Student> students = sa.getStudentsSortedByLastNameAscending();

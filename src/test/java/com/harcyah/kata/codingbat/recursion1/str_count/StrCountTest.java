@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class StrCountTest {
+class StrCountTest {
 
     @Test
-    public void testStrCount() {
+    void testStrCount() {
         StrCount strCount = new StrCount();
         assertThat(strCount.strCount("catcowcat", "cat")).isEqualTo(2);
         assertThat(strCount.strCount("catcowcat", "cow")).isEqualTo(1);

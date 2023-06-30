@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class In1To10Test {
+class In1To10Test {
 
     @Test
-    public void testIn1To10() {
+    void testIn1To10() {
         In1To10 in1To10 = new In1To10();
         assertThat(in1To10.in1To10(5, false)).isTrue();
         assertThat(in1To10.in1To10(11, false)).isFalse();

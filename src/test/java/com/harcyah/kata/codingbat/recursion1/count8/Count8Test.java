@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Count8Test {
+class Count8Test {
 
     @Test
-    public void testCount8() {
+    void testCount8() {
         Count8 count8 = new Count8();
         assertThat(count8.count8(8))
             .isEqualTo(1);

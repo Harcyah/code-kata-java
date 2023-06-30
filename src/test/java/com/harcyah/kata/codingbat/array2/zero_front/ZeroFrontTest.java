@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ZeroFrontTest {
+class ZeroFrontTest {
 
     @Test
-    public void testZeroFront() {
+    void testZeroFront() {
         ZeroFront zeroFront = new ZeroFront();
         assertThat(zeroFront.zeroFront(new int[]{1, 0, 0, 1}))
             .isEqualTo(new int[]{0, 0, 1, 1});

@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ShannonEntropyTest {
+class ShannonEntropyTest {
 
     protected ShannonEntropy shannonEntropy = new ShannonEntropy();
 
     @Test
-    public void testCompute() {
+    void testCompute() {
         assertEquals(1.84644, shannonEntropy.compute("1223334444"), 0.00001);
         assertEquals(3.18083, shannonEntropy.compute("Hello, world!"), 0.00001);
     }

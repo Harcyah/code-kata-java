@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DoubleCharTest {
+class DoubleCharTest {
 
     @Test
-    public void testDoubleChar() {
+    void testDoubleChar() {
         DoubleChar doubleChar = new DoubleChar();
         assertEquals("TThhee", doubleChar.doubleChar("The"));
         assertEquals("AAAAbbbb", doubleChar.doubleChar("AAbb"));

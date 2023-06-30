@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class FrontAgainTest {
+class FrontAgainTest {
 
     @Test
-    public void testFrontAgain() {
+    void testFrontAgain() {
         FrontAgain frontAgain = new FrontAgain();
         assertTrue(frontAgain.frontAgain("edited"));
         assertFalse(frontAgain.frontAgain("edit"));

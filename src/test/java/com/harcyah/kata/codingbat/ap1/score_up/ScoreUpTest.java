@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ScoreUpTest {
+class ScoreUpTest {
 
     @Test
-    public void testScoreUp() {
+    void testScoreUp() {
         ScoreUp scoreUp = new ScoreUp();
         assertEquals(6, scoreUp.scoreUp(
                 new String[]{"a", "a", "b", "b"},

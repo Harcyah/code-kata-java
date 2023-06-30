@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class MergeTwoTest {
+class MergeTwoTest {
 
     @Test
-    public void testMergeTwo() {
+    void testMergeTwo() {
         MergeTwo mergeTwo = new MergeTwo();
         assertThat(mergeTwo.mergeTwo(new String[]{"a", "c", "z"}, new String[]{"b", "f", "z"}, 3)).isEqualTo(new String[]{"a", "b", "c"});
         assertThat(mergeTwo.mergeTwo(new String[]{"a", "c", "z"}, new String[]{"c", "f", "z"}, 3)).isEqualTo(new String[]{"a", "c", "f"});

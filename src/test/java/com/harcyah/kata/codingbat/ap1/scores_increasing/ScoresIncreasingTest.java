@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class ScoresIncreasingTest {
+class ScoresIncreasingTest {
 
     @Test
-    public void testScoresIncreasing() {
+    void testScoresIncreasing() {
         ScoresIncreasing scoresIncreasing = new ScoresIncreasing();
         assertTrue(scoresIncreasing.scoresIncreasing(new int[]{1, 3, 4}));
         assertFalse(scoresIncreasing.scoresIncreasing(new int[]{1, 3, 2}));

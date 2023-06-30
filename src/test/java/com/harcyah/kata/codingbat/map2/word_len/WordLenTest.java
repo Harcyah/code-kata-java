@@ -6,10 +6,10 @@ import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class WordLenTest {
+class WordLenTest {
 
     @Test
-    public void testWordLen() {
+    void testWordLen() {
         WordLen wordLen = new WordLen();
         assertThat(wordLen.wordLen(new String[] { "a", "bb", "a", "bb" }))
             .isEqualTo(Map.of("a", 1, "bb", 2));

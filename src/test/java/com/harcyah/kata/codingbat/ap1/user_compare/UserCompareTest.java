@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class UserCompareTest {
+class UserCompareTest {
 
     @Test
-    public void testUserCompare() {
+    void testUserCompare() {
         UserCompare userCompare = new UserCompare();
         assertThat(userCompare.userCompare("bb", 1, "zz", 2))
             .isEqualTo(-1);

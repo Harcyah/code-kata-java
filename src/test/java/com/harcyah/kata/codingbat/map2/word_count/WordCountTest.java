@@ -7,10 +7,10 @@ import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class WordCountTest {
+class WordCountTest {
 
     @Test
-    public void testWordCount() {
+    void testWordCount() {
         WordCount wordCount = new WordCount();
         assertThat(wordCount.wordCount(new String[]{"a", "b", "a", "c", "b"}))
             .isEqualTo(Map.of("b", 2, "c", 1, "a", 2));

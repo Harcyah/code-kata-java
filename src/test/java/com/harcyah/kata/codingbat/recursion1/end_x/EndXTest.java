@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class EndXTest {
+class EndXTest {
 
     @Test
-    public void testEndX() {
+    void testEndX() {
         EndX endX = new EndX();
         assertThat(endX.endX("xxre")).isEqualTo("rexx");
         assertThat(endX.endX("xxhixx")).isEqualTo("hixxxx");

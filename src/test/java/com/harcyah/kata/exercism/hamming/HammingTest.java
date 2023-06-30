@@ -5,52 +5,52 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
-public class HammingTest {
+class HammingTest {
 
     @Test
-    public void testNoDifferenceBetweenIdenticalStrands() {
+    void testNoDifferenceBetweenIdenticalStrands() {
         assertThat(Hamming.compute("A", "A")).isEqualTo(0);
     }
 
     @Test
-    public void testCompleteHammingDistanceOfForSingleNucleotideStrand() {
+    void testCompleteHammingDistanceOfForSingleNucleotideStrand() {
         assertThat(Hamming.compute("A", "G")).isEqualTo(1);
     }
 
     @Test
-    public void testCompleteHammingDistanceForSmallStrand() {
+    void testCompleteHammingDistanceForSmallStrand() {
         assertThat(Hamming.compute("AG", "CT")).isEqualTo(2);
     }
 
     @Test
-    public void testSmallHammingDistance() {
+    void testSmallHammingDistance() {
         assertThat(Hamming.compute("AT", "CT")).isEqualTo(1);
     }
 
     @Test
-    public void testSmallHammingDistanceInLongerStrand() {
+    void testSmallHammingDistanceInLongerStrand() {
         assertThat(Hamming.compute("GGACG", "GGTCG")).isEqualTo(1);
     }
 
     @Test
-    public void testValidatesFirstStrandNotLonger() {
+    void testValidatesFirstStrandNotLonger() {
         assertThatThrownBy(() -> Hamming.compute("AAAG", "AAA"))
             .isInstanceOf(IllegalArgumentException.class);
     }
 
     @Test
-    public void testValidatesOtherStrandNotLonger() {
+    void testValidatesOtherStrandNotLonger() {
         assertThatThrownBy(() -> Hamming.compute("AAA", "AAAG"))
             .isInstanceOf(IllegalArgumentException.class);
     }
 
     @Test
-    public void testLargeHammingDistance() {
+    void testLargeHammingDistance() {
         assertThat(Hamming.compute("GATACA", "GCATAA")).isEqualTo(4);
     }
 
     @Test
-    public void testHammingDistanceInVeryLongStrand() {
+    void testHammingDistanceInVeryLongStrand() {
         assertThat(Hamming.compute("GGACGGATTCTG", "AGGACGGATTCT")).isEqualTo(9);
     }
 

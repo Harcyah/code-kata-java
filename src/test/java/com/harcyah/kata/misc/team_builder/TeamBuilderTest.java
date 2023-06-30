@@ -14,7 +14,7 @@ class TeamBuilderTest {
     private final TeamBuilder sut = new TeamBuilder();
 
     @Test
-    public void testCase1() throws Exception {
+    void testCase1() throws Exception {
         Freelancers freelancers = load("freelancers.json");
 
         Teams teams = sut.build(freelancers, 1, 560);
@@ -38,7 +38,7 @@ class TeamBuilderTest {
     }
 
     @Test
-    public void testCase2() throws Exception {
+    void testCase2() throws Exception {
         Freelancers freelancers = load("freelancers.json");
 
         Teams teams = sut.build(freelancers, 2, 390);
@@ -57,7 +57,7 @@ class TeamBuilderTest {
     }
 
     @Test
-    public void testCase3() throws Exception {
+    void testCase3() throws Exception {
         Freelancers freelancers = load("freelancers.json");
 
         Teams teams = sut.build(freelancers, 4, 3000);

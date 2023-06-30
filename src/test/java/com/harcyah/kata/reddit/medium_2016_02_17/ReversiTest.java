@@ -8,10 +8,10 @@ import java.util.Set;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @Slf4j
-public class ReversiTest {
+class ReversiTest {
 
     @Test
-    public void testGetPossibleMovesSample1() throws Exception {
+    void testGetPossibleMovesSample1() throws Exception {
         Reversi reversi = new Reversi("/com/harcyah/kata/reddit/medium_2016_02_17/sample1");
         Set<Square> moves = reversi.getPossibleMoves();
         assertThat(moves)
@@ -24,14 +24,14 @@ public class ReversiTest {
     }
 
     @Test
-    public void testGetPossibleMovesSample2() throws Exception {
+    void testGetPossibleMovesSample2() throws Exception {
         Reversi reversi = new Reversi("/com/harcyah/kata/reddit/medium_2016_02_17/sample2");
         Set<Square> moves = reversi.getPossibleMoves();
         assertThat(moves).hasSize(11);
     }
 
     @Test
-    public void testGetPossibleMovesSample3() throws Exception {
+    void testGetPossibleMovesSample3() throws Exception {
         Reversi reversi = new Reversi("/com/harcyah/kata/reddit/medium_2016_02_17/sample3");
         Set<Square> moves = reversi.getPossibleMoves();
         assertThat(moves).hasSize(12);

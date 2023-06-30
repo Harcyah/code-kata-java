@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Diff21Test {
+class Diff21Test {
 
     @Test
-    public void testDiff21() {
+    void testDiff21() {
         Diff21 diff21 = new Diff21();
         assertEquals(2, diff21.diff21(19));
         assertEquals(11, diff21.diff21(10));

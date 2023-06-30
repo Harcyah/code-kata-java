@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class StartWordTest {
+class StartWordTest {
 
     @Test
-    public void testStartWord() {
+    void testStartWord() {
         StartWord startWord = new StartWord();
         assertEquals("hi", startWord.startWord("hippo", "hi"));
         assertEquals("hip", startWord.startWord("hippo", "xip"));

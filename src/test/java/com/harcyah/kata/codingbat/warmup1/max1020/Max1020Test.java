@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Max1020Test {
+class Max1020Test {
 
     @Test
-    public void testMax1020() {
+    void testMax1020() {
         Max1020 max1020 = new Max1020();
         assertEquals(19, max1020.max1020(11, 19));
         assertEquals(19, max1020.max1020(19, 11));

@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MakeOutWordTest {
+class MakeOutWordTest {
 
     @Test
-    public void testMakeOutWord() {
+    void testMakeOutWord() {
         MakeOutWord makeOutWord = new MakeOutWord();
         assertEquals("<<Yay>>", makeOutWord.makeOutWord("<<>>", "Yay"));
         assertEquals("<<WooHoo>>", makeOutWord.makeOutWord("<<>>", "WooHoo"));

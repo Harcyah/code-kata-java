@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class SameEndsTest {
+class SameEndsTest {
 
     @Test
-    public void testSameEnds() {
+    void testSameEnds() {
         SameEnds sameEnds = new SameEnds();
         assertThat(sameEnds.sameEnds("abXYab")).isEqualTo("ab");
         assertThat(sameEnds.sameEnds("xx")).isEqualTo("x");

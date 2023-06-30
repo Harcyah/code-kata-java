@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class InOrderTest {
+class InOrderTest {
 
     @Test
-    public void testInOrder() {
+    void testInOrder() {
         InOrder inOrder = new InOrder();
         assertTrue(inOrder.inOrder(1, 2, 4, false));
         assertFalse(inOrder.inOrder(1, 2, 1, false));

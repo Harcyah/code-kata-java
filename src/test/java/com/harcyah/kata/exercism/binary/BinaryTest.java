@@ -8,7 +8,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BinaryTest {
+class BinaryTest {
 
     public static Collection<Object[]> getTestData() {
         return List.of(new Object[][]{
@@ -30,7 +30,7 @@ public class BinaryTest {
 
     @ParameterizedTest
     @MethodSource("getTestData")
-    public void test(String input, int expectedOutput) {
+    void test(String input, int expectedOutput) {
         Binary binary = new Binary(input);
 
         assertEquals(expectedOutput, binary.getDecimal());

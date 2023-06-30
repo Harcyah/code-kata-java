@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ComboStringTest {
+class ComboStringTest {
 
     @Test
-    public void testComboString() {
+    void testComboString() {
         ComboString comboString = new ComboString();
         assertEquals("hiHellohi", comboString.comboString("Hello", "hi"));
         assertEquals("hiHellohi", comboString.comboString("hi", "Hello"));

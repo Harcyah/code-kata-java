@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class GreenTicketTest {
+class GreenTicketTest {
 
     @Test
-    public void testGreenTicket() {
+    void testGreenTicket() {
         GreenTicket greenTicket = new GreenTicket();
         assertThat(greenTicket.greenTicket(1, 2, 3)).isEqualTo(0);
         assertThat(greenTicket.greenTicket(2, 2, 2)).isEqualTo(20);

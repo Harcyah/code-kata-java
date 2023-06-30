@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class MixStartTest {
+class MixStartTest {
 
     @Test
-    public void testMixStart() {
+    void testMixStart() {
         MixStart mixStart = new MixStart();
         assertTrue(mixStart.mixStart("mix snacks"));
         assertTrue(mixStart.mixStart("pix snacks"));

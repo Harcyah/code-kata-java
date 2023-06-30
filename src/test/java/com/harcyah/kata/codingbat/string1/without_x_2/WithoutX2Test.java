@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class WithoutX2Test {
+class WithoutX2Test {
 
     @Test
-    public void testWithoutX2() {
+    void testWithoutX2() {
         WithoutX2 withoutX2 = new WithoutX2();
         assertEquals("Hi", withoutX2.withoutX2("xHi"));
         assertEquals("Hi", withoutX2.withoutX2("Hxi"));

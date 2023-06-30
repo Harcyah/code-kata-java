@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ShiftLeftTest {
+class ShiftLeftTest {
 
     @Test
-    public void testShiftLeft() {
+    void testShiftLeft() {
         ShiftLeft shiftLeft = new ShiftLeft();
         assertThat(shiftLeft.shiftLeft(new int[]{6, 2, 5, 3}))
             .isEqualTo(new int[]{2, 5, 3, 6});

@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class HasTeenTest {
+class HasTeenTest {
 
     @Test
-    public void testHasTeen() {
+    void testHasTeen() {
         HasTeen hasTeen = new HasTeen();
         assertTrue(hasTeen.hasTeen(13, 20, 10));
         assertTrue(hasTeen.hasTeen(20, 19, 10));

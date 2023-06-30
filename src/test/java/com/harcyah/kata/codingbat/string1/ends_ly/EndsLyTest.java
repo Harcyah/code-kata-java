@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class EndsLyTest {
+class EndsLyTest {
 
     @Test
-    public void testEndsLy() {
+    void testEndsLy() {
         EndsLy endsLy = new EndsLy();
         assertTrue(endsLy.endsLy("oddly"));
         assertFalse(endsLy.endsLy("y"));

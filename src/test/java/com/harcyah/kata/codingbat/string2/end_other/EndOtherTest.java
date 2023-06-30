@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class EndOtherTest {
+class EndOtherTest {
 
     @Test
-    public void testEndOther() {
+    void testEndOther() {
         EndOther endOther = new EndOther();
         assertTrue(endOther.endOther("Hiabc", "abc"));
         assertTrue(endOther.endOther("AbC", "HiaBc"));

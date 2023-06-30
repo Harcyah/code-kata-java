@@ -8,7 +8,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RomanNumeralsTest {
+class RomanNumeralsTest {
 
     public static Collection<Object[]> getTestData() {
         return List.of(new Object[][]{
@@ -41,7 +41,7 @@ public class RomanNumeralsTest {
 
     @ParameterizedTest
     @MethodSource("getTestData")
-    public void testLoopImpl(int input, String expectedOutput) {
+    void testLoopImpl(int input, String expectedOutput) {
         RomanNumeralLoopImpl sut = new RomanNumeralLoopImpl();
 
         assertEquals(expectedOutput, sut.get(input));
@@ -49,7 +49,7 @@ public class RomanNumeralsTest {
 
     @ParameterizedTest
     @MethodSource("getTestData")
-    public void testModuloImpl(int input, String expectedOutput) {
+    void testModuloImpl(int input, String expectedOutput) {
         RomanNumeralModuloImpl sut = new RomanNumeralModuloImpl();
 
         assertEquals(expectedOutput, sut.get(input));

@@ -6,10 +6,10 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class NoYyTest {
+class NoYyTest {
 
     @Test
-    public void testNoYy() {
+    void testNoYy() {
         NoYy sut = new NoYy();
         assertThat(sut.noYy(List.of("a", "b", "c")))
             .containsExactly("ay", "by", "cy");

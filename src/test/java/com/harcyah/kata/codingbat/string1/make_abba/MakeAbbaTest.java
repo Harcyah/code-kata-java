@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MakeAbbaTest {
+class MakeAbbaTest {
 
     @Test
-    public void testMakeAbba() {
+    void testMakeAbba() {
         MakeAbba makeAbba = new MakeAbba();
         assertEquals("HiByeByeHi", makeAbba.makeAbba("Hi", "Bye"));
         assertEquals("YoAliceAliceYo", makeAbba.makeAbba("Yo", "Alice"));

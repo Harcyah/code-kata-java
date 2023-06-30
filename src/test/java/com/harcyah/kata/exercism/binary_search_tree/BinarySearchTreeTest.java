@@ -8,10 +8,10 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class BinarySearchTreeTest {
+class BinarySearchTreeTest {
 
     @Test
-    public void dataIsRetained() {
+    void dataIsRetained() {
         BinarySearchTree<Integer> sut = new BinarySearchTree<>();
         final int actual = 4;
         sut.insert(actual);
@@ -22,7 +22,7 @@ public class BinarySearchTreeTest {
     }
 
     @Test
-    public void insertsLess() {
+    void insertsLess() {
         BinarySearchTree<Integer> sut = new BinarySearchTree<>();
         final int expectedRoot = 4;
         final int expectedLeft = 2;
@@ -42,7 +42,7 @@ public class BinarySearchTreeTest {
     }
 
     @Test
-    public void insertsSame() {
+    void insertsSame() {
         BinarySearchTree<Integer> sut = new BinarySearchTree<>();
         final int expectedRoot = 4;
         final int expectedLeft = 4;
@@ -62,7 +62,7 @@ public class BinarySearchTreeTest {
     }
 
     @Test
-    public void insertsRight() {
+    void insertsRight() {
         BinarySearchTree<Integer> sut = new BinarySearchTree<>();
         final int expectedRoot = 4;
         final int expectedRight = 5;
@@ -82,7 +82,7 @@ public class BinarySearchTreeTest {
     }
 
     @Test
-    public void createsComplexTree() {
+    void createsComplexTree() {
         BinarySearchTree<Integer> sut = new BinarySearchTree<>();
         List<Integer> expected = Collections.unmodifiableList(
             List.of(4, 2, 6, 1, 3, 5, 7));
@@ -96,7 +96,7 @@ public class BinarySearchTreeTest {
     }
 
     @Test
-    public void sortsSingleElement() {
+    void sortsSingleElement() {
         BinarySearchTree<Integer> sut = new BinarySearchTree<>();
         List<Integer> expected = Collections.unmodifiableList(
             List.of(4));
@@ -108,7 +108,7 @@ public class BinarySearchTreeTest {
     }
 
     @Test
-    public void sortsCollectionOfTwoIfSecondInsertedIsSmallerThanFirst() {
+    void sortsCollectionOfTwoIfSecondInsertedIsSmallerThanFirst() {
         BinarySearchTree<Integer> sut = new BinarySearchTree<>();
         List<Integer> expected = Collections.unmodifiableList(
             List.of(2, 4));
@@ -121,7 +121,7 @@ public class BinarySearchTreeTest {
     }
 
     @Test
-    public void sortsCollectionOfTwoIfSecondInsertedIsBiggerThanFirst() {
+    void sortsCollectionOfTwoIfSecondInsertedIsBiggerThanFirst() {
         BinarySearchTree<Integer> sut = new BinarySearchTree<>();
         List<Integer> expected = Collections.unmodifiableList(
             List.of(4, 5));
@@ -134,7 +134,7 @@ public class BinarySearchTreeTest {
     }
 
     @Test
-    public void iteratesOverComplexTree() {
+    void iteratesOverComplexTree() {
         BinarySearchTree<Integer> sut = new BinarySearchTree<>();
         List<Integer> expected = Collections.unmodifiableList(
             List.of(1, 2, 3, 4, 5, 6, 7));

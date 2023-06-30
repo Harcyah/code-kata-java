@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class StringSplosionTest {
+class StringSplosionTest {
 
     @Test
-    public void testStringSplosion() {
+    void testStringSplosion() {
         StringSplosion stringSplosion = new StringSplosion();
         assertEquals("CCoCodCode", stringSplosion.stringSplosion("Code"));
         assertEquals("aababc", stringSplosion.stringSplosion("abc"));

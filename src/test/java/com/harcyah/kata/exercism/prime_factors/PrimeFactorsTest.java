@@ -8,7 +8,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PrimeFactorsTest {
+class PrimeFactorsTest {
 
     public static Collection<Object[]> getTestData() {
         return List.of(new Object[][]{
@@ -28,7 +28,7 @@ public class PrimeFactorsTest {
 
     @ParameterizedTest
     @MethodSource("getTestData")
-    public void test(long input, List<Long> expectedOutput) {
+    void test(long input, List<Long> expectedOutput) {
         assertEquals(expectedOutput, PrimeFactors.getForNumber(input));
     }
 

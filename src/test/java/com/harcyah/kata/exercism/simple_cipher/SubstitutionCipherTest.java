@@ -5,44 +5,44 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SubstitutionCipherTest {
+class SubstitutionCipherTest {
 
     private static final String KEY = "abcdefghij";
     private Cipher cipher;
 
     @BeforeEach
-    public void setup() {
+    void setup() {
         this.cipher = new Cipher(KEY);
     }
 
     @Test
-    public void cipherKeepsTheSubmittedKey() {
+    void cipherKeepsTheSubmittedKey() {
         assertEquals(KEY, cipher.getKey());
     }
 
     @Test
-    public void cipherCanEncodeWithGivenKey() {
+    void cipherCanEncodeWithGivenKey() {
         String expectedOutput = "abcdefghij";
 
         assertEquals(expectedOutput, cipher.encode("aaaaaaaaaa"));
     }
 
     @Test
-    public void cipherCanDecodeWithGivenKey() {
+    void cipherCanDecodeWithGivenKey() {
         String expectedOutput = "aaaaaaaaaa";
 
         assertEquals(expectedOutput, cipher.decode("abcdefghij"));
     }
 
     @Test
-    public void cipherIsReversibleGivenKey() {
+    void cipherIsReversibleGivenKey() {
         String plainText = "abcdefghij";
 
         assertEquals(plainText, cipher.decode(cipher.encode("abcdefghij")));
     }
 
     @Test
-    public void cipherCanDoubleShiftEncode() {
+    void cipherCanDoubleShiftEncode() {
         String plainText = "iamapandabear";
         String expectedOutput = "qayaeaagaciai";
 
@@ -50,21 +50,21 @@ public class SubstitutionCipherTest {
     }
 
     @Test
-    public void cipherCanWrapEncode() {
+    void cipherCanWrapEncode() {
         String expectedOutput = "zabcdefghi";
 
         assertEquals(expectedOutput, cipher.encode("zzzzzzzzzz"));
     }
 
     @Test
-    public void cipherCanEncodeMessageThatIsShorterThanTheKey() {
+    void cipherCanEncodeMessageThatIsShorterThanTheKey() {
         String expectedOutput = "abcde";
 
         assertEquals(expectedOutput, cipher.encode("aaaaa"));
     }
 
     @Test
-    public void cipherCanDecodeMessageThatIsShorterThanTheKey() {
+    void cipherCanDecodeMessageThatIsShorterThanTheKey() {
         String expectedOutput = "aaaaa";
 
         assertEquals(expectedOutput, cipher.decode("abcde"));

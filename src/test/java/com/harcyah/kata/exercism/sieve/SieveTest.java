@@ -6,10 +6,10 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SieveTest {
+class SieveTest {
 
     @Test
-    public void findFirstPrime() {
+    void findFirstPrime() {
         Sieve sieve = new Sieve(2);
         List<Integer> expectedOutput = List.of(new Integer[]{2});
 
@@ -17,7 +17,7 @@ public class SieveTest {
     }
 
     @Test
-    public void findPrimesUpTo10() {
+    void findPrimesUpTo10() {
         Sieve sieve = new Sieve(10);
         List<Integer> expectedOutput = List.of(2, 3, 5, 7);
 
@@ -25,7 +25,7 @@ public class SieveTest {
     }
 
     @Test
-    public void findPrimesUpTo1000() {
+    void findPrimesUpTo1000() {
         Sieve sieve = new Sieve(1000);
         List<Integer> expectedOutput = List.of(2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61,
                 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173,

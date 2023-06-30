@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TwiceNTest {
+class TwiceNTest {
 
     @Test
-    public void testNTwice() {
+    void testNTwice() {
         TwiceN sut = new TwiceN();
         assertEquals("Helo", sut.twiceN("Hello", 2));
         assertEquals("Choate", sut.twiceN("Chocolate", 3));

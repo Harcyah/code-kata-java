@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Less20Test {
+class Less20Test {
 
     @Test
-    public void testLess20() {
+    void testLess20() {
         Less20 less20 = new Less20();
         assertThat(less20.less20(18)).isTrue();
         assertThat(less20.less20(19)).isTrue();

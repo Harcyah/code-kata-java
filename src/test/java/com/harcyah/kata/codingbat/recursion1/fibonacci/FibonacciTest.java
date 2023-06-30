@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class FibonacciTest {
+class FibonacciTest {
 
     @Test
-    public void testFibonacci() {
+    void testFibonacci() {
         Fibonacci fibonacci = new Fibonacci();
         assertThat(fibonacci.fibonacci(0)).isEqualTo(0);
         assertThat(fibonacci.fibonacci(1)).isEqualTo(1);

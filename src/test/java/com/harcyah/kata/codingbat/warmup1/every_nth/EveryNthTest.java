@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class EveryNthTest {
+class EveryNthTest {
 
     @Test
-    public void testEveryNth() {
+    void testEveryNth() {
         EveryNth everyNth = new EveryNth();
         assertEquals("Mrce", everyNth.everyNth("Miracle", 2));
         assertEquals("aceg", everyNth.everyNth("abcdefg", 2));

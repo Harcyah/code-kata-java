@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TwoCharTest {
+class TwoCharTest {
 
     @Test
-    public void testTwoChar() {
+    void testTwoChar() {
         TwoChar twoChar = new TwoChar();
         assertEquals("ja", twoChar.twoChar("java", 0));
         assertEquals("va", twoChar.twoChar("java", 2));

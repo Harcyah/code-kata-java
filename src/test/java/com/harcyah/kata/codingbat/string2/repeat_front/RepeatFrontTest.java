@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RepeatFrontTest {
+class RepeatFrontTest {
 
     @Test
-    public void testRepeatFront() {
+    void testRepeatFront() {
         RepeatFront repeatFront = new RepeatFront();
         assertEquals("ChocChoChC", repeatFront.repeatFront("Chocolate", 4));
         assertEquals("ChoChC", repeatFront.repeatFront("Chocolate", 3));

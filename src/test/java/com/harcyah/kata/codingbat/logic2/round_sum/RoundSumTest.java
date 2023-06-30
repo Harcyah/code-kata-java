@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RoundSumTest {
+class RoundSumTest {
 
     @Test
-    public void testRoundSum() {
+    void testRoundSum() {
         RoundSum roundSum = new RoundSum();
         assertEquals(60, roundSum.roundSum(16, 17, 18));
         assertEquals(30, roundSum.roundSum(12, 13, 14));

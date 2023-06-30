@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DeFrontTest {
+class DeFrontTest {
 
     @Test
-    public void testDeFront() {
+    void testDeFront() {
         DeFront deFront = new DeFront();
         assertEquals("llo", deFront.deFront("Hello"));
         assertEquals("va", deFront.deFront("java"));

@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Sum28Test {
+class Sum28Test {
 
     @Test
-    public void testSum28() {
+    void testSum28() {
         Sum28 sum28 = new Sum28();
         assertThat(sum28.sum28(new int[]{2, 3, 2, 2, 4, 2}))
             .isTrue();

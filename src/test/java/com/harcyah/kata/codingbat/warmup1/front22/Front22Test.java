@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Front22Test {
+class Front22Test {
 
     @Test
-    public void testFront22() {
+    void testFront22() {
         Front22 front22 = new Front22();
         assertEquals("kikittenki", front22.front22("kitten"));
         assertEquals("HaHaHa", front22.front22("Ha"));

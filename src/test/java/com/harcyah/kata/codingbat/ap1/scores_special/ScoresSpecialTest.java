@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ScoresSpecialTest {
+class ScoresSpecialTest {
 
     @Test
-    public void testScoresSpecial() {
+    void testScoresSpecial() {
         ScoresSpecial scoresSpecial = new ScoresSpecial();
         assertThat(scoresSpecial.scoresSpecial(new int[]{12, 10, 4}, new int[]{2, 20, 30}))
             .isEqualTo(40);

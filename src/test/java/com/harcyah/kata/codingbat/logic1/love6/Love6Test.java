@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Love6Test {
+class Love6Test {
 
     @Test
-    public void testLove6() {
+    void testLove6() {
         Love6 love6 = new Love6();
         assertThat(love6.love6(6, 4)).isTrue();
         assertThat(love6.love6(4, 5)).isFalse();

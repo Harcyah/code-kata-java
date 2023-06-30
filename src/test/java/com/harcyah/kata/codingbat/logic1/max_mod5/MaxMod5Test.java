@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class MaxMod5Test {
+class MaxMod5Test {
 
     @Test
-    public void testMaxMod5() {
+    void testMaxMod5() {
         MaxMod5 maxMod5 = new MaxMod5();
         assertThat(maxMod5.maxMod5(2, 3)).isEqualTo(3);
         assertThat(maxMod5.maxMod5(6, 2)).isEqualTo(6);

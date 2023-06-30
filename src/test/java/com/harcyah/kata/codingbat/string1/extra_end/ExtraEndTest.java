@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ExtraEndTest {
+class ExtraEndTest {
 
     @Test
-    public void testExtraEnd() {
+    void testExtraEnd() {
         ExtraEnd extraEnd = new ExtraEnd();
         assertEquals("lololo", extraEnd.extraEnd("Hello"));
         assertEquals("ababab", extraEnd.extraEnd("ab"));

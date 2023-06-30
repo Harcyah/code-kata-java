@@ -7,10 +7,10 @@ import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class WordMultipleTest {
+class WordMultipleTest {
 
     @Test
-    public void testWordMultiple() {
+    void testWordMultiple() {
         WordMultiple wordMultiple = new WordMultiple();
         assertThat(wordMultiple.wordMultiple(new String[] { "a", "b", "a", "c", "b" }))
             .isEqualTo(Map.of("b", true, "c", false, "a", true));

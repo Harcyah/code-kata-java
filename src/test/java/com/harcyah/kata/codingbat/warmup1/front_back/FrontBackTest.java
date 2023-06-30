@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class FrontBackTest {
+class FrontBackTest {
 
     @Test
-    public void testFrontBack() {
+    void testFrontBack() {
         FrontBack frontBack = new FrontBack();
         assertEquals("eodc", frontBack.frontBack("code"));
         assertEquals("a", frontBack.frontBack("a"));

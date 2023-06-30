@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class SquareUpTest {
+class SquareUpTest {
 
     @Test
-    public void testSquareUp() {
+    void testSquareUp() {
         SquareUp squareUp = new SquareUp();
 
         assertThat(squareUp.squareUp(1)).isEqualTo(new int[]{1});

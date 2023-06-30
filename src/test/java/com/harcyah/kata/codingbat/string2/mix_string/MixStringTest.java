@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MixStringTest {
+class MixStringTest {
 
     @Test
-    public void testMixString() {
+    void testMixString() {
         MixString mixString = new MixString();
         assertEquals("axbycz", mixString.mixString("abc", "xyz"));
         assertEquals("HTihere", mixString.mixString("Hi", "There"));

@@ -6,10 +6,10 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Two2Test {
+class Two2Test {
 
     @Test
-    public void testTwo2() {
+    void testTwo2() {
         Two2 two2 = new Two2();
         assertThat(two2.two2(List.of(1, 2, 3)))
             .containsExactly(4, 6);

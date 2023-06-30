@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PlusOutTest {
+class PlusOutTest {
 
     @Test
-    public void testPlusOut() {
+    void testPlusOut() {
         PlusOut plusOut = new PlusOut();
         assertEquals("++xy++", plusOut.plusOut("12xy34", "xy"));
         assertEquals("1+++++", plusOut.plusOut("12xy34", "1"));

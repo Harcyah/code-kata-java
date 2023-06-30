@@ -9,10 +9,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class PythagoreanTripletTest {
+class PythagoreanTripletTest {
 
     @Test
-    public void shouldCalculateSum() {
+    void shouldCalculateSum() {
         PythagoreanTriplet sut = new PythagoreanTriplet(3, 4, 5);
         final int expected = 12;
         final int actual = sut.calculateSum();
@@ -20,7 +20,7 @@ public class PythagoreanTripletTest {
     }
 
     @Test
-    public void shouldCalculateProduct() {
+    void shouldCalculateProduct() {
         PythagoreanTriplet sut = new PythagoreanTriplet(3, 4, 5);
         final long expected = 60L;
         final long actual = sut.calculateProduct();
@@ -28,19 +28,19 @@ public class PythagoreanTripletTest {
     }
 
     @Test
-    public void testIsPythagoreanOK() {
+    void testIsPythagoreanOK() {
         PythagoreanTriplet sut = new PythagoreanTriplet(3, 4, 5);
         assertTrue(sut.isPythagorean());
     }
 
     @Test
-    public void testIsPythagoreanFail() {
+    void testIsPythagoreanFail() {
         PythagoreanTriplet sut = new PythagoreanTriplet(5, 6, 7);
         assertFalse(sut.isPythagorean());
     }
 
     @Test
-    public void shouldMakeTripletsUpToTen() {
+    void shouldMakeTripletsUpToTen() {
         final List<Long> actual
                 = PythagoreanTriplet
                 .makeTripletsList()
@@ -55,7 +55,7 @@ public class PythagoreanTripletTest {
     }
 
     @Test
-    public void shouldMakeTripletsElevenToTwenty() {
+    void shouldMakeTripletsElevenToTwenty() {
         final List<Long> actual
                 = PythagoreanTriplet
                 .makeTripletsList()
@@ -71,7 +71,7 @@ public class PythagoreanTripletTest {
     }
 
     @Test
-    public void shouldMakeTripletsAndFilterOnSum() {
+    void shouldMakeTripletsAndFilterOnSum() {
         final List<Long> actual
                 = PythagoreanTriplet
                 .makeTripletsList()

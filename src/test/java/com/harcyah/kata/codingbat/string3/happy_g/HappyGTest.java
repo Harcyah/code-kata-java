@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class HappyGTest {
+class HappyGTest {
 
     @Test
-    public void testHappyG() {
+    void testHappyG() {
         HappyG sut = new HappyG();
         assertThat(sut.happyG("xxggxx")).isTrue();
         assertThat(sut.happyG("xxgxx")).isFalse();

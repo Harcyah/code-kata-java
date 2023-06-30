@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class WithoutDoublesTest {
+class WithoutDoublesTest {
 
     @Test
-    public void testWithoutDoubles() {
+    void testWithoutDoubles() {
         WithoutDoubles withoutDoubles = new WithoutDoubles();
         assertEquals(5, withoutDoubles.withoutDoubles(2, 3, true));
         assertEquals(7, withoutDoubles.withoutDoubles(3, 3, true));

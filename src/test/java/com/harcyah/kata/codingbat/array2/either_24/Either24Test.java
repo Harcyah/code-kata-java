@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Either24Test {
+class Either24Test {
 
     @Test
-    public void testEither24() {
+    void testEither24() {
         Either24 either24 = new Either24();
         assertThat(either24.either24(new int[]{1, 2, 2}))
             .isTrue();

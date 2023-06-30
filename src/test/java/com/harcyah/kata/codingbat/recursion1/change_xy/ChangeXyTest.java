@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ChangeXyTest {
+class ChangeXyTest {
 
     @Test
-    public void testChangeXy() {
+    void testChangeXy() {
         ChangeXY sut = new ChangeXY();
         assertThat(sut.changeXY("codex")).isEqualTo("codey");
         assertThat(sut.changeXY("xxhixx")).isEqualTo("yyhiyy");

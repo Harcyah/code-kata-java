@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Lucky13Test {
+class Lucky13Test {
 
     @Test
-    public void testLucky13() {
+    void testLucky13() {
         Lucky13 lucky13 = new Lucky13();
         assertThat(lucky13.lucky13(new int[]{0, 2, 4})).isTrue();
         assertThat(lucky13.lucky13(new int[]{1, 2, 3})).isFalse();

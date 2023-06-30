@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CanBalanceTest {
+class CanBalanceTest {
 
     @Test
-    public void testCanBalance() {
+    void testCanBalance() {
         CanBalance canBalance = new CanBalance();
         assertThat(canBalance.canBalance(new int[]{1, 1, 1, 2, 1})).isTrue();
         assertThat(canBalance.canBalance(new int[]{2, 1, 1, 2, 1})).isFalse();

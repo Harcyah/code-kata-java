@@ -5,82 +5,82 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class BracketCheckerTest {
+class BracketCheckerTest {
 
     @Test
-    public void testPairedSquareBrackets() {
+    void testPairedSquareBrackets() {
         final BracketChecker bracketChecker = new BracketChecker("[]");
         assertTrue(bracketChecker.areBracketsMatchedAndNestedCorrectly());
     }
 
     @Test
-    public void testEmptyString() {
+    void testEmptyString() {
         final BracketChecker bracketChecker = new BracketChecker("");
         assertTrue(bracketChecker.areBracketsMatchedAndNestedCorrectly());
     }
 
     @Test
-    public void testUnpairedBrackets() {
+    void testUnpairedBrackets() {
         final BracketChecker bracketChecker = new BracketChecker("[[");
         assertFalse(bracketChecker.areBracketsMatchedAndNestedCorrectly());
     }
 
     @Test
-    public void testIncorrectlyOrderedBrackets() {
+    void testIncorrectlyOrderedBrackets() {
         final BracketChecker bracketChecker = new BracketChecker("}{");
         assertFalse(bracketChecker.areBracketsMatchedAndNestedCorrectly());
     }
 
     @Test
-    public void testPairedBracketsWithWhitespace() {
+    void testPairedBracketsWithWhitespace() {
         final BracketChecker bracketChecker = new BracketChecker("{ }");
         assertTrue(bracketChecker.areBracketsMatchedAndNestedCorrectly());
     }
 
     @Test
-    public void testSimpleNestedBrackets() {
+    void testSimpleNestedBrackets() {
         final BracketChecker bracketChecker = new BracketChecker("{[]}");
         assertTrue(bracketChecker.areBracketsMatchedAndNestedCorrectly());
     }
 
     @Test
-    public void testSeveralPairedBrackets() {
+    void testSeveralPairedBrackets() {
         final BracketChecker bracketChecker = new BracketChecker("{}[]");
         assertTrue(bracketChecker.areBracketsMatchedAndNestedCorrectly());
     }
 
     @Test
-    public void testPairedAndNestedBrackets() {
+    void testPairedAndNestedBrackets() {
         final BracketChecker bracketChecker = new BracketChecker("([{}({}[])])");
         assertTrue(bracketChecker.areBracketsMatchedAndNestedCorrectly());
     }
 
     @Test
-    public void testUnopenedClosingBracket() {
+    void testUnopenedClosingBracket() {
         final BracketChecker bracketChecker = new BracketChecker("{[)][]}");
         assertFalse(bracketChecker.areBracketsMatchedAndNestedCorrectly());
     }
 
     @Test
-    public void testUnpairedAndNestedBracket() {
+    void testUnpairedAndNestedBracket() {
         final BracketChecker bracketChecker = new BracketChecker("([{])");
         assertFalse(bracketChecker.areBracketsMatchedAndNestedCorrectly());
     }
 
     @Test
-    public void testPairedAndIncorrectlyNestedBrackets() {
+    void testPairedAndIncorrectlyNestedBrackets() {
         final BracketChecker bracketChecker = new BracketChecker("[({]})");
         assertFalse(bracketChecker.areBracketsMatchedAndNestedCorrectly());
     }
 
     @Test
-    public void testValidMathExpression() {
+    void testValidMathExpression() {
         final BracketChecker bracketChecker = new BracketChecker("(((185 + 223.85) * 15) - 543)/2");
         assertTrue(bracketChecker.areBracketsMatchedAndNestedCorrectly());
     }
 
     @Test
-    public void testValidComplexLaTeXExpression() {
+    void testValidComplexLaTeXExpression() {
         final BracketChecker bracketChecker = new BracketChecker(
                 "\\left(\\begin{array}{cc} \\frac{1}{3} & x\\\\ \\mathrm{e}^{x} &... x^2 \\end{array}\\right)");
 

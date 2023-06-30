@@ -7,10 +7,10 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class PascalsTriangleTest {
+class PascalsTriangleTest {
 
     @Test
-    public void testTriangleWithFourRows() {
+    void testTriangleWithFourRows() {
         int[][] expectedOutput = new int[][]{
             {1},
             {1, 1},
@@ -22,7 +22,7 @@ public class PascalsTriangleTest {
     }
 
     @Test
-    public void testTriangleWithSixRows() {
+    void testTriangleWithSixRows() {
         int[][] expectedOutput = new int[][]{
             {1},
             {1, 1},
@@ -36,7 +36,7 @@ public class PascalsTriangleTest {
     }
 
     @Test
-    public void testExpectEmptyTriangle() {
+    void testExpectEmptyTriangle() {
         int[][] expectedOutput = new int[][]{
         };
 
@@ -44,7 +44,7 @@ public class PascalsTriangleTest {
     }
 
     @Test
-    public void testValidInput() {
+    void testValidInput() {
         int[][] input = new int[][]{
             {1},
             {1, 1},
@@ -57,7 +57,7 @@ public class PascalsTriangleTest {
     }
 
     @Test
-    public void testInvalidInput() {
+    void testInvalidInput() {
         int[][] input = new int[][]{
             {1},
             {1, 1},
@@ -69,7 +69,7 @@ public class PascalsTriangleTest {
     }
 
     @Test
-    public void testValidatesNotNegativeRows() {
+    void testValidatesNotNegativeRows() {
         assertThatThrownBy(() -> PascalsTriangle.computeTriangle(-1))
             .isInstanceOf(IllegalArgumentException.class);
     }

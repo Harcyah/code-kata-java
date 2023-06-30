@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class AltPairsTest {
+class AltPairsTest {
 
     @Test
-    public void testAltPairs() {
+    void testAltPairs() {
         AltPairs altPairs = new AltPairs();
         assertEquals("kien", altPairs.altPairs("kitten"));
         assertEquals("Chole", altPairs.altPairs("Chocolate"));

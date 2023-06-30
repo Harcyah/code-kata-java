@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class StringTimesTest {
+class StringTimesTest {
 
     @Test
-    public void testStringTimes() {
+    void testStringTimes() {
         StringTimes stringTimes = new StringTimes();
         assertEquals("HiHi", stringTimes.stringTimes("Hi", 2));
         assertEquals("HiHiHi", stringTimes.stringTimes("Hi", 3));

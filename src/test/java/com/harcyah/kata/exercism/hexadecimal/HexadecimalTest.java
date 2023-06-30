@@ -4,64 +4,64 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class HexadecimalTest {
+class HexadecimalTest {
 
     @Test
-    public void testOne() {
+    void testOne() {
         int expected = 1;
         assertEquals(expected, Hexadecimal.toDecimal("1"));
     }
 
     @Test
-    public void testC() {
+    void testC() {
         int expected = 12;
         assertEquals(expected, Hexadecimal.toDecimal("c"));
     }
 
     @Test
-    public void test10() {
+    void test10() {
         int expected = 16;
         assertEquals(expected, Hexadecimal.toDecimal("10"));
     }
 
     @Test
-    public void testAf() {
+    void testAf() {
         int expected = 175;
         assertEquals(expected, Hexadecimal.toDecimal("af"));
     }
 
     @Test
-    public void test100() {
+    void test100() {
         int expected = 256;
         assertEquals(expected, Hexadecimal.toDecimal("100"));
     }
 
     @Test
-    public void test19ace() {
+    void test19ace() {
         int expected = 105166;
         assertEquals(expected, Hexadecimal.toDecimal("19ace"));
     }
 
     @Test
-    public void testInvalid() {
+    void testInvalid() {
         int expected = 0;
         assertEquals(expected, Hexadecimal.toDecimal("carrot"));
     }
 
     @Test
-    public void testBlack() {
+    void testBlack() {
         int expected = 0;
         assertEquals(expected, Hexadecimal.toDecimal("000000"));
     }
 
     @Test
-    public void testWhite() {
+    void testWhite() {
         int expected = 16777215;
         assertEquals(expected, Hexadecimal.toDecimal("ffffff"));
     }
 
     @Test
-    public void testYellow() {
+    void testYellow() {
         int expected = 16776960;
         assertEquals(expected, Hexadecimal.toDecimal("ffff00"));
     }

@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class MakeMiddleTest {
+class MakeMiddleTest {
 
     @Test
-    public void testMakeMiddle() {
+    void testMakeMiddle() {
         MakeMiddle makeMiddle = new MakeMiddle();
         assertThat(makeMiddle.makeMiddle(new int[]{1, 2, 3, 4})).isEqualTo(new int[]{2, 3});
         assertThat(makeMiddle.makeMiddle(new int[]{7, 1, 2, 3, 4, 9})).isEqualTo(new int[]{2, 3});

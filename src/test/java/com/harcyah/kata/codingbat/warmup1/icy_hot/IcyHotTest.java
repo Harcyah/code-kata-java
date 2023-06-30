@@ -5,10 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class IcyHotTest {
+class IcyHotTest {
 
     @Test
-    public void testIcyHot() {
+    void testIcyHot() {
         IcyHot icyHot = new IcyHot();
         assertTrue(icyHot.icyHot(120, -1));
         assertTrue(icyHot.icyHot(-1, 120));

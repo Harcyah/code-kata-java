@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class FactorialTest {
+class FactorialTest {
 
     @Test
-    public void testFactorial() {
+    void testFactorial() {
         Factorial factorial = new Factorial();
         assertThat(factorial.factorial(1)).isEqualTo(1);
         assertThat(factorial.factorial(2)).isEqualTo(2);

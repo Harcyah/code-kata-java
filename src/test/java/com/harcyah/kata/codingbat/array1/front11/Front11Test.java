@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Front11Test {
+class Front11Test {
 
     @Test
-    public void testFront11() {
+    void testFront11() {
         Front11 front11 = new Front11();
         assertThat(front11.front11(new int[]{1, 2, 3}, new int[]{7, 9, 8}))
             .isEqualTo(new int[]{1, 7});

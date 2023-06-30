@@ -4,17 +4,17 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DiamondTest {
+class DiamondTest {
 
     @Test
-    public void diamondOfA() throws Exception {
+    void diamondOfA() throws Exception {
         Diamond diamond = new Diamond();
         String s = diamond.diamondOf('A');
         assertEquals("A", s);
     }
 
     @Test
-    public void diamondOfC() throws Exception {
+    void diamondOfC() throws Exception {
         Diamond diamond = new Diamond();
         String s = diamond.diamondOf('C');
         assertEquals(
@@ -27,7 +27,7 @@ public class DiamondTest {
     }
 
     @Test
-    public void diamondOfE() throws Exception {
+    void diamondOfE() throws Exception {
         Diamond diamond = new Diamond();
         String s = diamond.diamondOf('E');
         assertEquals(

@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CommonTwoTest {
+class CommonTwoTest {
 
     @Test
-    public void testCommonTwo() {
+    void testCommonTwo() {
         CommonTwo commonTwo = new CommonTwo();
         assertThat(commonTwo.commonTwo(new String[]{"a", "c", "x"}, new String[]{"b", "c", "d", "x"})).isEqualTo(2);
         assertThat(commonTwo.commonTwo(new String[]{"a", "c", "x"}, new String[]{"a", "b", "c", "x", "z"})).isEqualTo(3);

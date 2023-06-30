@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Reverse3Test {
+class Reverse3Test {
 
     @Test
-    public void testReverse3() {
+    void testReverse3() {
         Reverse3 reverse3 = new Reverse3();
         assertThat(reverse3.reverse3(new int[]{1, 2, 3})).isEqualTo(new int[]{3, 2, 1});
         assertThat(reverse3.reverse3(new int[]{5, 11, 9})).isEqualTo(new int[]{9, 11, 5});

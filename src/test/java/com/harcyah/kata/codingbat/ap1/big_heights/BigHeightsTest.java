@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class BigHeightsTest {
+class BigHeightsTest {
 
     @Test
-    public void testBigHeights() {
+    void testBigHeights() {
         BigHeights bigHeights = new BigHeights();
         assertThat(bigHeights.bigHeights(new int[]{5, 3, 6, 7, 2}, 2, 4))
             .isEqualTo(1);
