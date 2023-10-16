@@ -8,7 +8,7 @@ public class ExcelNumberingRecursiveImpl {
             int r = number % 26;
             return getLabel(q) + toAlphabeticChar(r);
         } else {
-            return toAlphabeticChar(number) + "";
+            return Character.toString(toAlphabeticChar(number));
         }
     }
 
