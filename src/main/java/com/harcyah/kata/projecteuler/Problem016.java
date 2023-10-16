@@ -11,7 +11,7 @@ public class Problem016 {
         String str = bi.toString();
         int sum = 0;
         for (int i = 0; i < str.length(); i++) {
-            sum += Integer.parseInt(str.charAt(i) + "");
+            sum += Character.digit(str.charAt(i), 10);
         }
 
         return sum;

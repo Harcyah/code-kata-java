@@ -20,7 +20,7 @@ class CustomerTest {
         customer.addRental(new Rental(new Movie("Bambi", CHILDRENS), 3));
         customer.addRental(new Rental(new Movie("Toy Story", CHILDRENS), 4));
 
-        String expected = "" +
+        String expected =
             "Rental Record for Bob\n" +
             "\tJaws\t2.0\n" +
             "\tGolden Eye\t3.5\n" +
@@ -45,7 +45,7 @@ class CustomerTest {
         customer.addRental(new Rental(new Movie("Bambi", CHILDRENS), 3));
         customer.addRental(new Rental(new Movie("Toy Story", CHILDRENS), 4));
 
-        String expected = "" +
+        String expected =
             "<h1>Rental Record for <em>martin</em></h1>\n" +
             "<table>\n" +
             "  <tr><td>Jaws</td><td>2.0</td></tr>\n" +
