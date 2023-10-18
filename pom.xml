@@ -187,9 +187,10 @@
                     </dependency>
                 </dependencies>
                 <configuration>
-                    <includeTests>true</includeTests>
-                    <failOnError>true</failOnError>
                     <excludeFilterFile>https://www.harcyah.xyz/maven-spotbugs.xml</excludeFilterFile>
+                    <failOnError>true</failOnError>
+                    <includeTests>true</includeTests>
+                    <jvmArgs>-Duser.language=en</jvmArgs>
                     <plugins>
                         <plugin>
                             <groupId>jp.skypencil.findbugs.slf4j</groupId>
