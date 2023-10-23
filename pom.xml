@@ -208,50 +208,6 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>org.assertj</groupId>
-                <artifactId>assertj-assertions-generator-maven-plugin</artifactId>
-                <version>2.2.0</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.assertj</groupId>
-                        <artifactId>assertj-core</artifactId>
-                        <version>3.24.2</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.assertj</groupId>
-                        <artifactId>assertj-assertions-generator</artifactId>
-                        <version>2.2.1</version>
-                    </dependency>
-                </dependencies>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>generate-assertions</goal>
-                        </goals>
-                        <phase>generate-test-sources</phase>
-                    </execution>
-                </executions>
-                <configuration>
-                    <classes>
-                        <class>com.harcyah.kata.misc.team_builder.Freelancer</class>
-                        <class>com.harcyah.kata.misc.team_builder.Freelancers</class>
-                        <class>com.harcyah.kata.misc.team_builder.Team</class>
-                        <class>com.harcyah.kata.misc.team_builder.Teams</class>
-                    </classes>
-                    <templates>
-                        <templatesDirectory>src/test/templates/</templatesDirectory>
-                        <assertionsEntryPointClass>assertions_entry_point_template.txt</assertionsEntryPointClass>
-                    </templates>
-                    <entryPointClassPackage>com.harcyah.kata</entryPointClassPackage>
-                    <hierarchical>true</hierarchical>
-                    <generateBddAssertions>false</generateBddAssertions>
-                    <generateJUnitSoftAssertions>true</generateJUnitSoftAssertions>
-                    <generateSoftAssertions>true</generateSoftAssertions>
-                    <targetDir>target/generated-test-sources/java/assertj</targetDir>
-                    <quiet>true</quiet>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>versions-maven-plugin</artifactId>
                 <version>2.16.1</version>
@@ -314,6 +270,50 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-install-plugin</artifactId>
                 <version>3.1.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-assertions-generator-maven-plugin</artifactId>
+                <version>2.2.0</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.assertj</groupId>
+                        <artifactId>assertj-core</artifactId>
+                        <version>3.24.2</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.assertj</groupId>
+                        <artifactId>assertj-assertions-generator</artifactId>
+                        <version>2.2.1</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate-assertions</goal>
+                        </goals>
+                        <phase>generate-test-sources</phase>
+                    </execution>
+                </executions>
+                <configuration>
+                    <classes>
+                        <class>com.harcyah.kata.misc.team_builder.Freelancer</class>
+                        <class>com.harcyah.kata.misc.team_builder.Freelancers</class>
+                        <class>com.harcyah.kata.misc.team_builder.Team</class>
+                        <class>com.harcyah.kata.misc.team_builder.Teams</class>
+                    </classes>
+                    <templates>
+                        <templatesDirectory>src/test/templates/</templatesDirectory>
+                        <assertionsEntryPointClass>assertions_entry_point_template.txt</assertionsEntryPointClass>
+                    </templates>
+                    <entryPointClassPackage>com.harcyah.kata</entryPointClassPackage>
+                    <hierarchical>true</hierarchical>
+                    <generateBddAssertions>false</generateBddAssertions>
+                    <generateJUnitSoftAssertions>true</generateJUnitSoftAssertions>
+                    <generateSoftAssertions>true</generateSoftAssertions>
+                    <targetDir>target/generated-test-sources/java/assertj</targetDir>
+                    <quiet>true</quiet>
+                </configuration>
             </plugin>
         </plugins>
     </build>
