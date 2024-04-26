@@ -26,14 +26,14 @@ public enum Rank implements RankMatcher {
     FOUR_OF_A_KIND {
         @Override
         public boolean matches(PokerHand hand) {
-            return Rank.getGroupsOfCardsByValue(hand, 4).size() == 1;
+            return getGroupsOfCardsByValue(hand, 4).size() == 1;
         }
     },
 
     FULL_HOUSE {
         @Override
         public boolean matches(PokerHand hand) {
-            return Rank.getGroupsOfCardsByValue(hand, 3).size() == 1 && Rank.getGroupsOfCardsByValue(hand, 2).size() == 1;
+            return getGroupsOfCardsByValue(hand, 3).size() == 1 && getGroupsOfCardsByValue(hand, 2).size() == 1;
         }
     },
 
@@ -63,21 +63,21 @@ public enum Rank implements RankMatcher {
     THREE_OF_A_KIND {
         @Override
         public boolean matches(PokerHand hand) {
-            return Rank.getGroupsOfCardsByValue(hand, 3).size() == 1;
+            return getGroupsOfCardsByValue(hand, 3).size() == 1;
         }
     },
 
     TWO_PAIRS {
         @Override
         public boolean matches(PokerHand hand) {
-            return Rank.getGroupsOfCardsByValue(hand, 2).size() == 2;
+            return getGroupsOfCardsByValue(hand, 2).size() == 2;
         }
     },
 
     ONE_PAIR {
         @Override
         public boolean matches(PokerHand hand) {
-            return Rank.getGroupsOfCardsByValue(hand, 2).size() == 1;
+            return getGroupsOfCardsByValue(hand, 2).size() == 1;
         }
     };
 

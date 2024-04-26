@@ -70,7 +70,7 @@ public enum State implements EventHandler {
     STOPPED_WHILE_OPENING {
         @Override
         public void onButton(GarageDoor door) {
-            door.setState(State.CLOSING);
+            door.setState(CLOSING);
         }
 
         @Override
