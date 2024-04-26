@@ -174,7 +174,7 @@
                     <dependency>
                         <groupId>net.sourceforge.pmd</groupId>
                         <artifactId>pmd-core</artifactId>
-                        <version>7.0.0</version>
+                        <version>7.1.0</version>
                     </dependency>
                 </dependencies>
                 <configuration>
