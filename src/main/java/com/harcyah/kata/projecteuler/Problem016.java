@@ -5,7 +5,7 @@ import java.math.BigInteger;
 public class Problem016 {
 
     public int getPowerDigitSum(int limit) {
-        BigInteger bi = new BigInteger("2");
+        BigInteger bi = BigInteger.TWO;
         bi = bi.pow(limit);
 
         String str = bi.toString();
