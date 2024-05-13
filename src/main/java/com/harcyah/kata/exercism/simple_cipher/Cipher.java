@@ -26,7 +26,7 @@ public class Cipher {
     }
 
     private String random(int length) {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < length; i++) {
             char random = (char) (97 + RANDOM.nextInt(25));
             sb.append(random);

@@ -10,7 +10,7 @@ public class ConCat {
             return a;
         }
 
-        StringBuffer out = new StringBuffer();
+        StringBuilder out = new StringBuilder();
         out.append(a);
         char suffix = out.charAt(out.length() - 1);
         if (suffix == b.charAt(0)) {

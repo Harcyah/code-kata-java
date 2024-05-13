@@ -3,7 +3,7 @@ package com.harcyah.kata.codingbat.string1.without_x_2;
 public class WithoutX2 {
 
     public String withoutX2(String str) {
-        StringBuffer out = new StringBuffer();
+        StringBuilder out = new StringBuilder();
         if (str.length() >= 1 && str.charAt(0) != 'x') {
             out.append(str.charAt(0));
         }

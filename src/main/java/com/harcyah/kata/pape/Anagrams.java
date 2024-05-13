@@ -14,7 +14,7 @@ public class Anagrams {
     }
 
     private char[] getClean(String source) {
-        StringBuffer sba = new StringBuffer();
+        StringBuilder sba = new StringBuilder();
         for (int i = 0; i < source.length(); i++) {
             char c = source.charAt(i);
             if (Character.isAlphabetic(c)) {

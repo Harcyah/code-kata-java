@@ -4,7 +4,7 @@ public class SumNumbers {
 
     public int sumNumbers(String source) {
         int sum = 0;
-        StringBuffer accumulator = new StringBuffer();
+        StringBuilder accumulator = new StringBuilder();
         for (int i = 0; i < source.length(); i++) {
             char c = source.charAt(i);
             if (Character.isDigit(c)) {
@@ -12,7 +12,7 @@ public class SumNumbers {
             } else {
                 if (accumulator.length() > 0) {
                     sum += Integer.parseInt(accumulator.toString());
-                    accumulator = new StringBuffer();
+                    accumulator = new StringBuilder();
                 }
             }
         }

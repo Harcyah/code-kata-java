@@ -7,7 +7,7 @@ public class StartWord {
             return "";
         }
 
-        StringBuffer out = new StringBuffer();
+        StringBuilder out = new StringBuilder();
         out.append(str.charAt(0));
         for (int i = 1; i < word.length(); i++) {
             if (str.charAt(i) == word.charAt(i)) {

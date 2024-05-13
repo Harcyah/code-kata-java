@@ -4,7 +4,7 @@ package com.harcyah.kata.reddit.easy_2015_02_16;
 public class BinaryReader {
 
     public String read(String binary) {
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < binary.length(); i += 8) {
             String letter = binary.substring(i, i + 8);
             int integer = Integer.parseInt(letter, 2);

@@ -4,7 +4,7 @@ public class RepeatEnd {
 
     public String repeatEnd(String str, int n) {
         String suffix = str.substring(str.length() - n);
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < n; i++) {
             sb.append(suffix);
         }

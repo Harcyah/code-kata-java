@@ -29,7 +29,7 @@ public class Raindrops {
     public static String convert(int input) {
         List<Long> primes = getForNumber(input);
 
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         if (primes.contains(3L)) {
             sb.append("Pling");
         }

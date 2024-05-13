@@ -5,7 +5,7 @@ public class RepeatSeparator {
     public String repeatSeparator(String word, String sep, int count) {
         if (count == 0)
             return "";
-        StringBuffer sb = new StringBuffer(word);
+        StringBuilder sb = new StringBuilder(word);
         for (int i = 0; i < count - 1; i++) {
             sb.append(sep);
             sb.append(word);
