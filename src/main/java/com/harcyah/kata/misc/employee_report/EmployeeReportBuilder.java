@@ -3,7 +3,6 @@ package com.harcyah.kata.misc.employee_report;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
-import java.util.stream.Collectors;
 
 public class EmployeeReportBuilder {
 
@@ -19,7 +18,7 @@ public class EmployeeReportBuilder {
             .filter(e -> e.getAge() >= 18)
             .sorted(Comparator.comparing(Employee::getName).reversed())
             .map(it -> new Employee(it.getName().toUpperCase(Locale.ROOT), it.getAge()))
-            .collect(Collectors.toList());
+            .toList();
     }
 
 }

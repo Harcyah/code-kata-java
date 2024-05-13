@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static com.harcyah.kata.ResourceLoader.loadLines;
 
@@ -31,19 +30,19 @@ public class SchoolAttendance {
     public List<Student> getStudentsSortedByGenderAndLastNameAscending() {
         return students.stream()
             .sorted(Student::compareGenderAndLastName)
-            .collect(Collectors.toList());
+            .toList();
     }
 
     public List<Student> getStudentsSortedByBirthDateAscending() {
         return students.stream()
             .sorted(Student::compareDateOfBirth)
-            .collect(Collectors.toList());
+            .toList();
     }
 
     public List<Student> getStudentsSortedByLastNameAscending() {
         return students.stream()
             .sorted(Student::compareLastName)
-            .collect(Collectors.toList());
+            .toList();
     }
 
 }

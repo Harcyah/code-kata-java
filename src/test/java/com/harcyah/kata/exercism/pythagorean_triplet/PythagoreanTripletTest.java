@@ -3,7 +3,6 @@ package com.harcyah.kata.exercism.pythagorean_triplet;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -47,9 +46,9 @@ class PythagoreanTripletTest {
                 .withFactorsLessThanOrEqualTo(10)
                 .build()
                 .stream()
-                .map(t -> t.calculateProduct())
+                .map(PythagoreanTriplet::calculateProduct)
                 .sorted()
-                .collect(Collectors.toList());
+                .toList();
         final List<Long> expected = List.of(60L, 480L);
         assertEquals(expected, actual);
     }
@@ -63,9 +62,9 @@ class PythagoreanTripletTest {
                 .withFactorsLessThanOrEqualTo(20)
                 .build()
                 .stream()
-                .map(t -> t.calculateProduct())
-                .sorted((p1, p2) -> Double.compare(p1, p2))
-                .collect(Collectors.toList());
+                .map(PythagoreanTriplet::calculateProduct)
+                .sorted(Double::compare)
+                .toList();
         final List<Long> expected = List.of(3840L);
         assertEquals(expected, actual);
     }
@@ -79,9 +78,9 @@ class PythagoreanTripletTest {
                 .thatSumTo(180)
                 .build()
                 .stream()
-                .map(t -> t.calculateProduct())
-                .sorted((p1, p2) -> Double.compare(p1, p2))
-                .collect(Collectors.toList());
+                .map(PythagoreanTriplet::calculateProduct)
+                .sorted(Double::compare)
+                .toList();
         final List<Long> expected = List.of(118080L, 168480L, 202500L);
         assertEquals(expected, actual);
     }

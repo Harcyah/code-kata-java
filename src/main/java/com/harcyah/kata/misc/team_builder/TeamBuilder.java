@@ -6,7 +6,6 @@ import org.paukov.combinatorics.ICombinatoricsVector;
 import org.paukov.combinatorics.IFilter;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static org.paukov.combinatorics.CombinatoricsFactory.createSimpleCombinationGenerator;
 import static org.paukov.combinatorics.CombinatoricsFactory.createVector;
@@ -22,7 +21,7 @@ public class TeamBuilder {
 
         var teams = results.stream()
             .map(r -> new Team(r.getVector()))
-            .collect(Collectors.toList());
+            .toList();
         return new Teams(teams);
     }
 

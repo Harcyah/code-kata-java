@@ -1,7 +1,6 @@
 package com.harcyah.kata.codingbat.functional2;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Square56 {
 
@@ -11,7 +10,7 @@ public class Square56 {
             .map(x -> x + 10)
             .filter(x -> x % 10 != 5)
             .filter(x -> x % 10 != 6)
-            .collect(Collectors.toList());
+            .toList();
     }
 
 }

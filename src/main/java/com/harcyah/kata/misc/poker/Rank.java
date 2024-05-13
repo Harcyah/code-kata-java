@@ -83,7 +83,7 @@ public enum Rank implements RankMatcher {
 
     private static List<List<PokerCard>> getGroupsOfCardsByValue(PokerHand hand, int size) {
         Map<Value, List<PokerCard>> groups = hand.getCards().stream().collect(Collectors.groupingBy(PokerCard::getValue));
-        return groups.values().stream().filter(x -> x.size() == size).collect(Collectors.toList());
+        return groups.values().stream().filter(x -> x.size() == size).toList();
     }
 
 }
