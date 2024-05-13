@@ -1,8 +1,11 @@
 package com.harcyah.kata.exercism.pig_latin;
 
+import lombok.experimental.UtilityClass;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@UtilityClass
 public class PigLatin {
 
     private static final List<String> VOWELS = new ArrayList<>();

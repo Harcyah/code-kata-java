@@ -1,5 +1,8 @@
 package com.harcyah.kata.exercism.nth_prime;
 
+import lombok.experimental.UtilityClass;
+
+@UtilityClass
 public class Prime {
 
     public static int nth(int number) {

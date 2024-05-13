@@ -1,10 +1,13 @@
 package com.harcyah.kata.exercism.palindrome_products;
 
+import lombok.experimental.UtilityClass;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
+@UtilityClass
 public class Palindromes {
 
     public static class PalindromeListBuilder {

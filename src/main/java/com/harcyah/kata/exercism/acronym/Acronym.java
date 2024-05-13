@@ -1,5 +1,8 @@
 package com.harcyah.kata.exercism.acronym;
 
+import lombok.experimental.UtilityClass;
+
+@UtilityClass
 public class Acronym {
 
     public static String generate(String original) {

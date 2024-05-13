@@ -1,7 +1,10 @@
 package com.harcyah.kata.exercism.atbash_cipher;
 
+import lombok.experimental.UtilityClass;
+
 import java.util.Arrays;
 
+@UtilityClass
 public class Atbash {
 
     private static final char[] ALPHABET = new char[]{

@@ -1,5 +1,8 @@
 package com.harcyah.kata.exercism.hamming;
 
+import lombok.experimental.UtilityClass;
+
+@UtilityClass
 public class Hamming {
 
     public static int compute(String leftStrand, String rightStrand) {

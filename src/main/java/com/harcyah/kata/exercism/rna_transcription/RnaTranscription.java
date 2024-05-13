@@ -1,8 +1,11 @@
 package com.harcyah.kata.exercism.rna_transcription;
 
+import lombok.experimental.UtilityClass;
+
 import java.util.HashMap;
 import java.util.Map;
 
+@UtilityClass
 public class RnaTranscription {
 
     private static final Map<Character, Character> MAPPING = new HashMap<>();

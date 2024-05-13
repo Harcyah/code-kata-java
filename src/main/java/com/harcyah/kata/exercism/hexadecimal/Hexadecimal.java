@@ -1,7 +1,10 @@
 package com.harcyah.kata.exercism.hexadecimal;
 
+import lombok.experimental.UtilityClass;
+
 import java.util.Arrays;
 
+@UtilityClass
 public class Hexadecimal {
 
     private static final char[] LEGAL = "0123456789abcdef".toCharArray();

@@ -1,9 +1,12 @@
 package com.harcyah.kata.exercism.accumulate;
 
+import lombok.experimental.UtilityClass;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
 
+@UtilityClass
 public class Accumulate {
 
     public static <T> List<T> accumulate(List<T> input, Function<T, T> lambda) {

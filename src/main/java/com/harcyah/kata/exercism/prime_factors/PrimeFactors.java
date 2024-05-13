@@ -1,8 +1,11 @@
 package com.harcyah.kata.exercism.prime_factors;
 
+import lombok.experimental.UtilityClass;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@UtilityClass
 public class PrimeFactors {
 
     public static List<Long> getForNumber(long input) {

@@ -1,7 +1,10 @@
 package com.harcyah.kata.misc.dictionary_replacer;
 
+import lombok.experimental.UtilityClass;
+
 import java.util.Map;
 
+@UtilityClass
 public class DictionaryReplacer {
 
     public static String replace(String needle, Map<String, String> dictionary) {
