@@ -2,7 +2,6 @@ package com.harcyah.kata.exercism.kindergarten_garden;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class KindergartenGarden {
@@ -35,7 +34,7 @@ public class KindergartenGarden {
         plants[1] = topRow.charAt(index * 2 + 1);
         plants[2] = bottowRow.charAt(index * 2);
         plants[3] = bottowRow.charAt(index * 2 + 1);
-        return Stream.of(plants).map(Plant::getPlant).collect(Collectors.toList());
+        return Stream.of(plants).map(Plant::getPlant).toList();
     }
 
 }

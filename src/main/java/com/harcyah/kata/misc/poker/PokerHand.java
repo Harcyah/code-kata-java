@@ -32,7 +32,7 @@ public class PokerHand implements Comparable<PokerHand> {
             throw new IllegalArgumentException();
         }
 
-        cards = set.stream().sorted((a, b) -> -1 * a.compareTo(b)).collect(Collectors.toList());
+        cards = set.stream().sorted((a, b) -> -1 * a.compareTo(b)).toList();
     }
 
     @Override

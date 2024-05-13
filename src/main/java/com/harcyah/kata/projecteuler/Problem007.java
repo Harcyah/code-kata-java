@@ -2,7 +2,6 @@ package com.harcyah.kata.projecteuler;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static com.harcyah.kata.ResourceLoader.loadLines;
 
@@ -14,7 +13,7 @@ public class Problem007 {
         primes = loadLines("/com/harcyah/kata/projecteuler/projecteuler_007.txt")
             .stream()
             .map(Integer::parseInt)
-            .collect(Collectors.toList());
+            .toList();
     }
 
     public long getNthPrime(int nth) throws NumberFormatException, IOException {

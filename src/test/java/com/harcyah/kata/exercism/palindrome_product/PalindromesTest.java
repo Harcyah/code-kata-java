@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import java.util.Collections;
 import java.util.List;
 import java.util.SortedMap;
-import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -38,7 +37,7 @@ class PalindromesTest {
                 .get(palindromes.lastKey())
                 .stream()
                 .sorted((a, b) -> Integer.compare(a.get(0), b.get(0)))
-                .collect(Collectors.toList());
+                .toList();
         assertEquals(expected, actual);
     }
 
@@ -67,7 +66,7 @@ class PalindromesTest {
                 .get(palindromes.lastKey())
                 .stream()
                 .sorted((a, b) -> Integer.compare(a.get(0), b.get(0)))
-                .collect(Collectors.toList());
+                .toList();
         assertEquals(expected, actual);
     }
 
@@ -96,7 +95,7 @@ class PalindromesTest {
                 .get(palindromes.firstKey())
                 .stream()
                 .sorted((a, b) -> Integer.compare(a.get(0), b.get(0)))
-                .collect(Collectors.toList());
+                .toList();
         assertEquals(expected, actual);
     }
 
@@ -125,7 +124,7 @@ class PalindromesTest {
                 .get(palindromes.lastKey())
                 .stream()
                 .sorted((a, b) -> Integer.compare(a.get(0), b.get(0)))
-                .collect(Collectors.toList());
+                .toList();
         assertEquals(expected, actual);
     }
 
@@ -154,7 +153,7 @@ class PalindromesTest {
                 .get(palindromes.firstKey())
                 .stream()
                 .sorted((a, b) -> Integer.compare(a.get(0), b.get(0)))
-                .collect(Collectors.toList());
+                .toList();
         assertEquals(expected, actual);
     }
 

@@ -3,7 +3,6 @@ package com.harcyah.kata.exercism.rectangles;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 public class RectangleCounter {
 
@@ -39,13 +38,13 @@ public class RectangleCounter {
                 .filter(x -> x != topLeft)
                 .filter(x -> x.getY() == topLeft.getY())
                 .filter(x -> x.getX() > topLeft.getX())
-                .collect(Collectors.toList());
+                .toList();
 
             List<Point> possibleCs = points.stream()
                 .filter(x -> x != topLeft)
                 .filter(x -> x.getX() == topLeft.getX())
                 .filter(x -> x.getY() > topLeft.getY())
-                .collect(Collectors.toList());
+                .toList();
 
             for (Point b : possibleBs) {
                 for (Point c : possibleCs) {

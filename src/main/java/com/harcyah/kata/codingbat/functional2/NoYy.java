@@ -1,7 +1,6 @@
 package com.harcyah.kata.codingbat.functional2;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class NoYy {
 
@@ -9,7 +8,7 @@ public class NoYy {
         return strings.stream()
             .map(x -> x + "y")
             .filter(x -> !x.contains("yy"))
-            .collect(Collectors.toList());
+            .toList();
     }
 
 }
