@@ -12,8 +12,8 @@ public class Problem017 {
 
     protected long getLengthOfEnglishLiteral(int value) {
         String literal = getEnglishLiteralOf(value);
-        literal = literal.replaceAll(" ", "");
-        literal = literal.replaceAll("-", "");
+        literal = literal.replace(" ", "");
+        literal = literal.replace("-", "");
         return literal.length();
     }
 
