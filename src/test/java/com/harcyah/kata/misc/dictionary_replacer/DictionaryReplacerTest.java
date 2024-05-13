@@ -12,7 +12,7 @@ class DictionaryReplacerTest {
     @Test
     void testSample1() {
         Map<String, String> dictionary = Map.of();
-        assertThat(DictionaryReplacer.replace("", dictionary)).isEqualTo("");
+        assertThat(DictionaryReplacer.replace("", dictionary)).isEmpty();
     }
 
     @Test
