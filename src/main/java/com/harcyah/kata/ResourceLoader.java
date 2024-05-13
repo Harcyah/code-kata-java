@@ -1,6 +1,7 @@
 package com.harcyah.kata;
 
 import com.google.common.io.Resources;
+import lombok.experimental.UtilityClass;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,6 +9,7 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
+@UtilityClass
 public class ResourceLoader {
 
     public static InputStream loadStream(String name) throws IOException {

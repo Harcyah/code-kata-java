@@ -1,5 +1,8 @@
 package com.harcyah.kata.exercism.trinary;
 
+import lombok.experimental.UtilityClass;
+
+@UtilityClass
 public class Trinary {
 
     public static int toDecimal(String str) {

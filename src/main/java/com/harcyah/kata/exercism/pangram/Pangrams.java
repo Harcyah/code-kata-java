@@ -1,5 +1,8 @@
 package com.harcyah.kata.exercism.pangram;
 
+import lombok.experimental.UtilityClass;
+
+@UtilityClass
 public class Pangrams {
 
     private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";

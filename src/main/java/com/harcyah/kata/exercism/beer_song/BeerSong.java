@@ -1,5 +1,8 @@
 package com.harcyah.kata.exercism.beer_song;
 
+import lombok.experimental.UtilityClass;
+
+@UtilityClass
 public class BeerSong {
 
     public static String sing(int start, int end) {

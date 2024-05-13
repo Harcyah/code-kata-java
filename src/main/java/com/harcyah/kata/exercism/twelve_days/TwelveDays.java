@@ -1,8 +1,11 @@
 package com.harcyah.kata.exercism.twelve_days;
 
+import lombok.experimental.UtilityClass;
+
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+@UtilityClass
 public class TwelveDays {
 
     public static String verse(int number) {

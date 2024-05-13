@@ -1,7 +1,10 @@
 package com.harcyah.kata.exercism.pascals_triangle;
 
+import lombok.experimental.UtilityClass;
+
 import java.util.Arrays;
 
+@UtilityClass
 public class PascalsTriangle {
 
     public static int[][] computeTriangle(int height) {

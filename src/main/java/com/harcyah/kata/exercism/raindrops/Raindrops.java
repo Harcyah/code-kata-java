@@ -1,8 +1,11 @@
 package com.harcyah.kata.exercism.raindrops;
 
+import lombok.experimental.UtilityClass;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@UtilityClass
 public class Raindrops {
 
     public static List<Long> getForNumber(long input) {

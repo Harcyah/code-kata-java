@@ -1,9 +1,12 @@
 package com.harcyah.kata.exercism.strain;
 
+import lombok.experimental.UtilityClass;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
 
+@UtilityClass
 public class Strain {
 
     public static <T> List<T> keep(List<T> input, Function<T, Boolean> function) {

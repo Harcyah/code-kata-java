@@ -1,5 +1,8 @@
 package com.harcyah.kata.projecteuler;
 
+import lombok.experimental.UtilityClass;
+
+@UtilityClass
 public class Prime {
 
     public static boolean isPrime(long n) {

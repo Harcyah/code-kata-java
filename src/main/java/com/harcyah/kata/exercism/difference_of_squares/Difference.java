@@ -1,7 +1,10 @@
 package com.harcyah.kata.exercism.difference_of_squares;
 
+import lombok.experimental.UtilityClass;
+
 import java.util.stream.IntStream;
 
+@UtilityClass
 public class Difference {
 
     public static int computeSquareOfSumTo(int i) {
