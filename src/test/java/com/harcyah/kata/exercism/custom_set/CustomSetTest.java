@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Collections;
 import java.util.List;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -207,7 +208,7 @@ class CustomSetTest {
 
         assertNotNull(actual);
         assertFalse(actual.isEmpty());
-        assertTrue(expected.equals(actual));
+        assertThat(expected).isEqualTo(actual);
     }
 
     @Test
@@ -221,7 +222,7 @@ class CustomSetTest {
 
         assertNotNull(actual);
         assertFalse(actual.isEmpty());
-        assertTrue(expected.equals(actual));
+        assertThat(expected).isEqualTo(actual);
     }
 
     @Test
