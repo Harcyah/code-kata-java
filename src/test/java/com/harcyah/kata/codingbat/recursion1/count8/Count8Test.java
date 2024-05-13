@@ -18,7 +18,7 @@ class Count8Test {
         assertThat(count8.count8(8088))
             .isEqualTo(4);
         assertThat(count8.count8(123))
-            .isEqualTo(0);
+            .isZero();
         assertThat(count8.count8(81238))
             .isEqualTo(2);
         assertThat(count8.count8(88788))
@@ -30,7 +30,7 @@ class Count8Test {
         assertThat(count8.count8(23884))
             .isEqualTo(3);
         assertThat(count8.count8(0))
-            .isEqualTo(0);
+            .isZero();
         assertThat(count8.count8(1818188))
             .isEqualTo(5);
         assertThat(count8.count8(8818181))

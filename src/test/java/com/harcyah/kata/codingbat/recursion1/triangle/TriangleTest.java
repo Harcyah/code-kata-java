@@ -9,7 +9,7 @@ class TriangleTest {
     @Test
     void testTriangle() {
         Triangle triangle = new Triangle();
-        assertThat(triangle.triangle(0)).isEqualTo(0);
+        assertThat(triangle.triangle(0)).isZero();
         assertThat(triangle.triangle(1)).isEqualTo(1);
         assertThat(triangle.triangle(2)).isEqualTo(3);
         assertThat(triangle.triangle(3)).isEqualTo(6);

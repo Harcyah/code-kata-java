@@ -12,13 +12,13 @@ class BigHeightsTest {
         assertThat(bigHeights.bigHeights(new int[]{5, 3, 6, 7, 2}, 2, 4))
             .isEqualTo(1);
         assertThat(bigHeights.bigHeights(new int[]{5, 3, 6, 7, 2}, 0, 1))
-            .isEqualTo(0);
+            .isZero();
         assertThat(bigHeights.bigHeights(new int[]{5, 3, 6, 7, 2}, 0, 4))
             .isEqualTo(1);
         assertThat(bigHeights.bigHeights(new int[]{5, 3, 6, 7, 3}, 0, 4))
-            .isEqualTo(0);
+            .isZero();
         assertThat(bigHeights.bigHeights(new int[]{5, 3, 6, 7, 2}, 1, 1))
-            .isEqualTo(0);
+            .isZero();
         assertThat(bigHeights.bigHeights(new int[]{5, 13, 6, 7, 2}, 1, 2))
             .isEqualTo(1);
         assertThat(bigHeights.bigHeights(new int[]{5, 13, 6, 7, 2}, 0, 2))
@@ -30,7 +30,7 @@ class BigHeightsTest {
         assertThat(bigHeights.bigHeights(new int[]{5, 13, 6, 7, 2}, 0, 3))
             .isEqualTo(2);
         assertThat(bigHeights.bigHeights(new int[]{1, 2, 3, 4, 5, 4, 3, 2, 10}, 0, 3))
-            .isEqualTo(0);
+            .isZero();
         assertThat(bigHeights.bigHeights(new int[]{1, 2, 3, 4, 5, 4, 3, 2, 10}, 4, 8))
             .isEqualTo(1);
         assertThat(bigHeights.bigHeights(new int[]{1, 2, 3, 14, 5, 4, 3, 2, 10}, 0, 3))

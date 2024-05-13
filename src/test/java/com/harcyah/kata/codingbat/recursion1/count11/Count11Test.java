@@ -13,13 +13,13 @@ class Count11Test {
         assertThat(count11.count11("abc11x11x11")).isEqualTo(3);
         assertThat(count11.count11("111")).isEqualTo(1);
         assertThat(count11.count11("1111")).isEqualTo(2);
-        assertThat(count11.count11("1")).isEqualTo(0);
-        assertThat(count11.count11("")).isEqualTo(0);
-        assertThat(count11.count11("hi")).isEqualTo(0);
+        assertThat(count11.count11("1")).isZero();
+        assertThat(count11.count11("")).isZero();
+        assertThat(count11.count11("hi")).isZero();
         assertThat(count11.count11("11x111x1111")).isEqualTo(4);
         assertThat(count11.count11("1x111")).isEqualTo(1);
-        assertThat(count11.count11("1Hello1")).isEqualTo(0);
-        assertThat(count11.count11("Hello")).isEqualTo(0);
+        assertThat(count11.count11("1Hello1")).isZero();
+        assertThat(count11.count11("Hello")).isZero();
     }
 
 }

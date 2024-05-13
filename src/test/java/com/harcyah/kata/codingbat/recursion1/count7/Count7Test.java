@@ -14,7 +14,7 @@ class Count7Test {
         assertThat(count7.count7(7))
             .isEqualTo(1);
         assertThat(count7.count7(123))
-            .isEqualTo(0);
+            .isZero();
         assertThat(count7.count7(77))
             .isEqualTo(2);
         assertThat(count7.count7(7123))
@@ -32,7 +32,7 @@ class Count7Test {
         assertThat(count7.count7(777576197))
             .isEqualTo(5);
         assertThat(count7.count7(99999))
-            .isEqualTo(0);
+            .isZero();
         assertThat(count7.count7(99799))
             .isEqualTo(1);
     }

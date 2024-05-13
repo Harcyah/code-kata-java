@@ -22,8 +22,8 @@ class CommonTwoTest {
         assertThat(commonTwo.commonTwo(new String[]{"a", "a", "b", "b", "c"}, new String[]{"b", "b", "b", "x"})).isEqualTo(1);
         assertThat(commonTwo.commonTwo(new String[]{"a", "a", "b", "b", "c"}, new String[]{"b", "b"})).isEqualTo(1);
         assertThat(commonTwo.commonTwo(new String[]{"a"}, new String[]{"a", "b"})).isEqualTo(1);
-        assertThat(commonTwo.commonTwo(new String[]{"a"}, new String[]{"b"})).isEqualTo(0);
-        assertThat(commonTwo.commonTwo(new String[]{"a", "a"}, new String[]{"b", "b"})).isEqualTo(0);
+        assertThat(commonTwo.commonTwo(new String[]{"a"}, new String[]{"b"})).isZero();
+        assertThat(commonTwo.commonTwo(new String[]{"a", "a"}, new String[]{"b", "b"})).isZero();
         assertThat(commonTwo.commonTwo(new String[]{"a", "b"}, new String[]{"a", "b"})).isEqualTo(2);
     }
 

@@ -10,7 +10,7 @@ class NucleotideTest {
     @Test
     void testEmptyDnaStringHasNoAdenosine() {
         Dna dna = new Dna("");
-        assertThat(dna.count('A')).isEqualTo(0);
+        assertThat(dna.count('A')).isZero();
     }
 
     @Test

@@ -28,7 +28,7 @@ class ScoresSpecialTest {
         assertThat(scoresSpecial.scoresSpecial(new int[]{10, 4, 20, 30}, new int[]{30, 20, 99}))
             .isEqualTo(60);
         assertThat(scoresSpecial.scoresSpecial(new int[]{}, new int[]{2}))
-            .isEqualTo(0);
+            .isZero();
         assertThat(scoresSpecial.scoresSpecial(new int[]{}, new int[]{20}))
             .isEqualTo(20);
         assertThat(scoresSpecial.scoresSpecial(new int[]{14, 10, 4}, new int[]{4, 20, 30}))

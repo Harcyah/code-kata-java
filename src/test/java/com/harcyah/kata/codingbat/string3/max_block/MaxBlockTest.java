@@ -11,7 +11,7 @@ class MaxBlockTest {
         MaxBlock maxBlock = new MaxBlock();
         assertThat(maxBlock.maxBlock("hoopla")).isEqualTo(2);
         assertThat(maxBlock.maxBlock("abbCCCddBBBxx")).isEqualTo(3);
-        assertThat(maxBlock.maxBlock("")).isEqualTo(0);
+        assertThat(maxBlock.maxBlock("")).isZero();
         assertThat(maxBlock.maxBlock("xyz")).isEqualTo(1);
         assertThat(maxBlock.maxBlock("xxyz")).isEqualTo(2);
         assertThat(maxBlock.maxBlock("xyzz")).isEqualTo(2);

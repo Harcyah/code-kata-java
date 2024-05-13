@@ -9,7 +9,7 @@ class BunnyEarsTest {
     @Test
     void testBunnyEars() {
         BunnyEars bunnyEars = new BunnyEars();
-        assertThat(bunnyEars.bunnyEars(0)).isEqualTo(0);
+        assertThat(bunnyEars.bunnyEars(0)).isZero();
         assertThat(bunnyEars.bunnyEars(1)).isEqualTo(2);
         assertThat(bunnyEars.bunnyEars(2)).isEqualTo(4);
         assertThat(bunnyEars.bunnyEars(3)).isEqualTo(6);

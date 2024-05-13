@@ -24,9 +24,9 @@ class BigDiffTest {
         assertThat(bigDiff.bigDiff(new int[]{2, 3}))
             .isEqualTo(1);
         assertThat(bigDiff.bigDiff(new int[]{2, 2}))
-            .isEqualTo(0);
+            .isZero();
         assertThat(bigDiff.bigDiff(new int[]{2}))
-            .isEqualTo(0);
+            .isZero();
         assertThat(bigDiff.bigDiff(new int[]{5, 1, 6, 1, 9, 9}))
             .isEqualTo(8);
         assertThat(bigDiff.bigDiff(new int[]{7, 6, 8, 5}))
