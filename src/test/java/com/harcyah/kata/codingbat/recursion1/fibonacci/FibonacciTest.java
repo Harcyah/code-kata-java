@@ -9,7 +9,7 @@ class FibonacciTest {
     @Test
     void testFibonacci() {
         Fibonacci fibonacci = new Fibonacci();
-        assertThat(fibonacci.fibonacci(0)).isEqualTo(0);
+        assertThat(fibonacci.fibonacci(0)).isZero();
         assertThat(fibonacci.fibonacci(1)).isEqualTo(1);
         assertThat(fibonacci.fibonacci(2)).isEqualTo(1);
         assertThat(fibonacci.fibonacci(3)).isEqualTo(2);

@@ -14,17 +14,17 @@ class CountXTest {
         assertThat(countX.countX("xhixhix"))
             .isEqualTo(3);
         assertThat(countX.countX("hi"))
-            .isEqualTo(0);
+            .isZero();
         assertThat(countX.countX("h"))
-            .isEqualTo(0);
+            .isZero();
         assertThat(countX.countX("x"))
             .isEqualTo(1);
         assertThat(countX.countX(""))
-            .isEqualTo(0);
+            .isZero();
         assertThat(countX.countX("hihi"))
-            .isEqualTo(0);
+            .isZero();
         assertThat(countX.countX("hiAAhi12hi"))
-            .isEqualTo(0);
+            .isZero();
     }
 
 }

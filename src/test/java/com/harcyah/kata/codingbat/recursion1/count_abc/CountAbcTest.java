@@ -13,14 +13,14 @@ class CountAbcTest {
         assertThat(countAbc.countAbc("abcxxabc")).isEqualTo(2);
         assertThat(countAbc.countAbc("abaxxaba")).isEqualTo(2);
         assertThat(countAbc.countAbc("ababc")).isEqualTo(2);
-        assertThat(countAbc.countAbc("abxbc")).isEqualTo(0);
+        assertThat(countAbc.countAbc("abxbc")).isZero();
         assertThat(countAbc.countAbc("aaabc")).isEqualTo(1);
-        assertThat(countAbc.countAbc("hello")).isEqualTo(0);
-        assertThat(countAbc.countAbc("")).isEqualTo(0);
-        assertThat(countAbc.countAbc("ab")).isEqualTo(0);
+        assertThat(countAbc.countAbc("hello")).isZero();
+        assertThat(countAbc.countAbc("")).isZero();
+        assertThat(countAbc.countAbc("ab")).isZero();
         assertThat(countAbc.countAbc("aba")).isEqualTo(1);
-        assertThat(countAbc.countAbc("aca")).isEqualTo(0);
-        assertThat(countAbc.countAbc("aaa")).isEqualTo(0);
+        assertThat(countAbc.countAbc("aca")).isZero();
+        assertThat(countAbc.countAbc("aaa")).isZero();
     }
 
 }

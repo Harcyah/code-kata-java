@@ -13,8 +13,8 @@ class CountHiTest {
         assertThat(countHi.countHi("xhixhix")).isEqualTo(2);
         assertThat(countHi.countHi("hi")).isEqualTo(1);
         assertThat(countHi.countHi("hihih")).isEqualTo(2);
-        assertThat(countHi.countHi("h")).isEqualTo(0);
-        assertThat(countHi.countHi("")).isEqualTo(0);
+        assertThat(countHi.countHi("h")).isZero();
+        assertThat(countHi.countHi("")).isZero();
         assertThat(countHi.countHi("ihihihihih")).isEqualTo(4);
         assertThat(countHi.countHi("ihihihihihi")).isEqualTo(5);
         assertThat(countHi.countHi("hiAAhi12hi")).isEqualTo(3);

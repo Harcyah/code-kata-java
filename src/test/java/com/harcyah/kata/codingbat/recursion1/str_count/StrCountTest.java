@@ -11,7 +11,7 @@ class StrCountTest {
         StrCount strCount = new StrCount();
         assertThat(strCount.strCount("catcowcat", "cat")).isEqualTo(2);
         assertThat(strCount.strCount("catcowcat", "cow")).isEqualTo(1);
-        assertThat(strCount.strCount("catcowcat", "dog")).isEqualTo(0);
+        assertThat(strCount.strCount("catcowcat", "dog")).isZero();
         assertThat(strCount.strCount("cacatcowcat", "cat")).isEqualTo(2);
         assertThat(strCount.strCount("xyx", "x")).isEqualTo(2);
         assertThat(strCount.strCount("iiiijj", "i")).isEqualTo(4);

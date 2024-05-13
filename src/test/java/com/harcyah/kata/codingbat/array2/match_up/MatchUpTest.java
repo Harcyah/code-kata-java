@@ -26,9 +26,9 @@ class MatchUpTest {
         assertThat(matchUp.matchUp(new int[]{5, 3}, new int[]{1, 1}))
             .isEqualTo(1);
         assertThat(matchUp.matchUp(new int[]{5, 3}, new int[]{0, 0}))
-            .isEqualTo(0);
+            .isZero();
         assertThat(matchUp.matchUp(new int[]{4}, new int[]{4}))
-            .isEqualTo(0);
+            .isZero();
         assertThat(matchUp.matchUp(new int[]{4}, new int[]{5}))
             .isEqualTo(1);
     }

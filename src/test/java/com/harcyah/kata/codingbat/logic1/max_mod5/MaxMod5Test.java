@@ -16,7 +16,7 @@ class MaxMod5Test {
         assertThat(maxMod5.maxMod5(7, 12)).isEqualTo(7);
         assertThat(maxMod5.maxMod5(11, 6)).isEqualTo(6);
         assertThat(maxMod5.maxMod5(2, 7)).isEqualTo(2);
-        assertThat(maxMod5.maxMod5(7, 7)).isEqualTo(0);
+        assertThat(maxMod5.maxMod5(7, 7)).isZero();
         assertThat(maxMod5.maxMod5(9, 1)).isEqualTo(9);
         assertThat(maxMod5.maxMod5(9, 14)).isEqualTo(9);
         assertThat(maxMod5.maxMod5(1, 2)).isEqualTo(2);

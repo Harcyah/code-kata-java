@@ -12,7 +12,7 @@ class SimpleLinkedListTest {
     @Test
     void newListIsEmpty() {
         SimpleLinkedList list = new SimpleLinkedList();
-        assertThat(list.size()).isEqualTo(0);
+        assertThat(list.size()).isZero();
     }
 
     @Test
@@ -37,7 +37,7 @@ class SimpleLinkedListTest {
         assertThat(list.size()).isEqualTo(2);
         assertThat(list.pop()).isEqualTo(8);
         assertThat(list.pop()).isEqualTo(9);
-        assertThat(list.size()).isEqualTo(0);
+        assertThat(list.size()).isZero();
     }
 
     @Test

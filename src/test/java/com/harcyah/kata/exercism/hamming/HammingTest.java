@@ -9,7 +9,7 @@ class HammingTest {
 
     @Test
     void testNoDifferenceBetweenIdenticalStrands() {
-        assertThat(Hamming.compute("A", "A")).isEqualTo(0);
+        assertThat(Hamming.compute("A", "A")).isZero();
     }
 
     @Test

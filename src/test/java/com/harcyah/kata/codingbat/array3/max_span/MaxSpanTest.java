@@ -17,7 +17,7 @@ class MaxSpanTest {
         assertThat(maxSpan.maxSpan(new int[]{3, 9, 9})).isEqualTo(2);
         assertThat(maxSpan.maxSpan(new int[]{3, 9})).isEqualTo(1);
         assertThat(maxSpan.maxSpan(new int[]{3, 3})).isEqualTo(2);
-        assertThat(maxSpan.maxSpan(new int[]{})).isEqualTo(0);
+        assertThat(maxSpan.maxSpan(new int[]{})).isZero();
         assertThat(maxSpan.maxSpan(new int[]{1})).isEqualTo(1);
     }
 

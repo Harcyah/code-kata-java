@@ -14,9 +14,9 @@ class CountEvensTest {
         assertThat(countEvens.countEvens(new int[]{2, 2, 0}))
             .isEqualTo(3);
         assertThat(countEvens.countEvens(new int[]{1, 3, 5}))
-            .isEqualTo(0);
+            .isZero();
         assertThat(countEvens.countEvens(new int[]{}))
-            .isEqualTo(0);
+            .isZero();
         assertThat(countEvens.countEvens(new int[]{11, 9, 0, 1}))
             .isEqualTo(1);
         assertThat(countEvens.countEvens(new int[]{2, 11, 9, 0}))

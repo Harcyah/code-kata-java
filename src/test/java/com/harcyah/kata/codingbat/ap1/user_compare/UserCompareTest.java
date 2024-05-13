@@ -14,7 +14,7 @@ class UserCompareTest {
         assertThat(userCompare.userCompare("bb", 1, "aa", 2))
             .isEqualTo(1);
         assertThat(userCompare.userCompare("bb", 1, "bb", 1))
-            .isEqualTo(0);
+            .isZero();
         assertThat(userCompare.userCompare("bb", 5, "bb", 1))
             .isEqualTo(1);
         assertThat(userCompare.userCompare("bb", 5, "bb", 10))
