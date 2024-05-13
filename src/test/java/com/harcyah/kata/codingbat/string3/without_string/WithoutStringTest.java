@@ -18,14 +18,14 @@ class WithoutStringTest {
         assertThat(withoutString.withoutString("abxxxxab", "xx")).isEqualTo("abab");
         assertThat(withoutString.withoutString("abxxxab", "xx")).isEqualTo("abxab");
         assertThat(withoutString.withoutString("abxxxab", "x")).isEqualTo("abab");
-        assertThat(withoutString.withoutString("xxx", "x")).isEqualTo("");
+        assertThat(withoutString.withoutString("xxx", "x")).isEmpty();
         assertThat(withoutString.withoutString("xxx", "xx")).isEqualTo("x");
         assertThat(withoutString.withoutString("xyzzy", "Y")).isEqualTo("xzz");
-        assertThat(withoutString.withoutString("", "x")).isEqualTo("");
+        assertThat(withoutString.withoutString("", "x")).isEmpty();
         assertThat(withoutString.withoutString("abcabc", "b")).isEqualTo("acac");
         assertThat(withoutString.withoutString("AA22bb", "2")).isEqualTo("AAbb");
-        assertThat(withoutString.withoutString("1111", "1")).isEqualTo("");
-        assertThat(withoutString.withoutString("1111", "11")).isEqualTo("");
+        assertThat(withoutString.withoutString("1111", "1")).isEmpty();
+        assertThat(withoutString.withoutString("1111", "11")).isEmpty();
         assertThat(withoutString.withoutString("MkjtMkx", "Mk")).isEqualTo("jtx");
         assertThat(withoutString.withoutString("Hi HoHo", "Ho")).isEqualTo("Hi ");
     }

@@ -15,11 +15,11 @@ class SameEndsTest {
         assertThat(sameEnds.sameEnds("xxxx")).isEqualTo("xx");
         assertThat(sameEnds.sameEnds("javaXYZjava")).isEqualTo("java");
         assertThat(sameEnds.sameEnds("javajava")).isEqualTo("java");
-        assertThat(sameEnds.sameEnds("xavaXYZjava")).isEqualTo("");
+        assertThat(sameEnds.sameEnds("xavaXYZjava")).isEmpty();
         assertThat(sameEnds.sameEnds("Hello! and Hello!")).isEqualTo("Hello!");
-        assertThat(sameEnds.sameEnds("x")).isEqualTo("");
-        assertThat(sameEnds.sameEnds("")).isEqualTo("");
-        assertThat(sameEnds.sameEnds("abcb")).isEqualTo("");
+        assertThat(sameEnds.sameEnds("x")).isEmpty();
+        assertThat(sameEnds.sameEnds("")).isEmpty();
+        assertThat(sameEnds.sameEnds("abcb")).isEmpty();
         assertThat(sameEnds.sameEnds("mymmy")).isEqualTo("my");
     }
 

@@ -15,7 +15,7 @@ class PairStarTest {
         assertThat(pairStar.pairStar("aaab")).isEqualTo("a*a*ab");
         assertThat(pairStar.pairStar("aa")).isEqualTo("a*a");
         assertThat(pairStar.pairStar("a")).isEqualTo("a");
-        assertThat(pairStar.pairStar("")).isEqualTo("");
+        assertThat(pairStar.pairStar("")).isEmpty();
         assertThat(pairStar.pairStar("noadjacent")).isEqualTo("noadjacent");
         assertThat(pairStar.pairStar("abba")).isEqualTo("ab*ba");
         assertThat(pairStar.pairStar("abbba")).isEqualTo("ab*b*ba");

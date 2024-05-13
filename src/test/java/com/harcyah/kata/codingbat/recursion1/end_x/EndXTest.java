@@ -16,7 +16,7 @@ class EndXTest {
         assertThat(endX.endX("h")).isEqualTo("h");
         assertThat(endX.endX("x")).isEqualTo("x");
         assertThat(endX.endX("xx")).isEqualTo("xx");
-        assertThat(endX.endX("")).isEqualTo("");
+        assertThat(endX.endX("")).isEmpty();
         assertThat(endX.endX("bxx")).isEqualTo("bxx");
         assertThat(endX.endX("bxax")).isEqualTo("baxx");
         assertThat(endX.endX("axaxax")).isEqualTo("aaaxxx");

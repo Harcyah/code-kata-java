@@ -13,7 +13,7 @@ class NotReplaceTest {
         assertThat(notReplace.notReplace("is-is")).isEqualTo("is not-is not");
         assertThat(notReplace.notReplace("This is right")).isEqualTo("This is not right");
         assertThat(notReplace.notReplace("This is isabell")).isEqualTo("This is not isabell");
-        assertThat(notReplace.notReplace("")).isEqualTo("");
+        assertThat(notReplace.notReplace("")).isEmpty();
         assertThat(notReplace.notReplace("is")).isEqualTo("is not");
         assertThat(notReplace.notReplace("isis")).isEqualTo("isis");
         assertThat(notReplace.notReplace("Dis is bliss is")).isEqualTo("Dis is not bliss is not");

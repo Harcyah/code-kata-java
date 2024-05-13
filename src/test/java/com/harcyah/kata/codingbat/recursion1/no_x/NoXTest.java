@@ -11,8 +11,8 @@ class NoXTest {
         NoX noX = new NoX();
         assertThat(noX.noX("xaxb")).isEqualTo("ab");
         assertThat(noX.noX("abc")).isEqualTo("abc");
-        assertThat(noX.noX("xx")).isEqualTo("");
-        assertThat(noX.noX("")).isEqualTo("");
+        assertThat(noX.noX("xx")).isEmpty();
+        assertThat(noX.noX("")).isEmpty();
         assertThat(noX.noX("axxbxx")).isEqualTo("ab");
         assertThat(noX.noX("Hellox")).isEqualTo("Hello");
     }

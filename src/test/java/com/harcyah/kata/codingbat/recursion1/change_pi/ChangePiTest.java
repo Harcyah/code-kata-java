@@ -16,7 +16,7 @@ class ChangePiTest {
         assertThat(changePi.changePi("hip")).isEqualTo("hip");
         assertThat(changePi.changePi("p")).isEqualTo("p");
         assertThat(changePi.changePi("x")).isEqualTo("x");
-        assertThat(changePi.changePi("")).isEqualTo("");
+        assertThat(changePi.changePi("")).isEmpty();
         assertThat(changePi.changePi("pixx")).isEqualTo("3.14xx");
         assertThat(changePi.changePi("xyzzy")).isEqualTo("xyzzy");
     }
