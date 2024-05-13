@@ -4,7 +4,7 @@ public class MixString {
 
     public String mixString(String a, String b) {
         int l = Math.max(a.length(), b.length());
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < l; i++) {
             if (a.length() >= i + 1) {
                 sb.append(a.charAt(i));

@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 public class StringCalculator {
 
     private List<String> errors = Lists.newArrayList();
-    private StringBuffer accumulator = new StringBuffer();
+    private StringBuilder accumulator = new StringBuilder();
     private Set<Character> separators = Sets.newHashSet(',', '\n');
     private String str;
 

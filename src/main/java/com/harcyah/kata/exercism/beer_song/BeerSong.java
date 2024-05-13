@@ -3,7 +3,7 @@ package com.harcyah.kata.exercism.beer_song;
 public class BeerSong {
 
     public static String sing(int start, int end) {
-        StringBuffer v = new StringBuffer();
+        StringBuilder v = new StringBuilder();
         for (int i = start; i >= end; i--) {
             v.append(verse(i));
         }
@@ -15,7 +15,7 @@ public class BeerSong {
     }
 
     public static String verse(int beers) {
-        StringBuffer v = new StringBuffer();
+        StringBuilder v = new StringBuilder();
         v.append(verseLine1(beers));
         v.append('\n');
         v.append(verseLine2(beers - 1));
@@ -29,7 +29,7 @@ public class BeerSong {
             return "No more bottles of beer on the wall, no more bottles of beer.";
         }
 
-        StringBuffer v = new StringBuffer();
+        StringBuilder v = new StringBuilder();
         v.append(getBottlesLiteral(beers));
         v.append(" of beer on the wall, ");
         v.append(getBottlesLiteral(beers));
@@ -45,7 +45,7 @@ public class BeerSong {
             return "Take it down and pass it around, no more bottles of beer on the wall.";
         }
 
-        StringBuffer v = new StringBuffer();
+        StringBuilder v = new StringBuilder();
         v.append("Take one down and pass it around, ");
         v.append(getBottlesLiteral(beers));
         v.append(" of beer on the wall.");

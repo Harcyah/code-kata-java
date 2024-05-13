@@ -3,7 +3,7 @@ package com.harcyah.kata.codingbat.warmup1.start_oz;
 public class StartOz {
 
     public String startOz(String str) {
-        StringBuffer results = new StringBuffer();
+        StringBuilder results = new StringBuilder();
         if (str.length() >= 1 && str.charAt(0) == 'o') {
             results.append('o');
         }

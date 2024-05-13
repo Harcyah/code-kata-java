@@ -58,7 +58,7 @@ public class WordProblemSolver {
 
         String contents = words.substring(PREFIX.length(), words.length() - SUFFIX.length());
         int firstSpaceIndex = contents.indexOf(" ");
-        StringBuffer sb = new StringBuffer(contents.substring(firstSpaceIndex));
+        StringBuilder sb = new StringBuilder(contents.substring(firstSpaceIndex));
         String valueAsString = contents.substring(0, firstSpaceIndex);
         int value = Integer.parseInt(valueAsString);
 
@@ -71,7 +71,7 @@ public class WordProblemSolver {
         return value;
     }
 
-    private Integer getNextValue(StringBuffer sb) {
+    private Integer getNextValue(StringBuilder sb) {
         // Drop first space
         sb.delete(0, 1);
 
@@ -89,7 +89,7 @@ public class WordProblemSolver {
         return Integer.parseInt(digits.toString());
     }
 
-    private Operator getNextOperator(StringBuffer sb) {
+    private Operator getNextOperator(StringBuilder sb) {
         // Drop first space
         sb.delete(0, 1);
 

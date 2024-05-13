@@ -3,7 +3,7 @@ package com.harcyah.kata.misc.excel;
 public class ExcelNumberingWhileImpl {
 
     public String getLabel(int number) {
-        StringBuffer out = new StringBuffer();
+        StringBuilder out = new StringBuilder();
         while (number > 26) {
             int q = number / 26;
             int r = number % 26;

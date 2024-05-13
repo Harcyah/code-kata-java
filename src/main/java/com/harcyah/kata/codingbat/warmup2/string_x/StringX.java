@@ -6,7 +6,7 @@ public class StringX {
         if (str.equals("") || str.equals("x")) {
             return str;
         }
-        StringBuffer f = new StringBuffer();
+        StringBuilder f = new StringBuilder();
         f.append(str.charAt(0));
         for (int i = 1; i < str.length() - 1; i++) {
             if (str.charAt(i) != 'x') {

@@ -96,7 +96,7 @@ public class Terminal {
     }
 
     public String toString(String rowSeparator, String colSeparator) {
-        StringBuffer out = new StringBuffer();
+        StringBuilder out = new StringBuilder();
         for (int row = 0; row < SIZE; row++) {
             for (int col = 0; col < SIZE; col++) {
                 out.append(buffer[row][col]);

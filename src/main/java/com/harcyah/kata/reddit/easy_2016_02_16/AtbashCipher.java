@@ -8,7 +8,7 @@ public class AtbashCipher {
     private static final char[] CIPHER = "zyxwvutsrqponmlkjihgfedcba".toCharArray();
 
     public String encode(String raw) {
-        StringBuffer out = new StringBuffer();
+        StringBuilder out = new StringBuilder();
         for (char c : raw.toCharArray()) {
             int index = Arrays.binarySearch(PLAIN, c);
             if (index < 0) {

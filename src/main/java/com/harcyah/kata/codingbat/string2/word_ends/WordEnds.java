@@ -3,7 +3,7 @@ package com.harcyah.kata.codingbat.string2.word_ends;
 public class WordEnds {
 
     public String wordEnds(String source, String word) {
-        StringBuffer out = new StringBuffer();
+        StringBuilder out = new StringBuilder();
         int length = word.length();
         int start = 0;
         int index;
