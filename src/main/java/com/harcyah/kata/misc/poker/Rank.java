@@ -12,7 +12,7 @@ public enum Rank implements RankMatcher {
     ROYAL_FLUSH {
         @Override
         public boolean matches(PokerHand hand) {
-            return STRAIGHT_FLUSH.matches(hand) && hand.getCards().get(0).getValue().equals(Value._A);
+            return STRAIGHT_FLUSH.matches(hand) && hand.getCards().get(0).getValue().equals(Value.VALUE_A);
         }
     },
 

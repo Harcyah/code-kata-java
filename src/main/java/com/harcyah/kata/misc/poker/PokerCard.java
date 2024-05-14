@@ -28,7 +28,7 @@ public class PokerCard implements Comparable<PokerCard> {
 
     @Override
     public String toString() {
-        return value.toString() + suit.name();
+        return value.toString() + suit.toString();
     }
 
 }

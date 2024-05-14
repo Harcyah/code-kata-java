@@ -1,8 +1,11 @@
 package com.harcyah.kata.pape;
 
-import com.harcyah.kata.pape.BytesRepresentation.Unit;
 import org.junit.jupiter.api.Test;
 
+import static com.harcyah.kata.pape.BytesRepresentation.Unit.BYTE;
+import static com.harcyah.kata.pape.BytesRepresentation.Unit.GIGA_BYTE;
+import static com.harcyah.kata.pape.BytesRepresentation.Unit.KILO_BYTE;
+import static com.harcyah.kata.pape.BytesRepresentation.Unit.MEGA_BYTE;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class BytesRepresentationTest {
@@ -11,26 +14,26 @@ class BytesRepresentationTest {
 
     @Test
     void testBytes() {
-        assertEquals("123.0 Byte", br.toBytesString(Unit.Byte, 123));
-        assertEquals("123.0 Byte", br.toBytesString(123));
+        assertEquals("123.0 BYTE", br.toBytesString(BYTE, 123));
+        assertEquals("123.0 BYTE", br.toBytesString(123));
     }
 
     @Test
     void testKyloBytes() {
-        assertEquals("15.323 KByte", br.toBytesString(Unit.KByte, 15323));
-        assertEquals("15.323 KByte", br.toBytesString(15323));
+        assertEquals("15.323 KILO_BYTE", br.toBytesString(KILO_BYTE, 15323));
+        assertEquals("15.323 KILO_BYTE", br.toBytesString(15323));
     }
 
     @Test
     void testMegaBytes() {
-        assertEquals("15.323 MByte", br.toBytesString(Unit.MByte, 15323000));
-        assertEquals("15.323 MByte", br.toBytesString(15323000));
+        assertEquals("15.323 MEGA_BYTE", br.toBytesString(MEGA_BYTE, 15323000));
+        assertEquals("15.323 MEGA_BYTE", br.toBytesString(15323000));
     }
 
     @Test
     void testGigaBytes() {
-        assertEquals("1.532300001 GByte", br.toBytesString(Unit.GByte, 1532300001));
-        assertEquals("1.532300001 GByte", br.toBytesString(1532300001));
+        assertEquals("1.532300001 GIGA_BYTE", br.toBytesString(GIGA_BYTE, 1532300001));
+        assertEquals("1.532300001 GIGA_BYTE", br.toBytesString(1532300001));
     }
 
 }

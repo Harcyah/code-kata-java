@@ -2,30 +2,30 @@ package com.harcyah.kata.misc.poker.values;
 
 public enum Value {
 
-    _2,
-    _3,
-    _4,
-    _5,
-    _6,
-    _7,
-    _8,
-    _9,
-    _T,
-    _J,
-    _Q,
-    _K,
-    _A;
+    VALUE_2,
+    VALUE_3,
+    VALUE_4,
+    VALUE_5,
+    VALUE_6,
+    VALUE_7,
+    VALUE_8,
+    VALUE_9,
+    VALUE_T,
+    VALUE_J,
+    VALUE_Q,
+    VALUE_K,
+    VALUE_A;
 
     @Override
     public String toString() {
-        return this.name().substring(1, 2);
+        return this.name().substring(6);
     }
 
     public static Value parse(String letter) throws IllegalValueException {
         try {
-            return Value.valueOf("_" + letter);
+            return Value.valueOf("VALUE_" + letter);
         } catch (Exception e) {
-            throw new IllegalValueException("Letter " + letter + " is not valid value");
+            throw new IllegalValueException("Letter " + letter + " is not valid Value");
         }
     }
 

@@ -4,10 +4,10 @@ package com.harcyah.kata.pape;
 public class BytesRepresentation {
 
     public enum Unit {
-        Byte(0),
-        KByte(3),
-        MByte(6),
-        GByte(9);
+        BYTE(0),
+        KILO_BYTE(3),
+        MEGA_BYTE(6),
+        GIGA_BYTE(9);
 
         private final int ratio;
         private final int max;
@@ -24,14 +24,14 @@ public class BytesRepresentation {
     }
 
     public String toBytesString(long value) {
-        if (value < Unit.Byte.max) {
-            return toBytesString(Unit.Byte, value);
-        } else if (value < Unit.KByte.max) {
-            return toBytesString(Unit.KByte, value);
-        } else if (value < Unit.MByte.max) {
-            return toBytesString(Unit.MByte, value);
+        if (value < Unit.BYTE.max) {
+            return toBytesString(Unit.BYTE, value);
+        } else if (value < Unit.KILO_BYTE.max) {
+            return toBytesString(Unit.KILO_BYTE, value);
+        } else if (value < Unit.MEGA_BYTE.max) {
+            return toBytesString(Unit.MEGA_BYTE, value);
         } else {
-            return toBytesString(Unit.GByte, value);
+            return toBytesString(Unit.GIGA_BYTE, value);
         }
     }
 
