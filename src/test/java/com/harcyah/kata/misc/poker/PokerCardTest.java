@@ -15,8 +15,8 @@ class PokerCardTest {
     @Test
     void testConstructor() throws Exception {
         PokerCard card = new PokerCard("2C");
-        assertEquals(Value._2, card.getValue());
-        assertEquals(Suit.C, card.getSuit());
+        assertEquals(Value.VALUE_2, card.getValue());
+        assertEquals(Suit.SUIT_C, card.getSuit());
     }
 
     @Test
