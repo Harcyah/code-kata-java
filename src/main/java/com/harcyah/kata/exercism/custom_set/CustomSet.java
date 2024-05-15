@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class CustomSet<T> {
 
-    private Map<Integer, T> values;
+    private final Map<Integer, T> values;
 
     public CustomSet() {
         values = new HashMap<>();
@@ -23,7 +23,7 @@ public class CustomSet<T> {
     }
 
     public boolean contains(T element) {
-        return values.keySet().contains(element.hashCode());
+        return values.containsKey(element.hashCode());
     }
 
     public boolean isDisjoint(CustomSet<T> another) {
@@ -44,7 +44,7 @@ public class CustomSet<T> {
     }
 
     public CustomSet<T> getIntersection(CustomSet<T> another) {
-        CustomSet<T> intersection = new CustomSet<T>();
+        CustomSet<T> intersection = new CustomSet<>();
         for (Map.Entry<Integer, T> entry : this.values.entrySet()) {
             if (another.values.containsKey(entry.getKey())) {
                 intersection.values.put(entry.getKey(), entry.getValue());
@@ -54,14 +54,14 @@ public class CustomSet<T> {
     }
 
     public CustomSet<T> getDifference(CustomSet<T> another) {
-        CustomSet<T> union = new CustomSet<T>();
+        CustomSet<T> union = new CustomSet<>();
         union.values.putAll(this.values);
         union.values.keySet().removeAll(another.values.keySet());
         return union;
     }
 
     public CustomSet<T> getUnion(CustomSet<T> another) {
-        CustomSet<T> union = new CustomSet<T>();
+        CustomSet<T> union = new CustomSet<>();
         union.values.putAll(this.values);
         union.values.putAll(another.values);
         return union;

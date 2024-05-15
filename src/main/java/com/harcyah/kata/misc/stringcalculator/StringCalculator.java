@@ -11,9 +11,9 @@ import java.util.regex.Pattern;
 
 public class StringCalculator {
 
-    private List<String> errors = Lists.newArrayList();
-    private StringBuilder accumulator = new StringBuilder();
-    private Set<Character> separators = Sets.newHashSet(',', '\n');
+    private final List<String> errors = Lists.newArrayList();
+    private final StringBuilder accumulator = new StringBuilder();
+    private final Set<Character> separators = Sets.newHashSet(',', '\n');
     private String str;
 
     public StringCalculator(String str) {
@@ -24,7 +24,7 @@ public class StringCalculator {
         String accumulated = accumulator.toString();
         accumulator.setLength(0);
 
-        Integer integer = Integer.valueOf(accumulated);
+        int integer = Integer.parseInt(accumulated);
         if (integer < 0) {
             errors.add(accumulated);
             return 0;
@@ -54,7 +54,7 @@ public class StringCalculator {
         detectSeparators();
 
         // Parsing
-        List<Integer> values = new ArrayList<Integer>();
+        List<Integer> values = new ArrayList<>();
         for (int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
             if (isSeparator(c)) {
@@ -65,12 +65,12 @@ public class StringCalculator {
         }
 
         // Last element
-        if (accumulator.length() > 0) {
+        if (!accumulator.isEmpty()) {
             values.add(accumulate());
         }
 
         // Errors handling
-        if (errors.size() > 0) {
+        if (!errors.isEmpty()) {
             throw new NegativeNumberException(errors);
         }
 
