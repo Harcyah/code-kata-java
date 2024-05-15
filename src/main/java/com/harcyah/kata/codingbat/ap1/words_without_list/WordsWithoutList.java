@@ -6,10 +6,10 @@ import java.util.List;
 public class WordsWithoutList {
 
     public List<String> wordsWithoutList(String[] words, int len) {
-        List<String> output = new ArrayList<String>();
-        for (int i = 0; i < words.length; i++) {
-            if (words[i].length() != len)
-                output.add(words[i]);
+        List<String> output = new ArrayList<>();
+        for (String word : words) {
+            if (word.length() != len)
+                output.add(word);
         }
         return output;
     }
