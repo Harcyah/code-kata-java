@@ -4,25 +4,25 @@ import lombok.experimental.UtilityClass;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Function;
+import java.util.function.Predicate;
 
 @UtilityClass
 public class Strain {
 
-    public static <T> List<T> keep(List<T> input, Function<T, Boolean> function) {
+    public static <T> List<T> keep(List<T> input, Predicate<T> predicate) {
         List<T> output = new ArrayList<>();
         for (T element : input) {
-            if (function.apply(element)) {
+            if (predicate.test(element)) {
                 output.add(element);
             }
         }
         return output;
     }
 
-    public static <T> List<T> discard(List<T> input, Function<T, Boolean> function) {
+    public static <T> List<T> discard(List<T> input, Predicate<T> predicate) {
         List<T> output = new ArrayList<>();
         for (T element : input) {
-            if (!function.apply(element)) {
+            if (!predicate.test(element)) {
                 output.add(element);
             }
         }
