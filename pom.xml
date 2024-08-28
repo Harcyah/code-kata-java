@@ -95,9 +95,8 @@
                         <requireMavenVersion>
                             <version>3.9.9</version>
                         </requireMavenVersion>
-                        <requirePluginVersions>
-                            <unCheckedPluginList>org.apache.maven.plugins:maven-resources-plugin,org.apache.maven.plugins:maven-jar-plugin,org.apache.maven.plugins:maven-clean-plugin,org.apache.maven.plugins:maven-install-plugin,org.apache.maven.plugins:maven-deploy-plugin</unCheckedPluginList>
-                        </requirePluginVersions>
+                        <requirePluginVersions/>
+                        <requireReleaseDeps/>
                     </rules>
                 </configuration>
             </plugin>
