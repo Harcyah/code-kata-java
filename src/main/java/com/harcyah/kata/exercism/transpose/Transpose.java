@@ -10,7 +10,7 @@ public class Transpose {
 
     public String transpose(String input) {
         String[] lines = input.split(SEP);
-        int w = Arrays.stream(lines).map(String::length).max(Integer::compare).get();
+        int w = Arrays.stream(lines).map(String::length).max(Integer::compare).orElseThrow();
         int h = lines.length;
         char[][] source = toCharArray(lines, w, h);
         return Arrays.stream(source).map(String::new).collect(Collectors.joining(SEP)).trim();
