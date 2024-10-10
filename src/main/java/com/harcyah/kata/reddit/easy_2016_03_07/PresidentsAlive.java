@@ -37,7 +37,7 @@ public class PresidentsAlive {
                 .sorted(Map.Entry.<Integer, Integer>comparingByValue().reversed())
                 .limit(1)
                 .findFirst()
-                .get()
+                .orElseThrow()
                 .getKey();
     }
 
