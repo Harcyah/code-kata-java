@@ -29,7 +29,7 @@ public class Palindromes {
             SortedMap<Long, List<List<Integer>>> map = new TreeMap<>();
             for (int x = minFactor; x <= maxFactor; x++) {
                 for (int y = x; y <= maxFactor; y++) {
-                    long product = x * y;
+                    long product = (long) x * y;
                     if (isPalindromic(product)) {
                         List<List<Integer>> values = map.get(product);
                         if (values == null) {

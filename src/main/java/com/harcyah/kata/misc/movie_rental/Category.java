@@ -24,7 +24,7 @@ public enum Category {
 
         @Override
         public double getCost(int days) {
-            return days * 3;
+            return days * 3.0;
         }
 
         @Override

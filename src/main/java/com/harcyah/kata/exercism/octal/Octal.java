@@ -15,7 +15,7 @@ public class Octal {
             }
 
             int digit = Character.getNumericValue(c);
-            decimal += digit * Math.pow(8, octal.length() - i - 1);
+            decimal += digit * Math.pow(8.0, octal.length() - i - 1.0);
         }
     }
 
