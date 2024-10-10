@@ -14,7 +14,7 @@ public class BytesRepresentation {
 
         Unit(int ratio) {
             this.ratio = ratio;
-            this.max = (int) Math.pow(10, ratio + 3);
+            this.max = (int) Math.pow(10.0, ratio + 3.0);
         }
 
     }

@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 public class NurseHealOrganizer {
 
     private static final int GOAL_COST = 25000;
-    private static final long GOAL_DURATION = 12 * 60;
+    private static final long GOAL_DURATION = 12 * 60L;
     private static final long AVERAGE_TIME_BETWEEN_SICK_BOYS = 10;
 
     public static void main(String[] args) {

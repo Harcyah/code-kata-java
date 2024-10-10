@@ -5,8 +5,8 @@ import org.apache.commons.lang3.StringUtils;
 public class Problem004 {
 
     public int getLargestPalindrome(int width) {
-        int rMin = (int) Math.pow(10, width - 1);
-        int rMax = (int) (Math.pow(10, width) - 1);
+        int rMin = (int) Math.pow(10.0, width - 1.0);
+        int rMax = (int) (Math.pow(10.0, width) - 1.0);
         int max = 0;
         for (int i = rMin; i <= rMax; i++) {
             for (int j = rMin; j <= rMax; j++) {

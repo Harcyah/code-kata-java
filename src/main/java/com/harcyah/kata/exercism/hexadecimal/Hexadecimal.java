@@ -15,7 +15,7 @@ public class Hexadecimal {
             char c = hex.charAt(i);
             try {
                 int v = getCharValue(c);
-                decimal += v * Math.pow(16, hex.length() - i - 1);
+                decimal += v * Math.pow(16, hex.length() - i - 1.0);
             } catch (Exception e) {
                 return 0;
             }
