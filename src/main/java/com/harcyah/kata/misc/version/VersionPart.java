@@ -15,8 +15,8 @@ public class VersionPart implements Comparable<VersionPart> {
 
     private static final Table<VersionType, VersionType, VersionPartComparator> COMPARATORS = HashBasedTable.create();
 
-    private static final Pattern NUMBER_PATTERN = Pattern.compile("(\\d+)");
-    private static final Pattern ALPHANUMERICAL_PATTERN = Pattern.compile("(?<num>\\d+)(?<txt>\\w*)");
+    private static final Pattern NUMBER_PATTERN = Pattern.compile("^(\\d+)$");
+    private static final Pattern ALPHANUMERICAL_PATTERN = Pattern.compile("^(?<num>\\d+)(?<txt>[a-zA-Z]+)$");
 
     private static final Integer DEFAULT_NUMBER = null;
     private static final String DEFAULT_STRING = null;
