@@ -26,12 +26,12 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>33.3.1-jre</version>
+            <version>33.4.0-jre</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.5.12</version>
+            <version>1.5.15</version>
         </dependency>
         <dependency>
             <groupId>com.googlecode.combinatoricslib</groupId>
@@ -46,13 +46,13 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.11.3</version>
+            <version>5.11.4</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <version>3.26.3</version>
+            <version>3.27.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -323,7 +323,7 @@
                     <dependency>
                         <groupId>org.assertj</groupId>
                         <artifactId>assertj-core</artifactId>
-                        <version>3.26.3</version>
+                        <version>3.27.0</version>
                     </dependency>
                     <dependency>
                         <groupId>org.assertj</groupId>
