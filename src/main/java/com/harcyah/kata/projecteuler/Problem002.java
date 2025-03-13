@@ -10,8 +10,9 @@ public class Problem002 {
             int temp = a;
             a = fibo;
             fibo = temp + fibo;
-            if (fibo % 2 == 0)
+            if (fibo % 2 == 0) {
                 sum += fibo;
+            }
         }
         return sum;
     }

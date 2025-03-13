@@ -2,38 +2,17 @@ package com.harcyah.kata.exercism.binary_search;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class BinarySearchTest {
 
-    public static final List<Integer> EMPTY_LIST
-            = Collections.unmodifiableList(new ArrayList<Integer>(0));
-
-    public static final List<Integer> LIST_OF_UNIT_LENGTH
-            = Collections.unmodifiableList(
-            List.of(6)
-    );
-
-    private static final List<Integer> SORTED_LIST
-            = Collections.unmodifiableList(
-            List.of(1, 3, 4, 6, 8, 9, 11)
-    );
-
-    public static final List<Integer> SORTED_LIST_OF_ODD_LENGTH
-            = Collections.unmodifiableList(
-            List.of(1, 3, 5, 8, 13, 21, 34, 55,
-                    89, 144, 233, 377, 634)
-    );
-
-    public static final List<Integer> SORTED_LIST_OF_EVEN_LENGTH
-            = Collections.unmodifiableList(
-            List.of(1, 3, 5, 8, 13, 21, 34, 55,
-                    89, 144, 233, 377)
-    );
+    private static final List<Integer> EMPTY_LIST = List.of();
+    private static final List<Integer> LIST_OF_UNIT_LENGTH = List.of(6);
+    private static final List<Integer> SORTED_LIST = List.of(1, 3, 4, 6, 8, 9, 11);
+    private static final List<Integer> SORTED_LIST_OF_ODD_LENGTH = List.of(1, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 634);
+    private static final List<Integer> SORTED_LIST_OF_EVEN_LENGTH = List.of(1, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377);
 
     @Test
     void findsAValueInAnArrayWithOneElement() {

@@ -13,8 +13,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public abstract class AbstractMagicSquareRearrangerTest {
 
-    protected MagicSquareRearranger rearranger;
-
     private static Integer[][] square8x8Test0;
     private static Integer[][] square8x8Test1;
     private static Integer[][] square8x8Test2;
@@ -23,6 +21,8 @@ public abstract class AbstractMagicSquareRearrangerTest {
     private static Integer[][] square16x16;
     private static Integer[][] square20x20;
     private static Integer[][] square24x24;
+
+    protected MagicSquareRearranger rearranger;
 
     @BeforeAll
     static void setUpClass() throws IOException {

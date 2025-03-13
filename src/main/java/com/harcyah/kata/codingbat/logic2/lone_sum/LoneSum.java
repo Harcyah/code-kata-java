@@ -12,12 +12,15 @@ public class LoneSum {
 
     public int add(int a, int v1, int v2, int v3) {
         int appears = 0;
-        if (a == v1)
+        if (a == v1) {
             appears++;
-        if (a == v2)
+        }
+        if (a == v2) {
             appears++;
-        if (a == v3)
+        }
+        if (a == v3) {
             appears++;
+        }
         return appears == 1 ? a : 0;
     }
 

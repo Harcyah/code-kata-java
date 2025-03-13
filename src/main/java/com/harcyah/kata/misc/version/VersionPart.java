@@ -13,13 +13,11 @@ import java.util.regex.Pattern;
 @EqualsAndHashCode
 public class VersionPart implements Comparable<VersionPart> {
 
-    private static final Table<VersionType, VersionType, VersionPartComparator> COMPARATORS = HashBasedTable.create();
+    public static final VersionPart UNKNOWN = new VersionPart();
 
+    private static final Table<VersionType, VersionType, VersionPartComparator> COMPARATORS = HashBasedTable.create();
     private static final Pattern NUMBER_PATTERN = Pattern.compile("^(\\d+)$");
     private static final Pattern ALPHANUMERICAL_PATTERN = Pattern.compile("^(?<num>\\d+)(?<txt>[a-zA-Z]+)$");
-
-    private static final Integer DEFAULT_NUMBER = null;
-    private static final String DEFAULT_STRING = null;
 
     private final Integer number;
     private final String string;
@@ -35,11 +33,9 @@ public class VersionPart implements Comparable<VersionPart> {
         COMPARATORS.put(VersionType.NUMBER, VersionType.ALPHANUMERIC, (p1, p2) -> -1);
     }
 
-    public static final VersionPart UNKNOWN = new VersionPart();
-
     protected VersionPart() {
-        this.number = DEFAULT_NUMBER;
-        this.string = DEFAULT_STRING;
+        this.number = null;
+        this.string = null;
         this.raw = "";
         this.type = VersionType.EMPTY;
     }

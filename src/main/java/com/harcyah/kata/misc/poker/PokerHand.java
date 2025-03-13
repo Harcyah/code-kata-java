@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 public class PokerHand implements Comparable<PokerHand> {
 
     private static final int CARDS = 5;
-    private static final HighCardComparator highCardComparator = new HighCardComparator();
+    private static final HighCardComparator COMPARATOR = new HighCardComparator();
 
     private final List<PokerCard> cards;
 
@@ -40,7 +40,7 @@ public class PokerHand implements Comparable<PokerHand> {
         Rank thisRank = this.getRank();
         Rank thatRank = that.getRank();
         if (thisRank == null && thatRank == null) {
-            return highCardComparator.compare(this, that);
+            return COMPARATOR.compare(this, that);
         }
 
         if (thisRank == null) {

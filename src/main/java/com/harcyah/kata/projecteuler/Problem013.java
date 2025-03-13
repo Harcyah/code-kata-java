@@ -4,7 +4,7 @@ import java.math.BigInteger;
 
 public class Problem013 {
 
-    private static final BigInteger[] bigs = new BigInteger[]{
+    private static final BigInteger[] BIGS = new BigInteger[]{
         new BigInteger("37107287533902102798797998220837590246510135740250"),
         new BigInteger("46376937677490009712648124896970078050417018260538"),
         new BigInteger("74324986199524741059474233309513058123726617309629"),
@@ -109,7 +109,7 @@ public class Problem013 {
 
     public String getLargeSum() {
         BigInteger sum = BigInteger.ZERO;
-        for (BigInteger bi : bigs) {
+        for (BigInteger bi : BIGS) {
             sum = sum.add(bi);
         }
         return sum.toString().substring(0, 10);

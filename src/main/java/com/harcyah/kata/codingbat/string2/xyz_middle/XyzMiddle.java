@@ -10,12 +10,15 @@ public class XyzMiddle {
     protected static final String XYZ = "xyz";
 
     public boolean xyzMiddle(String str) {
-        if (str == null)
+        if (str == null) {
             return false;
-        if (str.length() < 3)
+        }
+        if (str.length() < 3) {
             return false;
-        if (str.equals(XYZ))
+        }
+        if (str.equals(XYZ)) {
             return true;
+        }
 
         List<Pattern> patterns = parse(str);
         for (Pattern pattern : patterns) {

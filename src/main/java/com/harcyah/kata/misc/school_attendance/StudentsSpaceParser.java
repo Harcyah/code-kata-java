@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
 
 public class StudentsSpaceParser implements Parser {
 
-    private static final DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("M-d-yyyy");
+    private static final DateTimeFormatter DATE_FORMAT = DateTimeFormatter.ofPattern("M-d-yyyy");
 
     @Override
     public Student parse(String line) throws ParseException {
@@ -19,7 +19,7 @@ public class StudentsSpaceParser implements Parser {
             tokens[0],
             Gender.from(tokens[3]),
             null,
-            LocalDate.parse(tokens[4], dateFormat)
+            LocalDate.parse(tokens[4], DATE_FORMAT)
         );
     }
 
