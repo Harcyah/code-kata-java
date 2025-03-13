@@ -3,10 +3,12 @@ package com.harcyah.kata.codingbat.logic1.date_fashion;
 public class DateFashion {
 
     public int dateFashion(int you, int date) {
-        if (isVEryStylish(you, date))
+        if (isVEryStylish(you, date)) {
             return 2;
-        if (isTramp(you, date))
+        }
+        if (isTramp(you, date)) {
             return 0;
+        }
         return 1;
     }
 

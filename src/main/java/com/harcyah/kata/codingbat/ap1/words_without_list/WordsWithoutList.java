@@ -8,8 +8,9 @@ public class WordsWithoutList {
     public List<String> wordsWithoutList(String[] words, int len) {
         List<String> output = new ArrayList<>();
         for (String word : words) {
-            if (word.length() != len)
+            if (word.length() != len) {
                 output.add(word);
+            }
         }
         return output;
     }

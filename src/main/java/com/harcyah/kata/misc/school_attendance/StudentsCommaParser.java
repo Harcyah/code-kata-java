@@ -9,7 +9,7 @@ import java.time.format.DateTimeFormatter;
 
 public class StudentsCommaParser implements Parser {
 
-    private static final DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("M/dd/yyyy");
+    private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("M/dd/yyyy");
 
     @Override
     public Student parse(String line) throws ParseException {
@@ -20,7 +20,7 @@ public class StudentsCommaParser implements Parser {
             tokens[0],
             Gender.from(tokens[2]),
             Color.getColor(tokens[3]),
-            LocalDate.parse(tokens[4], dateFormat)
+            LocalDate.parse(tokens[4], DATE_TIME_FORMATTER)
         );
     }
 

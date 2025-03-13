@@ -1,9 +1,11 @@
 package com.harcyah.kata.exercism.clock;
 
+import lombok.EqualsAndHashCode;
+
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Objects;
 
+@EqualsAndHashCode
 public class Clock {
 
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("HH:mm");
@@ -21,21 +23,6 @@ public class Clock {
 
     public void add(int minutes) {
         this.time = this.time.plusMinutes(minutes);
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Clock that = (Clock) o;
-
-        return Objects.equals(this.toString(), that.toString());
-    }
-
-    @Override
-    public int hashCode() {
-        return time.hashCode();
     }
 
 }

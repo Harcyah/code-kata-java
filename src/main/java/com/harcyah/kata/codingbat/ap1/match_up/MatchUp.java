@@ -11,10 +11,12 @@ public class MatchUp {
     }
 
     public int compare(String a, String b) {
-        if (a.equals(""))
+        if (a.equals("")) {
             return 0;
-        if (b.equals(""))
+        }
+        if (b.equals("")) {
             return 0;
+        }
         return a.charAt(0) == b.charAt(0) ? 1 : 0;
     }
 

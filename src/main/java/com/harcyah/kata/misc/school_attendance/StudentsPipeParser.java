@@ -9,7 +9,7 @@ import java.time.format.DateTimeFormatter;
 
 public class StudentsPipeParser implements Parser {
 
-    private static final DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("M-d-yyyy");
+    private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("M-d-yyyy");
 
     @Override
     public Student parse(String line) throws ParseException {
@@ -20,7 +20,7 @@ public class StudentsPipeParser implements Parser {
             tokens[0],
             Gender.from(tokens[3]),
             Color.getColor(tokens[4]),
-            LocalDate.parse(tokens[5], dateFormat)
+            LocalDate.parse(tokens[5], DATE_FORMATTER)
         );
     }
 

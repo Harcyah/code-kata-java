@@ -9,11 +9,13 @@ public class Max1020 {
             return 0;
         }
 
-        if (isA == false)
+        if (isA == false) {
             return b;
+        }
 
-        if (isB == false)
+        if (isB == false) {
             return a;
+        }
 
         return Math.max(a, b);
     }

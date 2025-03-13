@@ -7,10 +7,11 @@ public class ScoreUp {
         for (int i = 0; i < key.length; i++) {
             String correct = key[i];
             String student = answers[i];
-            if (student.equals(correct))
+            if (student.equals(correct)) {
                 score += 4;
-            else if (student.equals("?") == false)
+            } else if (!student.equals("?")) {
                 score -= 1;
+            }
         }
         return score;
     }

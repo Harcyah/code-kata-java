@@ -6,7 +6,7 @@ import java.util.Locale;
 
 public class EmployeeReportBuilder {
 
-    private static final List<Employee> employees = List.of(
+    private static final List<Employee> EMPLOYEES = List.of(
         new Employee("Max", 17),
         new Employee("Sepp", 18),
         new Employee("Nina", 15),
@@ -14,7 +14,7 @@ public class EmployeeReportBuilder {
     );
 
     public List<Employee> getEmployees() {
-        return employees.stream()
+        return EMPLOYEES.stream()
             .filter(e -> e.getAge() >= 18)
             .sorted(Comparator.comparing(Employee::getName).reversed())
             .map(it -> new Employee(it.getName().toUpperCase(Locale.ROOT), it.getAge()))
