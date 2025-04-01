@@ -5,15 +5,15 @@ public class Max1020 {
     public int max1020(int a, int b) {
         boolean isA = isIn(a, 10, 20);
         boolean isB = isIn(b, 10, 20);
-        if (isA == false && isB == false) {
+        if (!isA && !isB) {
             return 0;
         }
 
-        if (isA == false) {
+        if (!isA) {
             return b;
         }
 
-        if (isB == false) {
+        if (!isB) {
             return a;
         }
 
