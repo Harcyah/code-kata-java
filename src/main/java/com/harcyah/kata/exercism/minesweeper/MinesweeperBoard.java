@@ -27,7 +27,7 @@ public class MinesweeperBoard {
             this.board = new int[rows][cols];
         } else {
             this.rows = inputBoard.size();
-            this.cols = inputBoard.get(0).length();
+            this.cols = inputBoard.getFirst().length();
             this.board = new int[rows][cols];
 
             if (!inputBoard.stream().allMatch(x -> x.length() == this.cols)) {
@@ -37,13 +37,11 @@ public class MinesweeperBoard {
             for (int row = 0; row < rows; row++) {
                 String line = inputBoard.get(row);
                 for (int col = 0; col < line.length(); col++) {
-                    Character c = line.charAt(col);
-                    if (c.equals(MINE_CHAR)) {
-                        board[row][col] = MINE_INT;
-                    } else if (c.equals(VOID_CHAR)) {
-                        board[row][col] = VOID_INT;
-                    } else {
-                        throw new IllegalArgumentException("Input board can only contain the characters ' ' and '*'.");
+                    char c = line.charAt(col);
+                    switch (c) {
+                        case MINE_CHAR -> board[row][col] = MINE_INT;
+                        case VOID_CHAR -> board[row][col] = VOID_INT;
+                        default -> throw new IllegalArgumentException("Input board can only contain the characters ' ' and '*'.");
                     }
                 }
             }
@@ -55,13 +53,13 @@ public class MinesweeperBoard {
                     }
 
                     this.board[row][col] = get(row - 1, col - 1) +
-                            get(row - 1, col) +
-                            get(row - 1, col + 1) +
-                            get(row, col - 1) +
-                            get(row, col + 1) +
-                            get(row + 1, col - 1) +
-                            get(row + 1, col) +
-                            get(row + 1, col + 1);
+                        get(row - 1, col) +
+                        get(row - 1, col + 1) +
+                        get(row, col - 1) +
+                        get(row, col + 1) +
+                        get(row + 1, col - 1) +
+                        get(row + 1, col) +
+                        get(row + 1, col + 1);
                 }
             }
         }
@@ -82,12 +80,10 @@ public class MinesweeperBoard {
             StringBuilder sb = new StringBuilder();
             for (int col = 0; col < cols; col++) {
                 int mines = board[row][col];
-                if (mines == MINE_INT) {
-                    sb.append(MINE_CHAR);
-                } else if (mines == VOID_INT) {
-                    sb.append(VOID_CHAR);
-                } else {
-                    sb.append(mines);
+                switch (mines) {
+                    case MINE_INT -> sb.append(MINE_CHAR);
+                    case VOID_INT -> sb.append(VOID_CHAR);
+                    default -> sb.append(mines);
                 }
 
             }

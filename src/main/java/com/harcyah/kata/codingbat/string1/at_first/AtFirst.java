@@ -7,7 +7,7 @@ public class AtFirst {
         if (str.length() >= 2) {
             at.setCharAt(1, str.charAt(1));
         }
-        if (str.length() >= 1) {
+        if (!str.isEmpty()) {
             at.setCharAt(0, str.charAt(0));
         }
         return at.toString();
