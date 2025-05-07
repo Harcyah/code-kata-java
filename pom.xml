@@ -356,7 +356,7 @@
                     <generateBddAssertions>false</generateBddAssertions>
                     <generateJUnitSoftAssertions>true</generateJUnitSoftAssertions>
                     <generateSoftAssertions>true</generateSoftAssertions>
-                    <targetDir>target/generated-test-sources/java/assertj</targetDir>
+                    <targetDir>${project.build.directory}/generated-test-sources/java/assertj-assertions-generator-maven-plugin/</targetDir>
                     <quiet>true</quiet>
                 </configuration>
             </plugin>
