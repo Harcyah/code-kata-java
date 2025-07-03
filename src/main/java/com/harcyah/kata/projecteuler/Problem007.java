@@ -16,7 +16,7 @@ public class Problem007 {
             .toList();
     }
 
-    public long getNthPrime(int nth) throws NumberFormatException, IOException {
+    public long getNthPrime(int nth) throws NumberFormatException {
         return primes.get(nth - 1);
     }
 

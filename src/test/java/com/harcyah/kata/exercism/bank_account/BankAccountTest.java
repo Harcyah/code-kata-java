@@ -115,7 +115,7 @@ class BankAccountTest {
     }
 
     @Test
-    void cannotDepositMoneyIntoClosedAccount() throws BankAccountActionInvalidException {
+    void cannotDepositMoneyIntoClosedAccount() {
         bankAccount.open();
         bankAccount.close();
 
