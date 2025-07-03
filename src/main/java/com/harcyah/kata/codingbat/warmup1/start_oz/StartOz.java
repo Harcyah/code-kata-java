@@ -4,7 +4,7 @@ public class StartOz {
 
     public String startOz(String str) {
         StringBuilder results = new StringBuilder();
-        if (str.length() >= 1 && str.charAt(0) == 'o') {
+        if (!str.isEmpty() && str.charAt(0) == 'o') {
             results.append('o');
         }
         if (str.length() >= 2 && str.charAt(1) == 'z') {

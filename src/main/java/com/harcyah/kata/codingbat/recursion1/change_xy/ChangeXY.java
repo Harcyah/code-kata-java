@@ -3,7 +3,7 @@ package com.harcyah.kata.codingbat.recursion1.change_xy;
 public class ChangeXY {
 
     public String changeXY(String str) {
-        if (str.length() == 0) {
+        if (str.isEmpty()) {
             return "";
         }
         if (str.length() == 1) {

@@ -42,8 +42,8 @@ public class Raindrops {
         if (primes.contains(7L)) {
             sb.append("Plong");
         }
-        if (sb.length() == 0) {
-            sb.append(String.valueOf(input));
+        if (sb.isEmpty()) {
+            sb.append(input);
         }
 
         return sb.toString();

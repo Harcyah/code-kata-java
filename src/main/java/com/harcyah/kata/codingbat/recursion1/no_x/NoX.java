@@ -3,7 +3,7 @@ package com.harcyah.kata.codingbat.recursion1.no_x;
 public class NoX {
 
     public String noX(String str) {
-        if (str.length() == 0) {
+        if (str.isEmpty()) {
             return "";
         }
         if (str.length() == 1) {

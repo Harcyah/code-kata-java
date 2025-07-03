@@ -3,7 +3,7 @@ package com.harcyah.kata.codingbat.recursion1.count_x;
 public class CountX {
 
     public int countX(String str) {
-        if (str.length() == 0) {
+        if (str.isEmpty()) {
             return 0;
         }
         if (str.length() == 1) {

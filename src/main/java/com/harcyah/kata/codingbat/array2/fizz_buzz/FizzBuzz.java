@@ -17,7 +17,7 @@ public class FizzBuzz {
                 out[i] += "Buzz";
             }
 
-            if (out[i].length() == 0) {
+            if (out[i].isEmpty()) {
                 out[i] = String.valueOf(value);
             }
         }
