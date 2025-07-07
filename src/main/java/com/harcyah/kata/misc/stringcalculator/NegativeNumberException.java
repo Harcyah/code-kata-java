@@ -1,19 +1,16 @@
 package com.harcyah.kata.misc.stringcalculator;
 
 import com.google.common.base.Joiner;
-import com.google.common.collect.Lists;
+import lombok.AllArgsConstructor;
 
 import java.util.List;
 
+@AllArgsConstructor
 public class NegativeNumberException extends Exception {
 
     private static final long serialVersionUID = 4355135540418785206L;
 
-    protected List<String> numbers = Lists.newArrayList();
-
-    public NegativeNumberException(List<String> errors) {
-        this.numbers = errors;
-    }
+    private final List<String> numbers;
 
     @Override
     public String getMessage() {
