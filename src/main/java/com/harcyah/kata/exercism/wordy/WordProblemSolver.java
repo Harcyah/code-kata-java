@@ -1,5 +1,8 @@
 package com.harcyah.kata.exercism.wordy;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
 public class WordProblemSolver {
 
     private static final String PREFIX = "What is ";
@@ -11,7 +14,10 @@ public class WordProblemSolver {
 
     }
 
+    @Getter
+    @AllArgsConstructor
     private enum Operator implements Applicable {
+
         PLUS("plus") {
             @Override
             public int applyOn(int original, int value) {
@@ -39,13 +45,6 @@ public class WordProblemSolver {
 
         private final String english;
 
-        Operator(String english) {
-            this.english = english;
-        }
-
-        public String getEnglish() {
-            return english;
-        }
     }
 
     public int solve(String words) {
@@ -62,7 +61,7 @@ public class WordProblemSolver {
         String valueAsString = contents.substring(0, firstSpaceIndex);
         int value = Integer.parseInt(valueAsString);
 
-        while (sb.length() > 0) {
+        while (!sb.isEmpty()) {
             Operator operator = getNextOperator(sb);
             Integer operand = getNextValue(sb);
             value = operator.applyOn(value, operand);

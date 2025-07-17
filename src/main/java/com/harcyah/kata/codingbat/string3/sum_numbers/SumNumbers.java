@@ -10,13 +10,13 @@ public class SumNumbers {
             if (Character.isDigit(c)) {
                 accumulator.append(c);
             } else {
-                if (accumulator.length() > 0) {
+                if (!accumulator.isEmpty()) {
                     sum += Integer.parseInt(accumulator.toString());
                     accumulator = new StringBuilder();
                 }
             }
         }
-        if (accumulator.length() > 0) {
+        if (!accumulator.isEmpty()) {
             sum += Integer.parseInt(accumulator.toString());
         }
         return sum;
