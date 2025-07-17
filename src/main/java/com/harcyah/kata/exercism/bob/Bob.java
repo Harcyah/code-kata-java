@@ -44,7 +44,7 @@ public class Bob {
 
         @Override
         public boolean matches(String what) {
-            long characters = what.chars().filter(x -> Character.isLetter(x)).count();
+            long characters = what.chars().filter(Character::isLetter).count();
             long upperCase = what.chars().filter(x -> Character.isLetter(x) && Character.isUpperCase(x)).count();
             return characters > 0 && characters == upperCase;
         }
