@@ -29,7 +29,7 @@ class RobotTest {
     }
 
     private static void assertIsValidName(String name) {
-        assertThat(name.matches(EXPECTED_ROBOT_NAME_PATTERN)).isTrue();
+        assertThat(name).matches(EXPECTED_ROBOT_NAME_PATTERN);
     }
 
 }
