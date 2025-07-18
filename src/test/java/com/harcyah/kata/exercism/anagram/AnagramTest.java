@@ -45,7 +45,7 @@ class AnagramTest {
     @Test
     void testEliminateAnagramsWithSameChecksum() {
         Anagram detector = new Anagram("mass");
-        assertThat(detector.match(List.of("last")).isEmpty());
+        assertThat(detector.match(List.of("last"))).isEmpty();
     }
 
     @Test
