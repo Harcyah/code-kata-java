@@ -17,16 +17,7 @@ public class QueenAttackCalculator {
     }
 
     public boolean canQueensAttackOneAnother() {
-        if (q1.isOnSameRank(q2)) {
-            return true;
-        }
-        if (q1.isOnSameFile(q2)) {
-            return true;
-        }
-        if (q1.isOnSameDiagonal(q2)) {
-            return true;
-        }
-        return false;
+        return (q1.isOnSameRank(q2) || q1.isOnSameFile(q2) || q1.isOnSameDiagonal(q2));
     }
 
 }

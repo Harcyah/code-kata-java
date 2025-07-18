@@ -7,11 +7,7 @@ public class TwoTwo {
             return true;
         }
         if (nums.length == 1) {
-            if (nums[0] == 2) {
-                return false;
-            } else {
-                return true;
-            }
+            return nums[0] != 2;
         }
 
         // head check
