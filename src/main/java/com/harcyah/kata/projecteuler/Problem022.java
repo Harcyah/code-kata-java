@@ -8,17 +8,17 @@ public class Problem022 {
         long sum = 0;
         for (int i = 0; i < names.size(); i++) {
             String name = names.get(i);
-            int value = getValueOf(name);
+            long value = getValueOf(name);
             int rank = i + 1;
             sum += rank * value;
         }
         return sum;
     }
 
-    protected int getValueOf(String name) {
-        int sum = 0;
-        for (Character c : name.toCharArray()) {
-            sum += (((int) c - (int) 'A') + 1);
+    protected long getValueOf(String name) {
+        long sum = 0;
+        for (char c : name.toCharArray()) {
+            sum += ((c - 'A') + 1);
         }
         return sum;
     }
