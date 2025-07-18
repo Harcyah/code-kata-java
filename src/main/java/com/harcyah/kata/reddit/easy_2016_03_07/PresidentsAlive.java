@@ -15,30 +15,32 @@ public class PresidentsAlive {
     public int findYearWithMostPresidentsAlive() throws IOException {
         Map<Integer, Integer> yearsCounter = new HashMap<>();
         List<String> lines = loadLines("/com/harcyah/kata/reddit/easy_2016_03_07/presidents.csv");
-        lines.remove(0);
+        lines.removeFirst();
 
         for (String line : lines) {
             String[] tokens = line.split(",");
             int yearOfBirth = Integer.parseInt(StringUtils.right(tokens[1], 4));
-            int yearOfDeath = 0;
-            if (StringUtils.isBlank(tokens[3])) {
-                yearOfDeath = 2016;
-            } else {
-                yearOfDeath = Integer.parseInt(StringUtils.right(tokens[3], 4));
-            }
-
-            IntStream.range(yearOfBirth, yearOfDeath).boxed().forEach(x -> {
-                yearsCounter.compute(x, (k, v) -> v == null ? 1 : v + 1);
-            });
+            int yearOfDeath = getYearOfDeath(tokens);
+            IntStream.range(yearOfBirth, yearOfDeath)
+                .boxed()
+                .forEach(x -> yearsCounter.compute(x, (k, v) -> v == null ? 1 : v + 1));
         }
 
         return yearsCounter.entrySet()
-                .stream()
-                .sorted(Map.Entry.<Integer, Integer>comparingByValue().reversed())
-                .limit(1)
-                .findFirst()
-                .orElseThrow()
-                .getKey();
+            .stream()
+            .sorted(Map.Entry.<Integer, Integer>comparingByValue().reversed())
+            .limit(1)
+            .findFirst()
+            .orElseThrow()
+            .getKey();
+    }
+
+    private int getYearOfDeath(String[] tokens) {
+        if (StringUtils.isBlank(tokens[3])) {
+            return 2016;
+        } else {
+            return Integer.parseInt(StringUtils.right(tokens[3], 4));
+        }
     }
 
 }
