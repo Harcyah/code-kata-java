@@ -60,8 +60,8 @@ public class VersionPart implements Comparable<VersionPart> {
 
         Matcher alphanumMatcher = ALPHANUMERICAL_PATTERN.matcher(raw);
         if (alphanumMatcher.matches()) {
-            this.number = Integer.parseInt(alphanumMatcher.group(1));
-            this.string = alphanumMatcher.group(2);
+            this.number = Integer.parseInt(alphanumMatcher.group("num"));
+            this.string = alphanumMatcher.group("txt");
             this.raw = raw;
             this.type = VersionType.ALPHANUMERIC;
             return;
