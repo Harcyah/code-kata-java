@@ -1,11 +1,11 @@
 package com.harcyah.kata.reddit.hard_2016_02_13;
 
-import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.harcyah.kata.reddit.hard_2016_02_13.commands.MoveToCommand;
 import com.harcyah.kata.reddit.hard_2016_02_13.commands.PutCharCommand;
 import com.harcyah.kata.reddit.hard_2016_02_13.commands.SpecialCommands;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -17,7 +17,7 @@ public class Parser {
             specials.put(command.getInput(), command);
         }
 
-        List<Command> commands = Lists.newArrayList();
+        List<Command> commands = new ArrayList<>();
         for (int i = 0; i < input.length(); i++) {
             char c = input.charAt(i);
             if (c == '^') {

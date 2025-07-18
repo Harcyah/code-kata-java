@@ -1,6 +1,5 @@
 package com.harcyah.kata.reddit.easy_2016_03_28;
 
-import com.google.common.collect.ImmutableList;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -11,18 +10,23 @@ class GarageDoorTest {
 
     @Test
     void testGarageDoorOpening() {
-        List<Event> events = ImmutableList.of(
-                new EventButton(),
-                new EventCycleComplete(),
-                new EventButton(),
-                new EventButton(),
-                new EventButton(),
-                new EventButton(),
-                new EventButton(),
-                new EventCycleComplete());
-
+        // Given
         GarageDoor door = new GarageDoor();
+        List<Event> events = List.of(
+            new EventButton(),
+            new EventCycleComplete(),
+            new EventButton(),
+            new EventButton(),
+            new EventButton(),
+            new EventButton(),
+            new EventButton(),
+            new EventCycleComplete()
+        );
+
+        // When
         door.process(events);
+
+        // Then
         assertThat(door.getState()).isEqualTo(State.CLOSED);
     }
 

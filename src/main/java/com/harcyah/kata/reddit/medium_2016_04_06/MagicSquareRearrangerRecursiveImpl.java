@@ -1,11 +1,12 @@
 package com.harcyah.kata.reddit.medium_2016_04_06;
 
 import com.google.common.collect.Lists;
-import com.google.common.collect.Sets;
 import com.harcyah.kata.reddit.easy_2016_04_04.MagicSquareAny;
 import org.apache.commons.lang3.ArrayUtils;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -13,7 +14,7 @@ import java.util.stream.IntStream;
 
 public class MagicSquareRearrangerRecursiveImpl implements MagicSquareRearranger {
 
-    private static final List<Integer[]> EMPTY = Lists.newArrayList();
+    private static final List<Integer[]> EMPTY = new ArrayList<>();
 
     @Override
     public List<Integer[]> getSolutions(Integer[][] square) {
@@ -67,7 +68,7 @@ public class MagicSquareRearrangerRecursiveImpl implements MagicSquareRearranger
                 Integer[] row = square[r];
                 int thisLeft = left - row[index];
                 int thisRight = right - row[row.length - 1 - index];
-                Set<Integer> thisRemaining = Sets.newHashSet(remaining);
+                Set<Integer> thisRemaining = new HashSet<>(remaining);
                 thisRemaining.remove(r);
                 Integer[] thisCurrent = Arrays.copyOf(current, current.length);
                 thisCurrent[index] = r;

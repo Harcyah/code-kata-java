@@ -1,6 +1,5 @@
 package com.harcyah.kata.misc.square;
 
-import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -24,7 +23,7 @@ class SquareSolverTest {
         Point b = new Point(2, 1);
         Point c = new Point(4, -2);
         Point d = new Point(1, -4);
-        List<Point> points = Lists.newArrayList(a, b, c, d);
+        List<Point> points = List.of(a, b, c, d);
 
         List<Square> squares = solver.findSquares(Sets.newTreeSet(points));
 
@@ -37,7 +36,7 @@ class SquareSolverTest {
         Point b = new Point(1, -1);
         Point c = new Point(-1, 1);
         Point d = new Point(1, 1);
-        List<Point> points = Lists.newArrayList(a, b, c, d);
+        List<Point> points = List.of(a, b, c, d);
 
         List<Square> squares = solver.findSquares(Sets.newTreeSet(points));
 
@@ -56,7 +55,7 @@ class SquareSolverTest {
         Point b = new Point(-1, -2);
         Point c = new Point(2, -1);
         Point d = new Point(1, 2);
-        List<Point> points = Lists.newArrayList(a, b, c, d);
+        List<Point> points = List.of(a, b, c, d);
 
         List<Square> squares = solver.findSquares(Sets.newTreeSet(points));
 
@@ -75,7 +74,7 @@ class SquareSolverTest {
         Point b = new Point(1, -1);
         Point c = new Point(-1, 1);
         Point d = new Point(1, 10);
-        List<Point> points = Lists.newArrayList(a, b, c, d);
+        List<Point> points = List.of(a, b, c, d);
 
         List<Square> squares = solver.findSquares(Sets.newTreeSet(points));
 

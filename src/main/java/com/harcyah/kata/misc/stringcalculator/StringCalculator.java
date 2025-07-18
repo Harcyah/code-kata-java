@@ -1,6 +1,5 @@
 package com.harcyah.kata.misc.stringcalculator;
 
-import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import org.apache.commons.lang3.StringUtils;
 
@@ -11,7 +10,7 @@ import java.util.regex.Pattern;
 
 public class StringCalculator {
 
-    private final List<String> errors = Lists.newArrayList();
+    private final List<String> errors = new ArrayList<>();
     private final StringBuilder accumulator = new StringBuilder();
     private final Set<Character> separators = Sets.newHashSet(',', '\n');
     private String str;

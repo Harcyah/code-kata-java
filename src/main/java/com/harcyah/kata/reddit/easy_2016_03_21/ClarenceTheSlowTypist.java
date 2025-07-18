@@ -1,13 +1,12 @@
 package com.harcyah.kata.reddit.easy_2016_03_21;
 
-import com.google.common.collect.Maps;
-
 import java.awt.Point;
+import java.util.HashMap;
 import java.util.Map;
 
 public class ClarenceTheSlowTypist {
 
-    private static final Map<Character, Point> POINTS = Maps.newHashMap();
+    private static final Map<Character, Point> POINTS = new HashMap<>();
 
     static {
         String chars = "123456789.0";

@@ -1,8 +1,8 @@
 package com.harcyah.kata.misc.square;
 
 import com.google.common.base.Preconditions;
-import com.google.common.collect.Lists;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.TreeSet;
@@ -11,7 +11,7 @@ public class SquareSolver {
 
     public List<Square> findSquares(TreeSet<Point> points) {
         Preconditions.checkArgument(points.size() >= 4);
-        List<Square> squares = Lists.newArrayList();
+        List<Square> squares = new ArrayList<>();
         Iterator<Point> iterator = points.iterator();
         Point a = iterator.next();
         while (a != null) {

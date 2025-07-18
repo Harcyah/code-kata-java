@@ -1,8 +1,8 @@
 package com.harcyah.kata.reddit.easy_2016_12_12;
 
 import com.google.common.base.Preconditions;
-import com.google.common.collect.Lists;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class LetterByLetter {
@@ -10,7 +10,7 @@ public class LetterByLetter {
     public List<String> change(String in, String out) {
         Preconditions.checkArgument(in.length() == out.length());
 
-        List<String> changes = Lists.newArrayList();
+        List<String> changes = new ArrayList<>();
         changes.add(in);
 
         String prev = in;

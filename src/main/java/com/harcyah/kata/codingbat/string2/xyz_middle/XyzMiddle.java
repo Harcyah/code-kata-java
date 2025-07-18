@@ -1,8 +1,8 @@
 package com.harcyah.kata.codingbat.string2.xyz_middle;
 
-import com.google.common.collect.Lists;
 import lombok.AllArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class XyzMiddle {
@@ -30,7 +30,7 @@ public class XyzMiddle {
     }
 
     private List<Pattern> parse(String str) {
-        List<Pattern> patterns = Lists.newArrayList();
+        List<Pattern> patterns = new ArrayList<>();
         for (int i = 0; i < str.length() - XYZ.length(); i++) {
             String xyz = str.substring(i, i + XYZ.length());
             if (XYZ.equals(xyz)) {

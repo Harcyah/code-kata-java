@@ -1,30 +1,33 @@
 package com.harcyah.kata.exercism.etl;
 
-import com.google.common.collect.ImmutableMap;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.Map;
 
+import static java.util.Map.entry;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class EtlTest {
+
     private final Etl etl = new Etl();
 
     @Test
     void testTransformOneValue() {
-        Map<Integer, List<String>> old = ImmutableMap.of(1, List.of("A"));
-        Map<String, Integer> expected = ImmutableMap.of("a", 1);
+        Map<Integer, List<String>> old = Map.of(1, List.of("A"));
+
+        Map<String, Integer> expected = Map.of("a", 1);
 
         assertThat(etl.transform(old)).isEqualTo(expected);
     }
 
     @Test
     void testTransformMoreValues() {
-        Map<Integer, List<String>> old = ImmutableMap.of(
+        Map<Integer, List<String>> old = Map.of(
             1, List.of("A", "E", "I", "O", "U")
         );
-        Map<String, Integer> expected = ImmutableMap.of(
+
+        Map<String, Integer> expected = Map.of(
             "a", 1,
             "e", 1,
             "i", 1,
@@ -37,11 +40,12 @@ class EtlTest {
 
     @Test
     void testMoreKeys() {
-        Map<Integer, List<String>> old = ImmutableMap.of(
+        Map<Integer, List<String>> old = Map.of(
             1, List.of("A", "E"),
             2, List.of("D", "G")
         );
-        Map<String, Integer> expected = ImmutableMap.of(
+
+        Map<String, Integer> expected = Map.of(
             "a", 1,
             "e", 1,
             "d", 2,
@@ -53,23 +57,44 @@ class EtlTest {
 
     @Test
     void testFullDataset() {
-        Map<Integer, List<String>> old = ImmutableMap.<Integer, List<String>> builder()
-            .put(1, List.of("A", "E", "I", "O", "U", "L", "N", "R", "S", "T"))
-            .put(2, List.of("D", "G"))
-            .put(3, List.of("B", "C", "M", "P"))
-            .put(4, List.of("F", "H", "V", "W", "Y"))
-            .put(5, List.of("K"))
-            .put(8, List.of("J", "X"))
-            .put(10, List.of("Q", "Z"))
-            .build();
+        Map<Integer, List<String>> old = Map.ofEntries(
+            entry(1, List.of("A", "E", "I", "O", "U", "L", "N", "R", "S", "T")),
+            entry(2, List.of("D", "G")),
+            entry(3, List.of("B", "C", "M", "P")),
+            entry(4, List.of("F", "H", "V", "W", "Y")),
+            entry(5, List.of("K")),
+            entry(8, List.of("J", "X")),
+            entry(10, List.of("Q", "Z"))
+        );
 
-        Map<String, Integer> expected = ImmutableMap.<String, Integer>builder()
-            .put("a", 1).put("b", 3).put("c", 3).put("d", 2).put("e", 1)
-            .put("f", 4).put("g", 2).put("h", 4).put("i", 1).put("j", 8)
-            .put("k", 5).put("l", 1).put("m", 3).put("n", 1).put("o", 1)
-            .put("p", 3).put("q", 10).put("r", 1).put("s", 1).put("t", 1)
-            .put("u", 1).put("v", 4).put("w", 4).put("x", 8).put("y", 4)
-            .put("z", 10).build();
+        Map<String, Integer> expected = Map.ofEntries(
+            entry("a", 1),
+            entry("b", 3),
+            entry("c", 3),
+            entry("d", 2),
+            entry("e", 1),
+            entry("f", 4),
+            entry("g", 2),
+            entry("h", 4),
+            entry("i", 1),
+            entry("j", 8),
+            entry("k", 5),
+            entry("l", 1),
+            entry("m", 3),
+            entry("n", 1),
+            entry("o", 1),
+            entry("p", 3),
+            entry("q", 10),
+            entry("r", 1),
+            entry("s", 1),
+            entry("t", 1),
+            entry("u", 1),
+            entry("v", 4),
+            entry("w", 4),
+            entry("x", 8),
+            entry("y", 4),
+            entry("z", 10)
+        );
 
         assertThat(etl.transform(old)).isEqualTo(expected);
     }
