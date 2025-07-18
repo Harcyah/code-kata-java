@@ -1,7 +1,8 @@
 package com.harcyah.kata.exercism.queen_attack;
 
-import java.util.Objects;
+import lombok.EqualsAndHashCode;
 
+@EqualsAndHashCode
 public class BoardCoordinate {
 
     private final int rank;
@@ -23,23 +24,6 @@ public class BoardCoordinate {
             throw new IllegalArgumentException("Coordinate must have file <= 7.");
         }
         this.file = file;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        BoardCoordinate that = (BoardCoordinate) o;
-        return file == that.file && rank == that.rank;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(file, rank);
     }
 
     public boolean isOnSameRank(BoardCoordinate other) {

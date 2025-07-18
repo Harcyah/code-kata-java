@@ -1,7 +1,8 @@
 package com.harcyah.kata.reddit.medium_2016_02_17;
 
-import com.google.common.base.Objects;
+import lombok.EqualsAndHashCode;
 
+@EqualsAndHashCode
 public class Square {
 
     protected int col;
@@ -10,32 +11,6 @@ public class Square {
     public Square(int col, int row) {
         this.col = col;
         this.row = row;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(col, row);
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        Square other = (Square) obj;
-        if (col != other.col) {
-            return false;
-        }
-        if (row != other.row) {
-            return false;
-        }
-        return true;
     }
 
     @Override

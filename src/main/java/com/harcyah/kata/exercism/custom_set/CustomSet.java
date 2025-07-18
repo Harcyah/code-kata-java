@@ -1,11 +1,14 @@
 package com.harcyah.kata.exercism.custom_set;
 
+import lombok.EqualsAndHashCode;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+@EqualsAndHashCode
 public class CustomSet<T> {
 
     private final Map<Integer, T> values;
@@ -65,25 +68,6 @@ public class CustomSet<T> {
         union.values.putAll(this.values);
         union.values.putAll(another.values);
         return union;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-
-        CustomSet<?> other = (CustomSet<?>) o;
-        return other.values.equals(this.values);
-    }
-
-    @Override
-    public int hashCode() {
-        return values.hashCode();
     }
 
 }
