@@ -22,7 +22,7 @@ public class MagicSquareAny {
 
         // Diagonals checks
         checks[check++] = getTopLeftBottomRightDiagonalCheck(size);
-        checks[check++] = getTopRightBottomLeftDiagonalCheck(size);
+        checks[check] = getTopRightBottomLeftDiagonalCheck(size);
 
         return isMagicSquare(square, checks, magicConstant);
     }
