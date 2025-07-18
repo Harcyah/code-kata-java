@@ -73,9 +73,9 @@ public class SimpleLinkedList {
         tail = reverse(tail);
     }
 
-    protected Element reverse(Element element) {
-        Element head = new Element(tail.data);
-        Element curr = tail;
+    private static Element reverse(Element element) {
+        Element head = new Element(element.data);
+        Element curr = element;
         while (curr != null) {
             head = new Element(curr.data, head);
             curr = curr.prev;
