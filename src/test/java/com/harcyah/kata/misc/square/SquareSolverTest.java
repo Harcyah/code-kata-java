@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.TreeSet;
+import java.util.SortedSet;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -85,7 +85,7 @@ class SquareSolverTest {
     @Disabled
     void testWithLaurentDataset() throws IOException {
         Reader reader = new Reader();
-        TreeSet<Point> points = reader.read();
+        SortedSet<Point> points = reader.read();
 
         List<Square> squares = solver.findSquares(points);
 

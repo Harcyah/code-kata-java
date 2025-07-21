@@ -5,11 +5,11 @@ import com.google.common.base.Preconditions;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.TreeSet;
+import java.util.SortedSet;
 
 public class SquareSolver {
 
-    public List<Square> findSquares(TreeSet<Point> points) {
+    public List<Square> findSquares(SortedSet<Point> points) {
         Preconditions.checkArgument(points.size() >= 4);
         List<Square> squares = new ArrayList<>();
         Iterator<Point> iterator = points.iterator();
@@ -36,7 +36,7 @@ public class SquareSolver {
         return squares;
     }
 
-    protected void testAndAdd(Point a, Point b, Point normal, TreeSet<Point> points, List<Square> output) {
+    protected void testAndAdd(Point a, Point b, Point normal, SortedSet<Point> points, List<Square> output) {
         Point c = new Point(a, normal);
         if (points.contains(c)) {
             Point d = new Point(b, normal);
