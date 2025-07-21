@@ -21,6 +21,7 @@ public class StatementHtmlRenderer {
 
         builder.append("<p>Amount owed is <em>").append(statement.getTotalAmount()).append("</em></p>\n");
         builder.append("<p>You earned <em>").append(statement.getRenterPoints()).append("</em> frequent renter points</p>");
+        builder.append("\n");
 
         return builder.toString();
     }
