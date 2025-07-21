@@ -8,9 +8,7 @@ public class LinearIn {
         }
 
         int outerIterator = 0;
-        for (int i = 0; i < inner.length; i++) {
-            int value = inner[i];
-
+        for (int value : inner) {
             // Is this value in outer, between i and outer.length ?
             boolean found = false;
             for (; (outerIterator < outer.length) && !found; outerIterator++) {
@@ -19,7 +17,7 @@ public class LinearIn {
                 }
             }
 
-            if (found == false) {
+            if (!found) {
                 return false;
             }
         }

@@ -6,7 +6,7 @@ public class XyBalance {
         for (int i = 0; i < str.length(); i++) {
             if (str.charAt(i) == 'x') {
                 String post = str.substring(i);
-                if (post.contains("y") == false) {
+                if (!post.contains("y")) {
                     return false;
                 }
             }
